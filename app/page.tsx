@@ -32,7 +32,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find me on the fediverse with Calckey's fork Hajkey on @blahaj.zone@maikelthedev
+            Find me on the fediverse with Calckey&apos;s fork Hajkey on @blahaj.zone@maikelthedev
           </p>
         </a>
 
@@ -49,7 +49,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Read my CV on Microsoft futile CV network & Facebook cross breed.  
+            Read my CV on Microsoft futile CV network & Facebook cross breed.
           </p>
         </a>
 
@@ -66,7 +66,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Section under construction. Link takes you nowhere. 
+            Section under construction. Link takes you nowhere.
           </p>
         </a>
 
