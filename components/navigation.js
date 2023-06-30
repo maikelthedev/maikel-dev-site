@@ -218,7 +218,7 @@ function Navigation() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Maikel OÜ</span>
                 <img className="h-8 w-auto" src="/NOTHING.png" alt="" />
               </a>
               <button
@@ -262,13 +262,13 @@ function Navigation() {
                     )}
                   </Disclosure>
                   <Link
-                    href="/portfolio"
+                    href="/portfolio" onClick={() => setMobileMenuOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Portfolio
                   </Link>
                   <Link
-                    href="/testimonials"
+                    href="/testimonials" onClick={() => setMobileMenuOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Testimonials
@@ -276,7 +276,7 @@ function Navigation() {
                 </div>
                 <div className="py-6">
                   <Link
-                    href="#"
+                    href="https://matrix.to/#/@maikelthedev:matrix.org" target="_blank" onClick={() => setMobileMenuOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Contact
