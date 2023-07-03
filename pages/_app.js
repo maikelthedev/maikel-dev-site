@@ -6,7 +6,7 @@ function App({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <title>Maikel.dev</title>
+        <title>Maikel OÜ</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Maikel.dev" />
         <meta name="keywords" content="Maikel.dev" />
