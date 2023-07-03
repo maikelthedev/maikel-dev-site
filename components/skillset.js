@@ -158,7 +158,7 @@ const skillsets = [
         alt: "MongoDB",
       },
       {
-        src: "/logos/redis.png  ",
+        src: "/logos/redis.png",
         alt: "Redis",
       },
       {
@@ -186,7 +186,7 @@ const skillsets = [
         alt: "sensu",
       },
       {
-        src: "/logos/nagios.png ",
+        src: "/logos/nagios.png",
         alt: "Nagios",
       },
       {
@@ -194,7 +194,7 @@ const skillsets = [
         alt: "Icinga",
       },
       {
-        src: "/logos/pushover.png ",
+        src: "/logos/pushover.png",
         alt: "Pushover",
       },
     ],
