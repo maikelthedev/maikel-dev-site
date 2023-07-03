@@ -15,7 +15,7 @@ function Hero() {
               height={200}
             />
             <div className="pt-2 text-center">
-              <Link href="#reasons">
+              <Link href="/hire">
                 <h2 className="inline-block px-3 py-1 text-lg font-semibold text-white bg-indigo-700 rounded-full group-hover:bg-white group-hover:text-indigo-700 group-hover:border-indigo-700 group-hover:border-solid group-hover: border-2 duration-200">
                   Hire Me
                 </h2>

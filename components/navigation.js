@@ -50,48 +50,8 @@ const features = [
     icon: FingerPrintIcon,
   },
 ];
-const services = [
-  {
-    name: "Cloud Design",
-    description: "Create the perfect environment to run your applications",
-    href: "#",
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: "Cloud Monitoring",
-    description: "Get peace of mind knowing everything is running smoothly",
-    href: "#",
-    icon: ComputerDesktopIcon,
-  },
-  {
-    name: "Frontend Development",
-    description: "Angular, React? You name it, I got it.",
-    href: "#",
-    icon: CodeBracketSquareIcon,
-  },
-  {
-    description: "Mongo, Redis, PostreSQL, MySQL, using Node or Python",
-    href: "#",
-    icon: ServerIcon,
-  },
-];
-const callsToAction = [
-  {
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/maikelthedev/",
-    icon: LinkIcon,
-  },
-  {
-    name: "Chat Now",
-    href: "https://matrix.to/#/@maikelthedev:matrix.org",
-    icon: ChatBubbleBottomCenterIcon,
-  },
-];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
- 
+
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
@@ -104,7 +64,7 @@ function Navigation() {
           <Link href="/" className="-m-1.5 p-1.5"
           onClick={() => setMobileMenuOpen(false)}>
             <span className="sr-only">Maikel OÜ</span>
-            <img className="h-8 w-auto" src="/NOTHING.png" alt="" />
+            <img className="h-8 w-auto hover:scale-150 duration-200" src="/NOTHING.png" alt="" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -120,32 +80,32 @@ function Navigation() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
         <Link
             href="/services"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
           >
             Services
           </Link>
           <Link
             href="/portfolio"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
           >
             Portfolio
           </Link>
 
           <Link
             href="/testimonials"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
           >
             Testimonials
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
+          <Link
             href="https://matrix.to/#/@maikelthedev:matrix.org"
             target="_blank"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
           >
             Contact <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog
@@ -159,7 +119,7 @@ function Navigation() {
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Maikel OÜ</span>
-              <img className="h-8 w-auto" src="/NOTHING.png" alt="" />
+              <img className="h-8 w-auto hover:bg-indigo-50" src="/NOTHING.png" alt="" />
             </Link>
             <button
               type="button"
@@ -167,52 +127,30 @@ function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-6 w-6 hover:bg-indigo-50 rounded-full" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Services
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "rotate-180" : "",
-                            "h-5 w-5 flex-none"
-                          )}
-                          aria-hidden="true"
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...services, ...callsToAction].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            target="_blank"
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
+              <Link
+                  href="/services"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
+                >
+                  Services
+                </Link>
                 <Link
                   href="/portfolio"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
                 >
                   Portfolio
                 </Link>
                 <Link
                   href="/testimonials"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
                 >
                   Testimonials
                 </Link>
@@ -222,7 +160,7 @@ function Navigation() {
                   href="https://matrix.to/#/@maikelthedev:matrix.org"
                   target="_blank"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
                 >
                   Contact
                 </Link>
