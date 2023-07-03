@@ -46,7 +46,7 @@ export default function Home() {
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="grid h-screen h-full justify-items-center items-center mb-3">
+            <div className="grid justify-items-center items-center mb-3">
               <Image
                 
                 src="/nowords.png"
