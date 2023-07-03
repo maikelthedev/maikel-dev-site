@@ -46,9 +46,9 @@ export default function Home() {
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="flex h-screen h-full justify-center items-center mb-3">
+            <div className="grid h-screen h-full justify-items-center items-center mb-3">
               <Image
-                className="text-center"
+                
                 src="/nowords.png"
                 alt="Picture of the author"
                 width={200}
