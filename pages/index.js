@@ -46,29 +46,30 @@ export default function Home() {
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <div className="grid justify-items-center items-center mb-3">
+            <div className="grid justify-items-center items-center mb-3 ">
               <Image
-                
-                src="/nowords.png"
+                className="hover:scale-105 hover:border-0 duration-200 shadow-2xl shadow-indigo-200 rounded-full border-dashed border-2 border-indigo-500"
+                src="/me.jpg"
                 alt="Picture of the author"
                 width={200}
                 height={200}
               />
             </div>
-            
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                Tiny bollocks
+            <div className="pt-2 text-center">
+              <h2 className="inline-block px-3 py-1 text-sm font-semibold text-white bg-indigo-500 rounded-full">
+                Open Now
               </h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Big long sentence of bollocks
-              </p>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-                at. In mi viverra elit nunc.
-              </p>
             </div>
-          
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">
+              A Singular Vision, Infinite Possibilities
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
+              at. In mi viverra elit nunc.
+            </p>
+          </div>
+
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
               {features.map((feature) => (
