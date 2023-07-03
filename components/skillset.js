@@ -15,7 +15,7 @@ const skillsets = [
   {
     title: "Cloud Providers",
     description:
-      "Theses are companies that offer on-demand computing resources and services over the internet, such as storage, servers, and applications.",
+      "These are companies that offer on-demand computing resources and services over the internet, such as storage, servers, and applications",
     icon: CloudIcon,
     logos: [
       {
@@ -43,7 +43,7 @@ const skillsets = [
   {
     title: "Programming & Scripting Languages",
     description:
-      "A programming language is a formal language comprising a set of instructions that produce various kinds of output. Programming languages are used in computer programming to implement algorithms.",
+      "Formal languages comprising a set of instructions that produce various kinds of output",
     icon: CodeBracketIcon,
     logos: [
       {
@@ -75,7 +75,7 @@ const skillsets = [
   {
     title: "Orchestration & Deployment tools",
     description:
-      "Orchestration tools are used to automate the configuration, coordination, and management of computer systems, applications, and services.",
+      "Tools used to automate the configuration, coordination, and management of computer systems, applications, and services",
     icon: CubeIcon,
     logos: [
       {
@@ -102,7 +102,7 @@ const skillsets = [
   },
   {
     title: "Frameworks",
-    description: "A framework is a software development platform.",
+    description: "A software platform that provides reusable components, tools and libraries to assist developers",
     icon: TableCellsIcon,
     logos: [
       {
@@ -142,7 +142,7 @@ const skillsets = [
   {
     title: "Databases",
     description:
-      "A database is an organized collection of data, generally stored and accessed electronically from a computer system.",
+      "Organized collections of data, generally stored and accessed electronically from a computer system",
     icon: RectangleStackIcon,
     logos: [
       {
@@ -174,7 +174,7 @@ const skillsets = [
   {
     title: "Cloud Monitoring",
     description:
-      "Cloud monitoring is the process of evaluating, monitoring, and managing cloud-based services, applications, and infrastructure.",
+      "The process of evaluating, monitoring, and managing cloud-based services, applications, and infrastructure",
     icon: ShieldCheckIcon,
     logos: [
       {
@@ -217,12 +217,12 @@ export default function Skillset() {
       <p className="text-white text-2xl text-center justify-center mt-10">
         These are all the technologies I have worked with up-to-date
       </p>
-      <div className="mx-auto px-6 lg:px-8 pb-10 md:pb-2">
-        <div className="mx-auto mt-16">
-          <div className="flex flex-col flex-wrap justify-center md:flex-row gap-5">
+      <div className="">
+        <div className="">
+          <div className="md:columns-3 pt-10 gap-8 p-5">
             {skillsets.map((item) => (
-              <div className="basis-1/4">
-                <div className="bg-white border-indigo-700 border-2 rounded-lg">
+              <div className="mb-8 w-full break-inside-avoid-column">
+                <div className="bg-white border-indigo-700 border-2 rounded-lg ">
                   <div className="p-2 bg-indigo-700  text-white rounded-lg border-solid border-white border">
                     <div className="float-left mb-1 ml-2 mt-3 mr-3 flex h-20 w-20 items-center justify-center rounded-full bg-white">
                       <item.icon
