@@ -31,13 +31,16 @@ function Projects(props) {
       return <li className=""> {details.children } </li>
     },
     ul(details) {
-      return <ul className="list-disc px-5"> {details.children } </ul>
+      return <ul className="list-disc m-10"> {details.children } </ul>
     },
     ol(details) {
-      return <ul className="list-decimal px-10"> {details.children } </ul>
+      return <ul className="list-decimal m-10"> {details.children } </ul>
     },
     a(details)  {
       return <Link className="text-indigo-900 font-semibold" href={details.href} target="_blank">{details.children}</Link>
+    },
+    p(details)  {
+      return <p className="m-10 text-lg"> {details.children } </p>
     }
     /*
     p(paragraph) {
