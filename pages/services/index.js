@@ -1,24 +1,77 @@
+import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/components/hero";
+
+const services = [
+  {
+    name: "Full Stack Web Development",
+    description: "Using Angular, React, Flask or Django I can build your website backend and frontend from scratch.",
+  },
+  {
+    name: "Cloud Monitoring",
+    description: "I can monitor with alerts 24/7 your cloud infrastructure and perform any necessary actions to keep it running smoothly.",
+  },
+  {
+    name: "Cloud Creation",
+    description: "Is there a development environment that you'd like to replicate, I can use Terraform and Ansible for that. I can create production environments as Code in AWS, Azure, Oracle Cloud, Digital Ocean, Hetzner, or any cloud provider of your choice.",
+  },
+  {
+    name: "Costs Optimization",
+    description: "Do you know most people using password managers like LastPass do not know there are free and open-source technologies that can do the same (e.g.: Bitwarden) ? I can help you save money by using free and open-source technologies.",
+  },
+  {
+    name: "GDPR Compliance",
+    description: "Have you met many people who have read the 88 pages of the GDPR directive, dissected it and study it? I have. I can help you with your GDPR compliance.",
+  },
+  {
+    name: "Whatever else I can come up with",
+    description:"Fuck knows!",
+  },
+];
+
 function Portfolio() {
-  // I need th econtent of a portfolio page, for now I jsut need it to say the title "Porfolio Page" and to have some placeholder text describing what it is. This is a component inside a layout of a page. It should be decorated using TailwindCSS and NextJS. THe background of the text should be white and the text should be black. The text should be centered in the page. The syling should be consistent with the Home component. 
-    return (
-        <div className="bg-white py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:text-center">
-                    <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                    Services Page
-                    </h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        This is the Services page
-                    </p>
-                    <p className="mt-6 text-lg leading-8 text-gray-600">
-                    Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.
-                    </p>
-                </div>
-            </div>
-        </div>
-    );
-
-
+  return (
+    <div>
+      {/* The Logo
+      <div className="flex max-h-60 justify-center bg-[#212832]">
+        <Image
+          className="object-cover h-48"
+          src="/companylogo.png"
+          width={500}
+          height={100}
+        />
+      </div>*/}
+      <Hero />
+      {/* The Services*/}
+      <div className="bg-indigo-700 pt-1 md:py-5 md:pb-10">
+        <Link href="#services" id="services">
+        <h1
+          className="text-white border-2 border-dashed border-white text-center text-4xl 
+          font-bold mt-10 bg-indigo-700 mx-auto max-w-xs p-5 rounded-lg
+           hover:bg-white hover:text-indigo-700 duration-200 
+          "
+        >
+        Services
+        </h1>
+      </Link>
+        <p className="text-white text-2xl text-center justify-center mt-10 px-10">
+          I can help you with your existing services or help you build new
+          ones.
+        </p>
+      </div>
+      {/* The actual services */}
+      <div className="md:columns-3 pt-10 gap-8 p-5 bg-indigo-700">
+        {services.map((service) => (
+          <div className="mb-8 w-full break-inside-avoid-column bg-white rounded-lg p-4">
+            <h1 className="text-2xl font-bold text-indigo-900">
+              {service.name}
+            </h1>
+            <p className="text-gray-700 mt-2">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Portfolio;

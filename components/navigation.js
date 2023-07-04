@@ -51,7 +51,6 @@ const features = [
   },
 ];
 
-
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
@@ -61,10 +60,17 @@ function Navigation() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5"
-          onClick={() => setMobileMenuOpen(false)}>
+          <Link
+            href="/"
+            className="-m-1.5 p-1.5"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             <span className="sr-only">Maikel OÜ</span>
-            <img className="h-8 w-auto hover:scale-150 duration-200" src="/NOTHING.png" alt="" />
+            <img
+              className="h-8 w-auto hover:scale-150 duration-200"
+              src="/NOTHING.png"
+              alt=""
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -78,8 +84,8 @@ function Navigation() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-        <Link
-            href="/services"
+          <Link
+            href="/services/#services"
             className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
           >
             Services
@@ -117,9 +123,17 @@ function Navigation() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="#" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="#"
+              className="-m-1.5 p-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <span className="sr-only">Maikel OÜ</span>
-              <img className="h-8 w-auto hover:bg-indigo-50" src="/NOTHING.png" alt="" />
+              <img
+                className="h-8 w-auto hover:bg-indigo-50"
+                src="/NOTHING.png"
+                alt=""
+              />
             </Link>
             <button
               type="button"
@@ -127,14 +141,17 @@ function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6 hover:bg-indigo-50 rounded-full" aria-hidden="true" />
+              <XMarkIcon
+                className="h-6 w-6 hover:bg-indigo-50 rounded-full"
+                aria-hidden="true"
+              />
             </button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-              <Link
-                  href="/services"
+                <Link
+                  href="/services/#services"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
                 >
