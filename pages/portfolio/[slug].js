@@ -11,16 +11,16 @@ function Projects(props) {
       return <h1 className="text-4xl text-center pb-10 font-bold text-indigo-900"> {details.children } </h1>
     },
     h2(details) {
-      return <h2 className="text-3xl font-bold text-indigo-900"> {details.children } </h2>
+      return <h2 className="text-3xl pb-5 font-bold text-indigo-900"> {details.children } </h2>
     },
     h3(details) {
-      return <h3 className="text-2xl text-indigo-900"> {details.children } </h3>
+      return <h3 className="pb-5 text-2xl text-indigo-900"> {details.children } </h3>
     },
     h4(details) {
-      return <h4 className="text-xl text-indigo-900"> {details.children } </h4>
+      return <h4 className="pb-5 text-xl text-indigo-900"> {details.children } </h4>
     },
     h5(details) {
-      return <h5 className="text-lg text-indigo-900"> {details.children } </h5>
+      return <h5 className="pb-5 text-lg text-indigo-900"> {details.children } </h5>
     },
     img(image) {
       return <div className="flex items-center justify-center py-5">
@@ -31,16 +31,16 @@ function Projects(props) {
       return <li className=""> {details.children } </li>
     },
     ul(details) {
-      return <ul className="list-disc md:mx-20 mx-14"> {details.children } </ul>
+      return <ul className="pb-5 list-disc md:mx-20 mx-14"> {details.children } </ul>
     },
     ol(details) {
-      return <ul className="list-decimal md:mx-20 mx-14"> {details.children } </ul>
+      return <ul className="pb-5 list-decimal md:mx-20 mx-14"> {details.children } </ul>
     },
     a(details)  {
       return <Link className="text-indigo-900 font-semibold" href={details.href} target="_blank">{details.children}</Link>
     },
     p(details)  {
-      return <p className="m-5 md:m-10 text-lg"> {details.children } </p>
+      return <p className="pb-5 md:pb-10 mx-5 md:mx-10 text-lg"> {details.children } </p>
     }
     /*
     p(paragraph) {

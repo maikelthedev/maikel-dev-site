@@ -56,8 +56,26 @@ But then it became:
 - [Phabricator](https://phabricator.survation.com/) where every bit of my code, and some needed for the Data Scientist was shared. Let alone to get through me everbody had to first log their query there, stopping unnecesary questions that would be replied with a link to [lmgtfy.com](https://www.lmgtfy.app/)
 - Survation Utils: a set of Python utilities that worked alongisde the panel continously to create samples, email users and scrape the answers of the users to the surveys to be used to sample them. 
 - Survation Data: Jupyter Notebooks with several utilities to perform some data science with the data from Mongo or clean up respondent data from dirty datasets. 
+- [Survation File](https://files.survation.com/login) a OwnCloud instance used as a file drop so clients could sent data safely or viceversa. 
+- [Sensu](https://sensu.survation.com) to monitor their cloud. Sending to my smartwatch alarms if anything failed through Pushover. 
+- Grafana to monitor the panelist users, the sign-ups, the rate of growth, the completion of surveys and their cost. 
+- [Survation Dashboards](https://visual.survation.com/) Shiny dashboards hidden per client, behind a user-protected page. Their data scientist provided the visualisations, I provided the platform and configured it for each client. 
+
+## Enter Kubernetes
+
+As it was becoming unmanageable I decided to use Kubernetes to orchestrate them all, self-heal and not have a hundred different copies of MariaDB doing the same thing. Let alone assigning whatever.survation.com domain names was much easier using Traefik inside Kubernetes. 
+
+I configured the whole thing in Terraform to create the cloud while Ansible to configure the machines, including pulling from Velero the back-ups of every service. I tested the setup with production-mirrored data, destroying and rebuilding it once and again until the whole thing could be destroyed with a "terraform destroy --auto-approve" command and rebuilt losing absolutely nothing with "terraform apply" including domain names assignment using Digital Ocean via Terraform code. 
+
+The final setup was:
+- AWS SES to send emails. 
+- Digital Ocean as CDN, bucket for back ups and DNS nameservers for all of Survation domains and subdomains. 
+- Hetzner as the actual machines running it all, somewhere in Finland.
+
+As per today the Survation cloud still runs under this setup and I learnt a good lesson that I tattooed in my right arm. 
 
 
+![The Survation Panel](/projects/lessismore.jpg)
 
 
 
