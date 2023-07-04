@@ -7,8 +7,9 @@ import {
   RectangleStackIcon,
   TableCellsIcon,
   CodeBracketIcon,
-    CubeIcon,
-
+  CubeIcon,
+  CommandLineIcon,
+  ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
 
 const skillsets = [
@@ -53,6 +54,10 @@ const skillsets = [
       {
         src: "/logos/ecma6.png",
         alt: "JavaScript",
+      },
+      {
+        src: "/logos/nodejs.png",
+        alt: "Node.js",
       },
       {
         src: "/logos/java.png",
@@ -100,9 +105,42 @@ const skillsets = [
       },
     ],
   },
+  { // Create another section for System Administration
+    title: "System Administration",
+    description:
+        "The field of work that is in charge of maintaining reliable computer systems in a multi-user environment",
+    icon: CommandLineIcon,
+    logos: [
+        {
+            src: "/logos/ubuntu.png",
+            alt: "Ubuntu",
+        },
+        {
+            src: "/logos/debian.png",
+            alt: "Debians",
+        },
+        {
+            src: "/logos/alpine.png",
+            alt: "Alpine",
+        },
+        {
+            src: "/logos/freebsd.jpg",
+            alt: "FreeBSD",
+        },
+        {
+            src: "/logos/bash.png",
+            alt: "Bash",
+        },
+        {
+            src: "/logos/fish.png",
+            alt: "Fish Shell",
+        },
+    ]
+  },
   {
-    title: "Frameworks",
-    description: "A software platform that provides reusable components, tools and libraries to assist developers",
+    title: "Frameworks & Libraries",
+    description:
+      "A software platform that provides reusable components, tools and libraries to assist developers",
     icon: TableCellsIcon,
     logos: [
       {
@@ -140,6 +178,25 @@ const skillsets = [
     ],
   },
   {
+    title: "Content Management Systems",
+    description: "A software platform that provides tools to manage content without the end user having to know anything about coding",
+    icon: ComputerDesktopIcon,
+    logos: [
+        {
+            src: "/logos/wordpress.png",
+            alt: "Wordpress",
+          },
+          {
+            src: "/logos/gatsby.png",
+            alt: "Gatsby",
+          },
+          {
+            src: "/logos/jekyll.png",
+            alt: "Jekyll",
+          },
+        ]
+  },
+  {
     title: "Databases",
     description:
       "Organized collections of data, generally stored and accessed electronically from a computer system",
@@ -154,7 +211,7 @@ const skillsets = [
         alt: "MariaDB",
       },
       {
-        src: "/logos/mongo2.png",
+        src: "/logos/mongo.png",
         alt: "MongoDB",
       },
       {
@@ -166,7 +223,7 @@ const skillsets = [
         alt: "SQLite",
       },
       {
-        src: "/logos/mysql3.png",
+        src: "/logos/mysql.png",
         alt: "MySQL",
       },
     ],
@@ -214,7 +271,7 @@ export default function Skillset() {
           The Skillset
         </h1>
       </Link>
-      <p className="text-white text-2xl text-center justify-center mt-10">
+      <p className="text-white text-2xl text-center justify-center mt-10 px-10">
         These are all the technologies I have worked with up-to-date
       </p>
       <div className="">
@@ -222,7 +279,7 @@ export default function Skillset() {
           <div className="md:columns-3 pt-10 gap-8 p-5">
             {skillsets.map((item) => (
               <div className="mb-8 w-full break-inside-avoid-column">
-                <div className="bg-white border-indigo-700 border-2 rounded-lg ">
+                <div className="bg-white border-indigo-700 border-2 rounded-lg">
                   <div className="p-2 bg-indigo-700  text-white rounded-lg border-solid border-white border">
                     <div className="float-left mb-1 ml-2 mt-3 mr-3 flex h-20 w-20 items-center justify-center rounded-full bg-white">
                       <item.icon
@@ -235,7 +292,11 @@ export default function Skillset() {
                       <p className="text-sm">{item.description}</p>
                     </div>
                   </div>
-                  <div className="flex flex-row flex-wrap bg-white p-2 space-y-5 space-x-5 items-center justify-center pb-10">
+                  <div
+                    className="flex flex-row flex-wrap bg-white p-2 
+                                space-y-5 space-x-5 items-center 
+                                justify-center pb-10 rounded-b-full"
+                  >
                     <div></div>
                     {item.logos.map((logo) => (
                       <Image
