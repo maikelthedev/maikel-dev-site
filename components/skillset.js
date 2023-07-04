@@ -95,7 +95,7 @@ const skillsets = [
         alt: "Kubernetes",
       },
       {
-        src: "/logos/jenkins.svg",
+        src: "/logos/jenkins.png",
         alt: "Jenkins",
       },
     ],
@@ -114,7 +114,7 @@ const skillsets = [
         alt: "Angular",
       },
       {
-        src: "/logos/next.svg",
+        src: "/logos/nextjs.png",
         alt: "Next.js",
       },
       {
