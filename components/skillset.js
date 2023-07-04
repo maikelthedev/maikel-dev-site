@@ -36,7 +36,7 @@ const skillsets = [
         alt: "Azure",
       },
       {
-        src: "/logos/hetzner2.png",
+        src: "/logos/hetzner.png",
         alt: "Hetzner",
       },
     ],
@@ -64,11 +64,11 @@ const skillsets = [
         alt: "Java",
       },
       {
-        src: "/logos/css3.png",
-        alt: "css3",
+        src: "/logos/css.png",
+        alt: "css",
       },
       {
-        src: "/logos/html5.png",
+        src: "/logos/html.png",
         alt: "Html",
       },
       {
@@ -84,7 +84,7 @@ const skillsets = [
     icon: CubeIcon,
     logos: [
       {
-        src: "/logos/terra.png",
+        src: "/logos/terraform.png",
         alt: "Terraform",
       },
       {
@@ -106,7 +106,7 @@ const skillsets = [
     ],
   },
   { // Create another section for System Administration
-    title: "System Administration",
+    title: "Cloud Administration",
     description:
         "The field of work that is in charge of maintaining reliable computer systems in a multi-user environment",
     icon: CommandLineIcon,
@@ -115,6 +115,14 @@ const skillsets = [
             src: "/logos/ubuntu.png",
             alt: "Ubuntu",
         },
+        {
+          src: "/logos/velero.png",
+          alt: "Velero",
+        },
+        {
+          src: "/logos/qemu.png",
+          alt: "Qemu",
+      },
         {
             src: "/logos/debian.png",
             alt: "Debians",
@@ -168,6 +176,10 @@ const skillsets = [
         alt: "Tailwind",
       },
       {
+        src: "/logos/handlebars.png",
+        alt: "Handlebars",
+      },
+      {
         src: "/logos/bootstrap.png",
         alt: "Bootstrap",
       },
@@ -193,6 +205,10 @@ const skillsets = [
           {
             src: "/logos/ghost.png",
             alt: "Ghost.js",
+          },
+          {
+            src: "/logos/publii.png",
+            alt: "Publii",
           },
           {
             src: "/logos/drupal.png",
