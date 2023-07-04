@@ -1,6 +1,8 @@
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { getPostData } from '@/lib/project-utils';
 import Image from 'next/image'
+import Link from 'next/link';
 
 function Projects(props) {
   const {markdown} = props;
@@ -25,6 +27,18 @@ function Projects(props) {
         <Image className="w-full md:w-6/12" src={image.src} alt={image.alt} width={500} height={500} />
       </div>
     },
+    li(details) {
+      return <li className=""> {details.children } </li>
+    },
+    ul(details) {
+      return <ul className="list-disc px-5"> {details.children } </ul>
+    },
+    ol(details) {
+      return <ul className="list-decimal px-10"> {details.children } </ul>
+    },
+    a(details)  {
+      return <Link className="text-indigo-900 font-semibold" href={details.href} target="_blank">{details.children}</Link>
+    }
     /*
     p(paragraph) {
       const { node } = paragraph;
@@ -50,7 +64,7 @@ function Projects(props) {
   }
   return (
     <div className="p-6 md:mx-20">
-      <ReactMarkdown components={customRenderers}>{markdown}</ReactMarkdown>
+      <ReactMarkdown components={customRenderers} remarkPlugins={[remarkGfm]} >{markdown}</ReactMarkdown>
     </div>
   )
 }
