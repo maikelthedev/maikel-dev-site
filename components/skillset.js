@@ -20,7 +20,7 @@ const skillsets = [
     icon: CloudIcon,
     logos: [
       {
-        src: "/logos/aws3.png",
+        src: "/logos/aws.png",
         alt: "Amazon Web Services",
       },
       {
@@ -148,6 +148,10 @@ const skillsets = [
         alt: "Django",
       },
       {
+        src: "/logos/scrapy.png",
+        alt: "Scrapy",
+      },
+      {
         src: "/logos/angular.png",
         alt: "Angular",
       },
@@ -156,7 +160,7 @@ const skillsets = [
         alt: "Next.js",
       },
       {
-        src: "/logos/react3.png",
+        src: "/logos/react.png",
         alt: "React",
       },
       {
@@ -185,6 +189,18 @@ const skillsets = [
         {
             src: "/logos/wordpress.png",
             alt: "Wordpress",
+          },
+          {
+            src: "/logos/ghost.png",
+            alt: "Ghost.js",
+          },
+          {
+            src: "/logos/drupal.png",
+            alt: "Drupal",
+          },
+          {
+            src: "/logos/mediawiki.png",
+            alt: "Mediawiki",
           },
           {
             src: "/logos/gatsby.png",
@@ -227,6 +243,26 @@ const skillsets = [
         alt: "MySQL",
       },
     ],
+  },
+  {
+    title: "Web Servers",
+    description:
+        "A computer system that processes requests via HTTP, the basic network protocol used to distribute information on the World Wide Web",
+    icon: ComputerDesktopIcon,
+    logos: [
+        {
+            src: "/logos/nginx.webp",
+            alt: "Nginx",
+        },
+        {
+            src: "/logos/apache2.png",
+            alt: "Apache",
+        },
+        {
+            src: "/logos/traefik.png",
+            alt: "Traefik",
+        },
+    ]
   },
   {
     title: "Cloud Monitoring",
