@@ -40,7 +40,7 @@ export function Post(props) {
     },
     img(image) {
       return (
-        <div className="flex items-center justify-center py-5">
+        <span className="flex items-center justify-center py-5">
           <Image
             className="w-full md:w-6/12"
             src={image.src}
@@ -48,7 +48,7 @@ export function Post(props) {
             width={500}
             height={500}
           />
-        </div>
+        </span>
       );
     },
     li(details) {

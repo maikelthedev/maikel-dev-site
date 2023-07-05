@@ -25,7 +25,7 @@ export default function Skillset() {
           <div className="">
             <div className="md:columns-3 pt-10 gap-8 p-5">
               {skillsets.map((item) => (
-                <div className="mb-8 w-full break-inside-avoid-column">
+                <div key={item.id} className="mb-8 w-full break-inside-avoid-column">
                   <div className="bg-white border-indigo-700 border-2 rounded-lg">
                     <div className="p-2 bg-indigo-700  text-white rounded-lg border-solid border-white border">
                       <div className="float-left mb-1 ml-2 mt-3 mr-3 flex h-20 w-20 items-center justify-center rounded-full bg-white">
@@ -52,7 +52,7 @@ export default function Skillset() {
                           alt={logo.alt}
                           width={100}
                           height={100}
-                          key={logo.alt}
+                          key={logo.id}
                         />
                       ))}
                     </div>

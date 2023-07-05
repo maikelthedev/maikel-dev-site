@@ -57,7 +57,7 @@ But then it became:
 - Survation Utils: a set of Python utilities that worked alongisde the panel continously to create samples, email users and scrape the answers of the users to the surveys to be used to sample them. 
 - Survation Data: Jupyter Notebooks with several utilities to perform some data science with the data from Mongo or clean up respondent data from dirty datasets. 
 - [Survation File](https://files.survation.com/login) a OwnCloud instance used as a file drop so clients could sent data safely or viceversa. 
-- [Sensu](https://sensu.survation.com) to monitor their cloud. Sending to my smartwatch alarms if anything failed through Pushover. 
+- [Sensu](https://sensu.survation.com) to monitor their cloud. Sending to my smartwatch alarms if anything failed through Pushover. Before I was using good-old Nagios, later Icynga. I changed to Sensu because I wanted a simple distributed test system that could be in different places. 
 - Grafana to monitor the panelist users, the sign-ups, the rate of growth, the completion of surveys and their cost. 
 - [Survation Dashboards](https://visual.survation.com/) Shiny dashboards hidden per client, behind a user-protected page. Their data scientist provided the visualisations, I provided the platform and configured it for each client. 
 
@@ -75,7 +75,7 @@ The final setup was:
 As per today the Survation cloud still runs under this setup and I learnt a good lesson that I tattooed in my right arm. 
 
 
-![The Survation Panel](/projects/lessismore.jpg)
+![The Survation Panel](/posts/lessismore.webp)
 
 
 
