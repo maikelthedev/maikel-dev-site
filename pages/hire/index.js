@@ -2,6 +2,7 @@ import { useState, Fragment } from "react";
 import Hero from "@/components/hero";
 import Image from "next/image";
 import Link from "next/link";
+import { socials } from "@/data/socials";
 
 function Hire() {
   let sendLabel = "Send";
@@ -11,7 +12,8 @@ function Hire() {
   const header = {
     subtitle: "Hire Me",
     title: "Bootstrap your way to success",
-    slogan: "Experience seamless collaboration.Together, we'll navigate the intricacies of your project, ensuring a smooth and efficient workflow.",
+    slogan:
+      "Experience seamless collaboration.Together, we'll navigate the intricacies of your project, ensuring a smooth and efficient workflow.",
   };
 
   async function handleSubmit(event) {
@@ -45,59 +47,46 @@ function Hire() {
     <Fragment>
       <Hero header={header} />
 
-      <div className="flex flex-col md:flex-row p-5 bg-white mx-auto max-w-6xl">
+      <div className="flex flex-col md:flex-row p-5 bg-white md:mx-auto md:max-w-6xl">
         <div className="w-full md:w-8/12 md:p-10 p-5">
           <h1 className="text-2xl font-bold mb-5">Contact Me</h1>
-          <p className="text-md">There are multiple ways to contact me, you can use the form on this page so I receive an email with your message, I check my email several times per day. Or you can use any of the social media links below or to get an instant response, in case it is <span className="font-bold">absolutely urgent,</span> use my Matrix account.</p>
+          <p className="text-md">
+            There are multiple ways to contact me, you can use the form on this
+            page so I receive an email with your message, I check my email
+            several times per day. Or you can use any of the social media links
+            below or to get an instant response, in case it is{" "}
+            <span className="font-bold">absolutely urgent,</span> use my Matrix
+            account.
+          </p>
           <br />
-          <p className="text-md">I do not regularly check my Linkedin account</p>
+          <p className="text-md">
+            I do not regularly check my Linkedin account
+          </p>
           <h2 className="text-xl font-bold mt-5 mb-3">Social Media</h2>
-          <div className="flex flex-row space-x-5">
-            <a href="https://matrix.to/#/@maikelthedev:matrix.org" target="_blank">
-              <div className="flex flex-col items-center justify-center">
-                <Image
-                  className="hover:scale-150 duration-200"
-                  src="/logos/element.webp"
-                  width={30}
-                  height={30}
-                />
-                <p className="text-sm">Matrix</p>
+          <div className="flex flex-row space-x-5 mx-10">
+            {socials.map((social) => (
+              <Link key={social.id} href={social.url} target="_blank">
+                <div className="flex flex-col items-center justify-center">
+                  <Image
+                    className="md:hover:scale-150 duration-200"
+                    src={social.logo}
+                    width={30}
+                    height={30}
+                  />
+                  <p className="text-sm">{social.name}</p>
                 </div>
-            </a>
-            <a href="https://www.linkedin.com/in/maikelfrias/" target="_blank">
-              <div className="flex flex-col items-center justify-center">
-                <Image
-                  className="hover:scale-150 duration-200"
-                  src="/logos/linkedin.webp"
-                  width={30}
-                  height={30}
-                />
-                <p className="text-sm">LinkedIn</p>
-                </div>
-            </a>
-            <Link href="https://fedi.maikel.dev/maikel" target="_blank">
-              <div className="flex flex-col items-center justify-center">
-                <Image
-                  className="hover:scale-150 duration-200"
-                  src="/logos/calckey.webp"
-                  width={30}
-                  height={30}
-                />
-                <p className="text-sm">Calckey</p>
-                </div>
-            </Link>
+              </Link>
+            ))}
           </div>
-
-
-
-
-          
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex flex-col">
+          <h1 className="md:invisible text-2xl mx-5 font-bold mb-5">
+            Contact Form
+          </h1>
           <form
             onSubmit={handleSubmit}
             method="post"
-            className="bg-white shadow-2xl rounded-lg px-8 pt-6 pb-8  max-w-3xl"
+            className="bg-white shadow-2xl rounded-lg px-8 w-full pt-6 pb-8"
           >
             <div className="mb-4">
               <label

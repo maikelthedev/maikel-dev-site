@@ -1,0 +1,20 @@
+export const socials = [
+  {
+    id: 1,
+    name: "Matrix",
+    url: "https://matrix.to/#/@maikelthedev:matrix.org",
+    logo: "/logos/element.webp",
+  },
+  {
+    id: 2,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/maikelfrias/",
+    logo: "/logos/linkedin.webp",
+  },
+  {
+    id: 3,
+    name: "Calckey",
+    url: "https://fedi.maikel.dev/maikel",
+    logo: "/logos/calckey.webp",
+  },
+];
