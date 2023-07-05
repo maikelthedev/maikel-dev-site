@@ -1,7 +1,7 @@
 export const clients = [
     {
       name: "Survation",
-      logo: "/surva.png",
+      logo: "surva.webp",
       description:
         "Survation is a Market Research & Political Pooling company based in London, UK.",
       projects: [
@@ -44,41 +44,41 @@ export const clients = [
     },
     {
       name: "SkunkWerks",
-      logo: "/skunkwerks.png",
+      logo: "skunkwerks.webp",
       description:
-        "Survation is a Market Research & Political Pooling company based in London, UK.",
+        "SkunkWerks specialises in designing, building and providing ongoing support for distributed computer systems and multi-peer networking technologies",
       projects: [
         {
           name: "OCI Development Cloud",
           description: "This is a project",
           technologies: ["oracle", "terraform", "freebsd"],
-          markdown: "default",
+          markdown: "oci-dev-cloud",
         },
         {
           name: "Automated FreeBSD Builds for OCI",
           description: "This is a project",
           technologies: ["oracle", "ansible", "freebsd", "qemu"],
-          markdown: "default",
+          markdown: "automated-freebsd-oci",
         },
       ],
     },
     {
       name: "Maikel OÜ",
-      logo: "/companylogo.png",
+      logo: "companylogo.webp",
       description:
-        "Survation is a Market Research & Political Poolling company based in London, UK.",
+        "Maikel OÜ is a company that provides IT services to small and medium sized businesses everywhere on the globe.",
       projects: [
         {
           name: "This Website",
           description: "This is a project",
           technologies: ["nextjs", "tailwind", "html", "css"],
-          markdown: "default",
+          markdown: "this-website",
         },
         {
           name: "Personal Blog",
           description: "This is a project",
           technologies: ["publii", "handlebars"],
-          markdown: "default",
+          markdown: "personal-blog",
         },
       ],
     },

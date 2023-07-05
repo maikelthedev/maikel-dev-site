@@ -16,15 +16,15 @@ function Footer() {
           <div className="flex flex-col items-center md:flex-row">
             <Image
               className="mt-10 md:mt-2 hover:scale-105 hover:rotate-90 hover:border-0 duration-200 shadow-xl shadow-indigo-200 rounded-full sm:mb-2"
-              src="/me.jpg"
+              src="/me.webp"
               alt="Picture of the author"
               width={50}
               height={50}
             />
-            <div class="grid grid-cols-1 text-center items-center justify-center pt-5 md:pt-0">
+            <div className="grid grid-cols-1 text-center items-center justify-center pt-5 md:pt-0">
               <p className="text-lg font-semibold md:ml-2">
                 Maikel OÜ
-                <sup class="font-features sups">©</sup>
+                <sup className="font-features sups">©</sup>
               </p>
               <p className="text-sm">2020 - {new Date().getFullYear()}</p>
             </div>

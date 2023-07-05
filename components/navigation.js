@@ -68,7 +68,7 @@ function Navigation() {
             <span className="sr-only">Maikel OÜ</span>
             <img
               className="h-8 w-auto hover:scale-150 duration-200"
-              src="/NOTHING.png"
+              src="/NOTHING.webp"
               alt=""
             />
           </Link>
@@ -131,7 +131,7 @@ function Navigation() {
               <span className="sr-only">Maikel OÜ</span>
               <img
                 className="h-8 w-auto hover:bg-indigo-50"
-                src="/NOTHING.png"
+                src="/NOTHING.webp"
                 alt=""
               />
             </Link>

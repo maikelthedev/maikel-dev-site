@@ -17,23 +17,23 @@ export const skillsets = [
       icon: CloudIcon,
       logos: [
         {
-          src: "/logos/aws.png", // TODO: Simplify this logo structure
+          src: "/logos/aws.webp", // TODO: Simplify this logo structure
           alt: "Amazon Web Services",
         },
         {
-          src: "/logos/oracle.png",
+          src: "/logos/oracle.webp",
           alt: "Oracle Cloud Infrastructure",
         },
         {
-          src: "/logos/digitalocean.png",
+          src: "/logos/digitalocean.webp",
           alt: "Digital Ocean",
         },
         {
-          src: "/logos/azure.png",
+          src: "/logos/azure.webp",
           alt: "Azure",
         },
         {
-          src: "/logos/hetzner.png",
+          src: "/logos/hetzner.webp",
           alt: "Hetzner",
         },
       ],
@@ -45,31 +45,31 @@ export const skillsets = [
       icon: CodeBracketIcon,
       logos: [
         {
-          src: "/logos/python.png",
+          src: "/logos/python.webp",
           alt: "Python",
         },
         {
-          src: "/logos/javascript.png",
+          src: "/logos/javascript.webp",
           alt: "JavaScript",
         },
         {
-          src: "/logos/nodejs.png",
+          src: "/logos/nodejs.webp",
           alt: "Node.js",
         },
         {
-          src: "/logos/java.png",
+          src: "/logos/java.webp",
           alt: "Java",
         },
         {
-          src: "/logos/css.png",
+          src: "/logos/css.webp",
           alt: "css",
         },
         {
-          src: "/logos/html.png",
+          src: "/logos/html.webp",
           alt: "Html",
         },
         {
-          src: "/logos/rust.png",
+          src: "/logos/rust.webp",
           alt: "Rust",
         },
       ],
@@ -81,23 +81,23 @@ export const skillsets = [
       icon: CubeIcon,
       logos: [
         {
-          src: "/logos/terraform.png",
+          src: "/logos/terraform.webp",
           alt: "Terraform",
         },
         {
-          src: "/logos/ansible.png",
+          src: "/logos/ansible.webp",
           alt: "Ansible",
         },
         {
-          src: "/logos/docker.png",
+          src: "/logos/docker.webp",
           alt: "Docker",
         },
         {
-          src: "/logos/kubernetes.png",
+          src: "/logos/kubernetes.webp",
           alt: "Kubernetes",
         },
         {
-          src: "/logos/jenkins.png",
+          src: "/logos/jenkins.webp",
           alt: "Jenkins",
         },
       ],
@@ -109,35 +109,35 @@ export const skillsets = [
       icon: CommandLineIcon,
       logos: [
           {
-              src: "/logos/ubuntu.png",
+              src: "/logos/ubuntu.webp",
               alt: "Ubuntu",
           },
           {
-            src: "/logos/velero.png",
+            src: "/logos/velero.webp",
             alt: "Velero",
           },
           {
-            src: "/logos/qemu.png",
+            src: "/logos/qemu.webp",
             alt: "Qemu",
         },
           {
-              src: "/logos/debian.png",
+              src: "/logos/debian.webp",
               alt: "Debians",
           },
           {
-              src: "/logos/alpine.png",
+              src: "/logos/alpine.webp",
               alt: "Alpine",
           },
           {
-              src: "/logos/freebsd.png",
+              src: "/logos/freebsd.webp",
               alt: "FreeBSD",
           },
           {
-              src: "/logos/bash.png",
+              src: "/logos/bash.webp",
               alt: "Bash",
           },
           {
-              src: "/logos/fish.png",
+              src: "/logos/fish.webp",
               alt: "Fish Shell",
           },
       ]
@@ -149,43 +149,43 @@ export const skillsets = [
       icon: TableCellsIcon,
       logos: [
         {
-          src: "/logos/django.png",
+          src: "/logos/django.webp",
           alt: "Django",
         },
         {
-          src: "/logos/scrapy.png",
+          src: "/logos/scrapy.webp",
           alt: "Scrapy",
         },
         {
-          src: "/logos/angular.png",
+          src: "/logos/angular.webp",
           alt: "Angular",
         },
         {
-          src: "/logos/nextjs.png",
+          src: "/logos/nextjs.webp",
           alt: "Next.js",
         },
         {
-          src: "/logos/react.png",
+          src: "/logos/react.webp",
           alt: "React",
         },
         {
-          src: "/logos/tailwind.png",
+          src: "/logos/tailwind.webp",
           alt: "Tailwind",
         },
         {
-          src: "/logos/handlebars.png",
+          src: "/logos/handlebars.webp",
           alt: "Handlebars",
         },
         {
-          src: "/logos/bootstrap.png",
+          src: "/logos/bootstrap.webp",
           alt: "Bootstrap",
         },
         {
-          src: "/logos/express.png",
+          src: "/logos/express.webp",
           alt: "Express",
         },
         {
-          src: "/logos/flask.png",
+          src: "/logos/flask.webp",
           alt: "Flask",
         },
       ],
@@ -196,31 +196,31 @@ export const skillsets = [
       icon: ComputerDesktopIcon,
       logos: [
           {
-              src: "/logos/wordpress.png",
+              src: "/logos/wordpress.webp",
               alt: "Wordpress",
             },
             {
-              src: "/logos/ghost.png",
+              src: "/logos/ghost.webp",
               alt: "Ghost.js",
             },
             {
-              src: "/logos/publii.png",
+              src: "/logos/publii.webp",
               alt: "Publii",
             },
             {
-              src: "/logos/drupal.png",
+              src: "/logos/drupal.webp",
               alt: "Drupal",
             },
             {
-              src: "/logos/mediawiki.png",
+              src: "/logos/mediawiki.webp",
               alt: "Mediawiki",
             },
             {
-              src: "/logos/gatsby.png",
+              src: "/logos/gatsby.webp",
               alt: "Gatsby",
             },
             {
-              src: "/logos/jekyll.png",
+              src: "/logos/jekyll.webp",
               alt: "Jekyll",
             },
           ]
@@ -232,27 +232,27 @@ export const skillsets = [
       icon: RectangleStackIcon,
       logos: [
         {
-          src: "/logos/pgsql.png",
+          src: "/logos/pgsql.webp",
           alt: "PostgreSQL",
         },
         {
-          src: "/logos/mariadb.png",
+          src: "/logos/mariadb.webp",
           alt: "MariaDB",
         },
         {
-          src: "/logos/mongo.png",
+          src: "/logos/mongo.webp",
           alt: "MongoDB",
         },
         {
-          src: "/logos/redis.png",
+          src: "/logos/redis.webp",
           alt: "Redis",
         },
         {
-          src: "/logos/sqlite.png",
+          src: "/logos/sqlite.webp",
           alt: "SQLite",
         },
         {
-          src: "/logos/mysql.png",
+          src: "/logos/mysql.webp",
           alt: "MySQL",
         },
       ],
@@ -264,15 +264,15 @@ export const skillsets = [
       icon: ComputerDesktopIcon,
       logos: [
           {
-              src: "/logos/nginx.png",
+              src: "/logos/nginx.webp",
               alt: "Nginx",
           },
           {
-              src: "/logos/apache.png",
+              src: "/logos/apache.webp",
               alt: "Apache",
           },
           {
-              src: "/logos/traefik.png",
+              src: "/logos/traefik.webp",
               alt: "Traefik",
           },
       ]
@@ -284,27 +284,27 @@ export const skillsets = [
       icon: ShieldCheckIcon,
       logos: [
         {
-          src: "/logos/grafana.png",
+          src: "/logos/grafana.webp",
           alt: "Grafana",
         },
         {
-          src: "/logos/sensu.png",
+          src: "/logos/sensu.webp",
           alt: "sensu",
         },
         {
-            src: "/logos/locust.png",
+            src: "/logos/locust.webp",
             alt: "locust",
           },
         {
-          src: "/logos/nagios.png",
+          src: "/logos/nagios.webp",
           alt: "Nagios",
         },
         {
-          src: "/logos/icinga.png",
+          src: "/logos/icinga.webp",
           alt: "Icinga",
         },
         {
-          src: "/logos/pushover.png",
+          src: "/logos/pushover.webp",
           alt: "Pushover",
         },
       ],
