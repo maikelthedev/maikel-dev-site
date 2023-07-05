@@ -17,7 +17,7 @@ export const skillsets = [
       icon: CloudIcon,
       logos: [
         {
-          src: "/logos/aws.png",
+          src: "/logos/aws.png", // TODO: Simplify this logo structure
           alt: "Amazon Web Services",
         },
         {
@@ -29,7 +29,7 @@ export const skillsets = [
           alt: "Digital Ocean",
         },
         {
-          src: "/logos/azure2.png",
+          src: "/logos/azure.png",
           alt: "Azure",
         },
         {
@@ -49,7 +49,7 @@ export const skillsets = [
           alt: "Python",
         },
         {
-          src: "/logos/ecma6.png",
+          src: "/logos/javascript.png",
           alt: "JavaScript",
         },
         {
@@ -69,7 +69,7 @@ export const skillsets = [
           alt: "Html",
         },
         {
-          src: "/logos/rust2.png",
+          src: "/logos/rust.png",
           alt: "Rust",
         },
       ],
@@ -129,7 +129,7 @@ export const skillsets = [
               alt: "Alpine",
           },
           {
-              src: "/logos/freebsd.jpg",
+              src: "/logos/freebsd.png",
               alt: "FreeBSD",
           },
           {
@@ -248,7 +248,7 @@ export const skillsets = [
           alt: "Redis",
         },
         {
-          src: "/logos/sqlite2.png",
+          src: "/logos/sqlite.png",
           alt: "SQLite",
         },
         {
@@ -264,11 +264,11 @@ export const skillsets = [
       icon: ComputerDesktopIcon,
       logos: [
           {
-              src: "/logos/nginx.webp",
+              src: "/logos/nginx.png",
               alt: "Nginx",
           },
           {
-              src: "/logos/apache2.png",
+              src: "/logos/apache.png",
               alt: "Apache",
           },
           {
@@ -288,7 +288,7 @@ export const skillsets = [
           alt: "Grafana",
         },
         {
-          src: "/logos/sensu.jpg",
+          src: "/logos/sensu.png",
           alt: "sensu",
         },
         {

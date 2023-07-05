@@ -18,6 +18,12 @@ export const clients = [
           markdown: "panel-backend",
         },
         {
+            name: "Panel Utils",
+            description: "This is a project",
+            technologies: ["python", "aws", "mongo", "redis","foundation"],
+            markdown: "panel-utils",
+          },
+        {
           name: "Survation Cloud",
           description: "This is a project",
           technologies: [
