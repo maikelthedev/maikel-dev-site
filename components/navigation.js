@@ -85,7 +85,13 @@ function Navigation() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Link
-            href="/services/#services"
+            href="/"
+            className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
+          >
+            Home
+          </Link>
+          <Link
+            href="/services"
             className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
           >
             Services
@@ -151,7 +157,14 @@ function Navigation() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Link
-                  href="/services/#services"
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/services"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
                 >

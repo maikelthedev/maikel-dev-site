@@ -11,28 +11,33 @@ export const clients = [
       {
         name: "Panel Frontend",
         id: uuidv4(),
+        description:
+          "Angular app for panelists to complete surveys and researchers to manage surveys",
         technologies: [
           { name: "angular", id: uuidv4() },
           { name: "bootstrap", id: uuidv4() },
           { name: "html", id: uuidv4() },
           { name: "css", id: uuidv4() },
         ],
-        markdown: "panel-frontend",
+        link: "panel-frontend",
       },
       {
         name: "Panel Backend",
         id: uuidv4(),
+        description: "ExpressJS app serving a REST API to the frontend",
         technologies: [
           { name: "express", id: uuidv4() },
           { name: "nodejs", id: uuidv4() },
           { name: "mongo", id: uuidv4() },
           { name: "redis", id: uuidv4() },
         ],
-        markdown: "panel-backend",
+        link: "panel-backend",
       },
       {
         name: "Panel Utils",
         id: uuidv4(),
+        description:
+          "Background utilities for the panel to create samples and send emails",
         technologies: [
           { name: "python", id: uuidv4() },
           { name: "aws", id: uuidv4() },
@@ -40,11 +45,13 @@ export const clients = [
           { name: "redis", id: uuidv4() },
           { name: "foundation", id: uuidv4() },
         ],
-        markdown: "panel-utils",
+        link: "panel-utils",
       },
       {
         name: "Survation Cloud",
         id: uuidv4(),
+        description:
+          "Kubernetes cluster for hosting the panel and every other Survation services",
         technologies: [
           { name: "kubernetes", id: uuidv4() },
           { name: "nginx", id: uuidv4() },
@@ -57,7 +64,7 @@ export const clients = [
           { name: "mariadb", id: uuidv4() },
           { name: "wordpress", id: uuidv4() },
         ],
-        markdown: "survation-cloud",
+        link: "survation-cloud",
       },
     ],
   },
@@ -71,23 +78,26 @@ export const clients = [
       {
         name: "OCI Development Cloud",
         id: uuidv4(),
+        description:
+          "Oracle Cloud Infrastructure as Code with custom-made FreeBSD image",
         technologies: [
           { name: "oracle", id: uuidv4() },
           { name: "terraform", id: uuidv4() },
           { name: "freebsd", id: uuidv4() },
         ],
-        markdown: "oci-dev-cloud",
+        link: "oci-dev-cloud",
       },
       {
         name: "Automated FreeBSD Builds for OCI",
         id: uuidv4(),
+        description: "Ansible script to run a builder machine that builds FreeBSD in & for OCI, launch it and test it",
         technologies: [
           { name: "oracle", id: uuidv4() },
           { name: "ansible", id: uuidv4() },
           { name: "freebsd", id: uuidv4() },
           { name: "qemu", id: uuidv4() },
         ],
-        markdown: "automated-freebsd-oci",
+        link: "automated-freebsd-oci",
       },
     ],
   },
@@ -101,22 +111,24 @@ export const clients = [
       {
         name: "This Website",
         id: uuidv4(),
+        description: "My company website, showcasing my portfolio, services and contact information",
         technologies: [
           { name: "nextjs", id: uuidv4() },
           { name: "tailwind", id: uuidv4() },
           { name: "html", id: uuidv4() },
           { name: "css", id: uuidv4() },
         ],
-        markdown: "this-website",
+        link: "this-website",
       },
       {
         name: "Personal Blog",
         id: uuidv4(),
+        description: "My personal blog, where I write about my experiences and thoughts",
         technologies: [
           { name: "publii", id: uuidv4() },
           { name: "handlebars", id: uuidv4() },
         ],
-        markdown: "personal-blog",
+        link: "personal-blog",
       },
     ],
   },

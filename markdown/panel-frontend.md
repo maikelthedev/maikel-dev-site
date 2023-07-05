@@ -12,7 +12,7 @@ The same interface was used for both panelists and project managers. So they had
 
 The result is in this image
 
-![The Survation Panel](/projects/panel-frontend.webp)
+![The Survation Panel](/posts/panel-frontend.webp)
 
 ## Features
 

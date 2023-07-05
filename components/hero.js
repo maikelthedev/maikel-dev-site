@@ -1,17 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function Hero() {
+function Hero(props) {
+  const { subtitle, title, slogan } = props.header;
   return (
-    <div className="bg-gray-100 py-10">
-      <div className="mx-auto px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row mx-auto max-w-2xl lg:text-center bg-white rounded-lg p-6">
+    <div className="bg-gray-100  md:py-10">
+      <div className="mx-auto p-3 md:p-0 md:px-8">
+        <div
+          className="flex flex-col md:flex-row mx-auto max-w-2xl text-center bg-white rounded-lg p-6 
+        shadow-slate-700 md:shadow-md"
+        >
           <div className="group grid justify-items-center items-center mb-3 md:min-w-fit md:mr-10">
             <Link href="/hire">
               <Image
-                className="group-hover:scale-105 group-hover:border-0 duration-200 shadow-2xl shadow-indigo-200 rounded-full border-dashed border-2 border-indigo-500 p-2 group-hover:p-0"
+                className="md:group-hover:scale-90 group-hover:shadow-none duration-200 shadow-lg mb-3 shadow-slate-700 rounded-full border-dashed  md:group-hover:mb-0"
                 src="/me.webp"
-                alt="Logo of Maikel with Maikel inside"
+                alt="Logo of Maikel with me inside"
                 width={200}
                 height={200}
               />
@@ -22,15 +26,14 @@ function Hero() {
               </div>
             </Link>
           </div>
-          <div className="">
-            <p className="mt-2 text-3xl font-bold tracking-tight text-indigo-900 md:text-4xl text-center">
-              One Man for All Your Tech Needs
+          <div className="flex flex-col justify-center items-center">
+            <h2 className="font-semibold leading-7 text-indigo-600">
+              {subtitle}
+            </h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-black md:text-4xl text-center">
+              {title}
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Full Stack development in multi-language environments and with
-              your cloud architecture designed and monitored all by the same
-              person.
-            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">{slogan}</p>
           </div>
         </div>
       </div>
