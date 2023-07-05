@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { getPostData } from '@/lib/project-utils';
+import { getPostData, getAllPosts } from '@/lib/project-utils';
 import Image from 'next/image'
 import Link from 'next/link';
 
@@ -84,8 +84,11 @@ export async function getStaticProps(context) {
   return {props: { markdown } }  
 }
 
-export function getStaticPaths() {
-  return { paths: [], fallback: true }
+export function getStaticPaths() { // TODO: Implement this properly
+  const posts = getAllPosts();
+  const paths = posts.map((post) => ({ params: { slug: post } }))
+  console.log(paths)
+  return { paths, fallback: false}
 }
 
 
