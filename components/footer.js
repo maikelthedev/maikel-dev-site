@@ -15,11 +15,12 @@ function Footer() {
               height={50}
             />
             <div className="grid grid-cols-1 text-center items-center justify-center pt-5 md:pt-0">
+              <Link href="/about">
               <p className="text-lg font-semibold md:ml-2">
                 Maikel OÜ
-                <sup className="font-features sups">©</sup>
               </p>
               <p className="text-sm">2020 - {new Date().getFullYear()}</p>
+              </Link>
             </div>
           </div>
           <div className="w-10/12 space-y-1 mt-1">
@@ -27,6 +28,9 @@ function Footer() {
               <div></div>
               <div className="basis-1/4 text-center md:text-left hover:text-indigo-500 hover:font-bold">
                 <Link href="/about">About</Link>
+              </div>
+              <div className="basis-1/4 text-center md:text-left hover:text-indigo-500 hover:font-bold">
+                <Link href="/testimonials">Testimonials</Link>
               </div>
               <div className="basis-1/4 text-center md:text-left hover:text-indigo-500 hover:font-bold">
                 <Link href="/services">Services</Link>
@@ -43,7 +47,7 @@ function Footer() {
             <Link href="https://matrix.to/#/@maikelthedev:matrix.org" target="_blank">
               <Image
                 className="hover:scale-150 duration-200"
-                src="/masto2.svg"
+                src="/logos/calckey.webp"
                 width={30}
                 height={30}
               />
