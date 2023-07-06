@@ -4,9 +4,9 @@ import Hero from "@/components/hero";
 function Testimonials() {
   const header = {
     subtitle: "Testimonials & Reviews",
-    title: "What my clients say about me",
+    title: "What others say about me",
     slogan:
-      "I have collaborated with many clients over the years, and here are some of their thoughts about me",
+      "I have collaborated with many people over the years, and here are some of their thoughts about me",
   };
   const testimonials = [
     {
@@ -15,11 +15,13 @@ function Testimonials() {
       role: "CEO @ SkunkWerks",
       content:
         "I think you did an incredible job of landing on all four feet (like a cat!) in quite unfamiliar terrain, picking up OCI like you used it already, and navigating a lot of incomplete information on FreeBSD as well.",
+      logo: "/clients/skunkwerks.webp",
     },
     {
       id: 2,
       name: "John Gibb",
       role: "Head of Projects @ Survation",
+      logo: "/clients/surva.webp",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
     },
@@ -27,6 +29,7 @@ function Testimonials() {
       id: 2,
       name: "Mike Burrows",
       role: "Former CTO @ Survation",
+      logo: "/clients/surva.webp",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
     },
@@ -34,6 +37,7 @@ function Testimonials() {
       id: 2,
       name: "Rushaa Hamid",
       role: "Former Special Projects Manager @ Survation",
+      logo: "/clients/surva.webp",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
     },
@@ -47,10 +51,18 @@ function Testimonials() {
           <h1 className="text-3xl font-bold mb-8">Testimonials</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-white p-6 rounded shadow">
+              <div
+                key={testimonial.id}
+                className="relative bg-white p-6 rounded shadow"
+              >
                 <p className="text-gray-800 mb-2">{testimonial.content}</p>
                 <p className="text-gray-600 font-medium">{testimonial.name}</p>
                 <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                <img
+                  src={testimonial.logo}
+                  alt="Company Logo"
+                  className="absolute bottom-2 right-2 h-8 w-8"
+                />
               </div>
             ))}
           </div>
