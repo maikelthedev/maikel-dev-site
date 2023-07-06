@@ -29,7 +29,8 @@ function Projects(props) {
         />
         <meta property="og:image" content={"https://maikel.dev/" + image} key="og-image" />
         <meta property="og:url" content={`https://maikel.dev/blog/${post}`} key="og-url" />
-        <meta name="twitter:card" content={"https://maikel.dev/" + image} key="twitter:card" />
+        
+        <meta property="twitter:url" content={`https://maikel.dev/blog/${post}`} key="twitter:url"/>
         <meta name="twitter:site" content="@maikelthedev" key="twitter:site" />
         <meta
           name="twitter:creator"
