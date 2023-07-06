@@ -39,12 +39,12 @@ function Footer() {
                 <Link href="/portfolio">Portfolio</Link>
               </div>
               <div className="basis-1/4 text-center md:text-left hover:text-indigo-500 hover:font-bold">
-                <Link href="/hire">Hire Me</Link>
+                <Link href="/contact">Contact</Link>
               </div>
             </div>
           </div>
           <div className="mt-10 flex justify-between mr-2 py-1 md:mt-0">
-            <Link href="https://matrix.to/#/@maikelthedev:matrix.org" target="_blank">
+            <Link href="https://fedi.maikel.dev/@maikel" target="_blank">
               <Image
                 className="hover:scale-150 duration-200"
                 src="/logos/calckey.webp"

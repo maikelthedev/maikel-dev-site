@@ -1,55 +1,7 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Link from "next/link";
-const inter = Inter({ subsets: ["latin"] });
-
-import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  XMarkIcon,
-  CloudArrowUpIcon,
-  ComputerDesktopIcon,
-  CodeBracketSquareIcon,
-  FingerPrintIcon,
-} from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PlayCircleIcon,
-  ChatBubbleBottomCenterIcon,
-} from "@heroicons/react/20/solid";
-import {
-  LockClosedIcon,
-  ServerIcon,
-  LinkIcon,
-} from "@heroicons/react/20/solid";
-const features = [
-  {
-    name: "Bollocks 1",
-    description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: "Bollocks 2",
-    description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    icon: LockClosedIcon,
-  },
-  {
-    name: "Bollocks 3",
-    description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Bollocks 4",
-    description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-    icon: FingerPrintIcon,
-  },
-];
+import { useState } from "react";
+import { Dialog, Popover } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -69,7 +21,7 @@ function Navigation() {
             <img
               className="h-8 w-auto hover:scale-150 duration-200"
               src="/NOTHING.webp"
-              alt=""
+              alt="Maikel Cloud & Software"
             />
           </Link>
         </div>
@@ -112,8 +64,7 @@ function Navigation() {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
-            href="https://matrix.to/#/@maikelthedev:matrix.org"
-            target="_blank"
+            href="/contact"
             className="text-sm font-semibold leading-6 text-indigo-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-700 hover:border-solid hover:border-2 border-2 border-white duration-200 hover:rounded-lg p-1"
           >
             Contact <span aria-hidden="true">&rarr;</span>
@@ -187,8 +138,7 @@ function Navigation() {
               </div>
               <div className="py-6">
                 <Link
-                  href="https://matrix.to/#/@maikelthedev:matrix.org"
-                  target="_blank"
+                  href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-indigo-900 hover:bg-indigo-50"
                 >
