@@ -3,18 +3,14 @@ import Hero from "@/components/hero";
 import Image from "next/image";
 import Link from "next/link";
 import { socials } from "@/data/socials";
+import { headers } from "@/data/headers";
 
-function Hire() {
+function Contact() {
   let sendLabel = "Send";
   const [isSendEnabled, enableSend] = useState(true);
   const [isSendingShown, showIsSending] = useState(false);
   const [isSentShown, showIsSent] = useState(false);
-  const header = {
-    subtitle: "Hire Me",
-    title: "Bootstrap your way to success",
-    slogan:
-      "Experience seamless collaboration.Together, we'll navigate the intricacies of your project, ensuring a smooth and efficient workflow.",
-  };
+  const header = headers.contact
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -153,4 +149,4 @@ function Hire() {
   );
 }
 
-export default Hire;
+export default Contact;

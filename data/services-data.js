@@ -33,7 +33,9 @@ export const services = [
   },
   {
     id: uuidv4(),
-    name: "Whatever else I can come up with",
-    description: "Fuck knows!",
+    name: "Database Design",
+    description:
+      "I can design your database and create the necessary queries for your application to run smoothly in Mongo DB, MySQL, PostgreSQL, or any database of your choice.",
   },
+
 ];

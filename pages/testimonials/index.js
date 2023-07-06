@@ -1,14 +1,9 @@
 import { Fragment } from "react";
 import Hero from "@/components/hero";
 import { testimonials } from "@/data/testimonials-data";
-
+import {headers} from "@/data/headers";
 function Testimonials() {
-  const header = {
-    subtitle: "Testimonials & Reviews",
-    title: "What others say about me",
-    slogan:
-      "I have collaborated with many people over the years, and here are some of their thoughts about me",
-  };
+  const header = headers.testimonials;
 
   return (
     <Fragment>

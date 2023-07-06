@@ -1,16 +1,12 @@
 import { Fragment } from "react";
 import Hero from "@/components/hero";
 import { socials } from "@/data/socials";
+import { headers } from "@/data/headers";
 import Image from "next/image";
 import Link from "next/link";
 
 function About() {
-  const header = {
-    subtitle: "About",
-    title: "Maikel Frias Mosquea",
-    slogan:
-      "Multi-lingual Full-Stack Developer, Cloud Architect & DevOps Engineer",
-  };
+  const header = headers.about; 
 
   return (
     <Fragment>
