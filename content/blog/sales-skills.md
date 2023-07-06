@@ -2,6 +2,7 @@
 title: There's no business without clients
 image: "/posts/sales.webp"
 excerpt: "Notes on a course of salesmanship for start ups that I'm doing"
+date: "2023-07-06"
 ---
 
 ## Introduction

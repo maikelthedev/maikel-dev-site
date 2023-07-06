@@ -11,7 +11,7 @@ function Hero(props) {
         shadow-slate-700 md:shadow-md"
         >
           <div className="group grid justify-items-center items-center mb-3 md:min-w-fit md:mr-10">
-            <Link href="/hire">
+            <Link href="/contact">
               <Image
                 className="md:group-hover:scale-90 group-hover:shadow-none duration-200 shadow-lg mb-3 shadow-slate-700 rounded-full border-dashed  md:group-hover:mb-0"
                 src="/me.webp"

@@ -48,8 +48,8 @@ function Hire() {
       <Hero header={header} />
 
       <div className="flex flex-col md:flex-row p-5 bg-white md:mx-auto md:max-w-6xl">
-        <div className="w-full md:w-8/12 md:p-10 p-5">
-          <h1 className="text-2xl font-bold mb-5">Contact Me</h1>
+        <div className="w-full md:w-8/12 md:p-10 p-5 space-y-5">
+          <h1 className="text-2xl font-bold">Contact Me</h1>
           <p className="text-md">
             There are multiple ways to contact me, you can use the form on this
             page so I receive an email with your message, I check my email
@@ -58,11 +58,15 @@ function Hire() {
             <span className="font-bold">absolutely urgent,</span> use my Matrix
             account.
           </p>
-          <br />
           <p className="text-md">
-            I do not regularly check my Linkedin account
+            If you use Mastodon or any Fediverse flavour (I use Calckey), you
+            can find me as{" "}
+            <span className="font-bold">@maikel@fedi.maikel.dev</span>
           </p>
-          <h2 className="text-xl font-bold mt-5 mb-3">Social Media</h2>
+          <p className="text-md">
+            I do not regularly check my Linkedin account.
+          </p>
+          <h2 className="text-xl font-bold mt-5">Social Media</h2>
           <div className="flex flex-row space-x-5 mx-10">
             {socials.map((social) => (
               <Link key={social.id} href={social.url} target="_blank">
