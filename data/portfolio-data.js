@@ -26,6 +26,7 @@ export const clients = [
         id: uuidv4(),
         description: "ExpressJS app serving a REST API to the frontend",
         technologies: [
+          { name: "javascript", id: uuidv4() },
           { name: "express", id: uuidv4() },
           { name: "nodejs", id: uuidv4() },
           { name: "mongo", id: uuidv4() },
@@ -81,8 +82,8 @@ export const clients = [
         description:
           "Oracle Cloud Infrastructure as Code with custom-made FreeBSD image",
         technologies: [
-          { name: "oracle", id: uuidv4() },
           { name: "terraform", id: uuidv4() },
+          { name: "oracle", id: uuidv4() },
           { name: "freebsd", id: uuidv4() },
         ],
         link: "oci-dev-cloud",
@@ -92,8 +93,8 @@ export const clients = [
         id: uuidv4(),
         description: "Ansible script to run a builder machine that builds FreeBSD in & for OCI, launch it and test it",
         technologies: [
-          { name: "oracle", id: uuidv4() },
           { name: "ansible", id: uuidv4() },
+          { name: "oracle", id: uuidv4() },
           { name: "freebsd", id: uuidv4() },
           { name: "qemu", id: uuidv4() },
         ],
