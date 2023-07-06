@@ -33,6 +33,13 @@ export function Post(props) {
         <h4 className="pb-5 text-xl text-indigo-900"> {details.children} </h4>
       );
     },
+    blockquote(details) {
+      return (
+        <blockquote className="italic m-10 md:ml-20 border-l-4 border-indigo-900 pl-5 py-5">
+          {details.children}
+        </blockquote>
+      );
+    },
     h5(details) {
       return (
         <h5 className="pb-5 text-lg text-indigo-900"> {details.children} </h5>
