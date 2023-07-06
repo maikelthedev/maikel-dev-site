@@ -1,15 +1,14 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import Project from "./project";
 
 export default function Client(props) {
-  const router = useRouter();
   const { client } = props;
   return (
     <Fragment>
-      <div className="bg-indigo-700 rounded-lg md:mb-10 text-white   text-center text-4xl font-bold p-5 md:hover:bg-white md:hover:text-indigo-700 duration-200">
+      <div className="bg-indigo-700 rounded-lg md:mb-10 text-white   text-center text-4xl font-bold p-5 md:hover:bg-white md:hover:text-indigo-700 duration-200"
+      >
         <Link href={"#" + client.name} id={client.name}>
           <h1 className="mx-auto">{client.name}</h1>
         </Link>
