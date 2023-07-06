@@ -12,7 +12,7 @@ function App({ Component, pageProps }) {
         <meta name="description" content="Maikel OÜ" key="description" />
         <meta name="keywords" content="Maikel OÜ" key="keywords" />
         <meta name="author" content="Maikel" key="author" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://maikel.dev/favicon.ico" />
         <meta property="og:title" content="Maikel OÜ" key="og-title" />
         <meta property="og:type" content="website" />
         <meta
