@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { skillsets } from "@/data/skillset-data";
 import { Fragment } from "react";
+import Skill from "./skill";
 
 export default function Skillset() {
   return (
@@ -25,39 +26,7 @@ export default function Skillset() {
           <div className="">
             <div className="md:columns-3 pt-10 gap-8 p-5">
               {skillsets.map((item) => (
-                <div key={item.id} className="mb-8 w-full break-inside-avoid-column">
-                  <div className="bg-white border-indigo-700 border-2 rounded-lg">
-                    <div className="p-2 bg-indigo-700  text-white rounded-lg border-solid border-white border">
-                      <div className="float-left mb-1 ml-2 mt-3 mr-3 flex h-20 w-20 items-center justify-center rounded-full bg-white">
-                        <item.icon
-                          className="h-10 w-10 text-indigo-700"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className="p-2 relative top-0">
-                        <h2 className="text-2xl font-semibold">{item.title}</h2>
-                        <p className="text-sm">{item.description}</p>
-                      </div>
-                    </div>
-                    <div
-                      className="flex flex-row flex-wrap bg-white p-2 
-                                space-y-5 space-x-5 items-center 
-                                justify-center pb-10 rounded-b-full"
-                    >
-                      <div></div>
-                      {item.logos.map((logo) => (
-                        <Image
-                          className=""
-                          src={logo.src}
-                          alt={logo.alt}
-                          width={100}
-                          height={100}
-                          key={logo.id}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
+               <Skill key={item.id} skill={item} />
               ))}
             </div>
           </div>

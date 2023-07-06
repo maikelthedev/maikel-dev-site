@@ -16,7 +16,7 @@ export default function Client(props) {
       </div>
       <div className="md:columns-3">
         <div
-          className="mt-5 flex mx-auto justify-center items-center shadow-lg  p-5 rounded-lg mb-10"
+          className="mt-5 flex mx-auto justify-center items-center  p-5 rounded-lg mb-10"
           key={client.id}
         >
           <div className="flex flex-row items-top md:items-center justify-between">
