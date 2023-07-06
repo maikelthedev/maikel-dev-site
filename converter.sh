@@ -5,6 +5,6 @@ for file in *.png; do
     filename="${file%.*}"
     webp_file="$filename.webp"
     cwebp -q 80 -resize 200 200 "$file" -o "$webp_file"
-    #     convert "$file" -resize '200x200>' -quality 80 "$webp_file"
+    #convert /tmp/sales.jpg  -resize '700x700>' -quality 80 sales.webp
   fi
 done
