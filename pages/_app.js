@@ -22,7 +22,7 @@ function App({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="https://maikel.dev/NOTHING.webp"
+          content="https://maikel.dev/mkl.webp"
           key="og-image"
         />
         <meta property="og:url" content="https://maikel.dev" key="og-url" />
@@ -33,7 +33,7 @@ function App({ Component, pageProps }) {
         />
         <meta
           property="twitter:url"
-          content="https://maikel.dev/blog/sales-course"
+          content="https://maikel.dev/"
           key="twitter:url"
         />
         <meta name="twitter:site" content="@maikelthedev" key="twitter:site" />
@@ -50,7 +50,7 @@ function App({ Component, pageProps }) {
         />
         <meta
           name="twitter:image"
-          content="https://maikel.dev/NOTHING.webp"
+          content="https://maikel.dev/mkl.webp"
           key="twitter:image"
         />
       </Head>
