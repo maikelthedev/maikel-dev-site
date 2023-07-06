@@ -27,9 +27,9 @@ function Projects(props) {
           content={excerpt}
           key="og-description"
         />
-        <meta property="og:image" content={image} key="og-image" />
+        <meta property="og:image" content={"https://maikel.dev/" + image} key="og-image" />
         <meta property="og:url" content={`https://maikel.dev/blog/${post}`} key="og-url" />
-        <meta name="twitter:card" content={image} key="twitter:card" />
+        <meta name="twitter:card" content={"https://maikel.dev/" + image} key="twitter:card" />
         <meta name="twitter:site" content="@maikelthedev" key="twitter:site" />
         <meta
           name="twitter:creator"
@@ -42,7 +42,7 @@ function Projects(props) {
           content={excerpt}
           key="twitter:description"
         />
-        <meta name="twitter:image" content={image} key="twitter:image" />
+        <meta name="twitter:image" content={"https://maikel.dev/" + image} key="twitter:image" />
       </Head>
       <div className="flex text-sm   mx-auto text-center items-center justify-center space-x-2">
         <CalendarDaysIcon
