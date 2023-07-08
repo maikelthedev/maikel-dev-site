@@ -4,10 +4,10 @@ import Link from "next/link";
 function Hero(props) {
   const { subtitle, title, slogan } = props.header;
   return (
-    <div className="bg-gray-100  md:py-10">
+    <div className="custom-bg-gray-100   md:py-10">
       <div className="mx-auto p-3 md:p-0 md:px-8">
         <div
-          className="flex flex-col md:flex-row mx-auto max-w-2xl text-center bg-white rounded-lg p-6 
+          className="custom-white-background flex flex-col md:flex-row mx-auto max-w-2xl text-center rounded-lg p-6 
         shadow-slate-700 md:shadow-md"
         >
           <div className="group grid justify-items-center items-center mb-3 md:min-w-fit md:mr-10">
@@ -27,13 +27,13 @@ function Hero(props) {
             </Link>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h2 className="font-semibold leading-7 text-indigo-600">
+            <h2 className="font-semibold leading-7 dark:text-indigo-400 text-indigo-600">
               {subtitle}
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-black md:text-4xl text-center">
+            <p className="mt-2 text-3xl font-bold tracking-tight dark:text-white text-black md:text-4xl text-center">
               {title}
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">{slogan}</p>
+            <p className="mt-6 text-lg leading-8 dark:text-gray-400 text-gray-600">{slogan}</p>
           </div>
         </div>
       </div>

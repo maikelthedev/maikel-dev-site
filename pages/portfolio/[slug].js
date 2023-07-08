@@ -6,9 +6,11 @@ function Projects(props) {
   const { markdown } = props;
   return (
     <Fragment>
-      <Post markdown={markdown} />
+      <div className="custom-bg-white">
+        <Post markdown={markdown} />
+      </div>
     </Fragment>
-  )  
+  );
 }
 
 export async function getStaticProps(context) {

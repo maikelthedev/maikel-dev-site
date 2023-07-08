@@ -10,15 +10,15 @@ function Testimonials() {
   return (
     <Fragment>
       <Hero header={header} />
-      <div className="bg-gray-100 p-8">
+      <div className="custom-bg-gray-100 p-8">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Testimonials</h1>
+          <h1 className="custom-text-black text-3xl font-bold mb-8">Testimonials</h1>
           <div className="md:columns-2">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="w-full py-2">
-                <div className="bg-white rounded shadow relative">
+                <div className="custom-bg-white rounded shadow relative">
                   <div className="p-6">
-                    <p className="text-gray-800 mb-2">{testimonial.content}</p>
+                    <p className="custom-text-gray-800 mb-2">{testimonial.content}</p>
                     <Link href={testimonial.link}>
                       <p className="text-gray-600 font-medium hover:underline">
                         {testimonial.name}

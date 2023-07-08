@@ -9,7 +9,7 @@ export function Post(props) {
   const customRenderers = {
     h1(details) {
       return (
-        <h1 className="text-4xl text-center pb-10 font-bold text-indigo-900">
+        <h1 className="text-4xl text-center pb-10 font-bold custom-text-indigo-900">
           {" "}
           {details.children}{" "}
         </h1>
@@ -17,7 +17,7 @@ export function Post(props) {
     },
     h2(details) {
       return (
-        <h2 className="text-3xl pb-5 font-bold text-indigo-900">
+        <h2 className="text-3xl pb-5 font-bold custom-text-indigo-900">
           {" "}
           {details.children}{" "}
         </h2>
@@ -25,24 +25,24 @@ export function Post(props) {
     },
     h3(details) {
       return (
-        <h3 className="pb-5 text-2xl text-indigo-900"> {details.children} </h3>
+        <h3 className="pb-5 text-2xl custom-text-indigo-900"> {details.children} </h3>
       );
     },
     h4(details) {
       return (
-        <h4 className="pb-5 text-xl text-indigo-900"> {details.children} </h4>
+        <h4 className="pb-5 text-xl custom-text-indigo-900"> {details.children} </h4>
       );
     },
     blockquote(details) {
       return (
-        <blockquote className="italic m-10 md:ml-20 border-l-4 border-indigo-900 pl-5 py-5">
+        <blockquote className="custom-text-black italic m-10 md:ml-20 border-l-4 border-indigo-900 pl-5 py-5">
           {details.children}
         </blockquote>
       );
     },
     h5(details) {
       return (
-        <h5 className="pb-5 text-lg text-indigo-900"> {details.children} </h5>
+        <h5 className="pb-5 text-lg custom-text-indigo-900"> {details.children} </h5>
       );
     },
     img(image) {
@@ -59,16 +59,16 @@ export function Post(props) {
       );
     },
     li(details) {
-      return <li className=""> {details.children} </li>;
+      return <li className="custom-text-black"> {details.children} </li>;
     },
     ul(details) {
       return (
-        <ul className="pb-5 list-disc md:mx-20 mx-14"> {details.children} </ul>
+        <ul className="custom-text-black pb-5 list-disc md:mx-20 mx-14"> {details.children} </ul>
       );
     },
     ol(details) {
       return (
-        <ul className="pb-5 list-decimal md:mx-20 mx-14">
+        <ul className="custom-text-black pb-5 list-decimal md:mx-20 mx-14">
           {" "}
           {details.children}{" "}
         </ul>
@@ -77,7 +77,7 @@ export function Post(props) {
     a(details) {
       return (
         <Link
-          className="text-indigo-900 font-semibold"
+          className="custom-text-indigo-900 font-semibold"
           href={details.href}
           target="_blank"
         >
@@ -87,7 +87,7 @@ export function Post(props) {
     },
     p(details) {
       return (
-        <p className="pb-5 md:pb-10 mx-5 md:mx-10 text-lg">
+        <p className="custom-text-black pb-5 md:pb-10 mx-5 md:mx-10 text-lg">
           {" "}
           {details.children}{" "}
         </p>
@@ -95,8 +95,8 @@ export function Post(props) {
     },
   };
   return (
-    <Fragment>
-      <div className="p-6 md:mx-20">
+    <Fragment >
+      <div className="custom-bg-white p-6 md:mx-20">
         <ReactMarkdown components={customRenderers} remarkPlugins={[remarkGfm]}>
           {markdown}
         </ReactMarkdown>

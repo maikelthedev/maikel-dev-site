@@ -41,9 +41,10 @@ function Contact() {
 
   return (
     <Fragment>
+      <div className="custom-bg-white">
       <Hero header={header} />
 
-      <div className="flex flex-col md:flex-row p-5 bg-white md:mx-auto md:max-w-6xl">
+      <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl">
         <div className="w-full md:w-8/12 md:p-10 p-5 space-y-5">
           <h1 className="text-2xl font-bold">Contact Me</h1>
           <p className="text-md">
@@ -86,17 +87,17 @@ function Contact() {
           <form
             onSubmit={handleSubmit}
             method="post"
-            className="bg-white shadow-2xl rounded-lg px-8 w-full pt-6 pb-8"
+            className="custom-bg-white dark:shadow-white shadow-2xl rounded-lg px-8 w-full pt-6 pb-8"
           >
             <div className="mb-4">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block custom-text-gray-700 text-sm font-bold mb-2"
                 for="name"
               >
                 Name
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="custom-bg-white shadow appearance-none border rounded w-full py-2 px-3 custom-text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
                 placeholder="Name"
@@ -105,27 +106,30 @@ function Contact() {
             </div>
             <div className="mb-6">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block custom-text-gray-700 text-sm font-bold mb-2"
                 for="email"
+                
               >
                 Email
               </label>
               <input
-                className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="custom-bg-white shadow appearance-none border  rounded w-full py-2 px-3 custom-text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
+                placeholder="Email"
                 required
               />
             </div>
             <div className="mb-6">
               <label
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block custom-text-gray-700 text-sm font-bold mb-2"
                 for="message"
               >
                 Message
               </label>
               <textarea
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="custom-bg-white shadow appearance-none border rounded w-full py-2 px-3 custom-text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
+                placeholder="Message"
                 required
               />
             </div>
@@ -144,6 +148,7 @@ function Contact() {
             </div>
           </form>
         </div>
+      </div>
       </div>
     </Fragment>
   );

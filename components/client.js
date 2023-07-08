@@ -7,7 +7,7 @@ export default function Client(props) {
   const { client } = props;
   return (
     <Fragment>
-      <div className="bg-indigo-700 rounded-lg md:mb-10 text-white   text-center text-4xl font-bold p-5 md:hover:bg-white md:hover:text-indigo-700 duration-200"
+      <div className="bg-indigo-700 rounded-lg md:mb-10 custom-text-white text-center text-4xl font-bold p-5 md:hover:bg-white md:hover:text-indigo-700 duration-200"
       >
         <Link href={"#" + client.name} id={client.name}>
           <h1 className="mx-auto">{client.name}</h1>
@@ -21,7 +21,7 @@ export default function Client(props) {
           <div className="flex flex-row items-top md:items-center justify-between">
             <div className="text-left mb-4 justify-center items-center">
               
-              <p>{client.description}</p>
+              <p className="custom-text-black">{client.description}</p>
             </div>
 
             <div className="ml-3">

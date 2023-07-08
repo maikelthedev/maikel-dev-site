@@ -17,6 +17,7 @@ function Projects(props) {
 
   return (
     <Fragment>
+      <div className="custom-bg-white">
       <Head>
         <title>{"Maikel - " + title}</title>
         <meta name="description" content={excerpt} key="description" />
@@ -45,14 +46,15 @@ function Projects(props) {
         />
         <meta name="twitter:image" content={"https://maikel.dev/" + image} key="twitter:image" />
       </Head>
-      <div className="flex text-sm   mx-auto text-center items-center justify-center space-x-2">
+      <div className=" flex text-sm   mx-auto text-center items-center justify-center space-x-2">
         <CalendarDaysIcon
-          className="h-5 w-5 text-slate-300"
+          className="h-5 w-5 custom-text-slate-300"
           aria-hidden="true"
         />
-        <p className="text-indigo-900">{formattedDate}</p>
+        <p className="custom-text-indigo-900">{formattedDate}</p>
       </div>
       <Post markdown={markdown} />
+      </div>
     </Fragment>
   );
 }
