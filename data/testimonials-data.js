@@ -16,7 +16,10 @@ export const testimonials = [
     link: "https://www.linkedin.com/in/mike-burrows-272b231/",
     content:
       "Maikel designs systems to solve complete business problems, rapidly learning whatever is needed to detect, resolve and prevent issues for the long term. His effort and commitment in the workplace is always impressive and I recommend his services to anyone needing a rapid build-out of a stand-alone project or resolution to technical issues with existing deployments.",
-  },
+  }
+]
+
+const fakers = [
   {
     id: 3,
     name: "John Gibb",
