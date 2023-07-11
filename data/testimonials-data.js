@@ -1,6 +1,19 @@
 export const testimonials = [
   {
     id: 1,
+    name: "Hina Hussain",
+    role: "Office and Operations Manager @ Survation",
+    logo: "/clients/surva.webp",
+    link: "https://www.linkedin.com/in/hina-hussain/",
+    content:
+    `Maikel has been an exceptional asset to our team during our time working together. Maikel's expertise in IT and his unwavering commitment to delivering streamlined support for our staff have truly made a significant impact on our organization.
+      Throughout our collaboration, I have had the privilege of witnessing Maikel's exceptional technical skills and his ability to solve complex IT challenges with ease. His deep understanding of various systems and technologies, coupled with his willingness to share his knowledge, has been invaluable to our team's success. Maikel consistently goes above and beyond to ensure that our staff members have the necessary tools and support to perform their duties efficiently.
+      One of the most admirable qualities of Maikel is his patience and dedication when teaching others. He possesses a rare talent for breaking down complex concepts into easily understandable terms, which has allowed me and other team members to acquire new skills and knowledge in the field of IT. Maikel's willingness to share his expertise has not only enhanced our individual capabilities but has also fostered a collaborative and supportive work environment.
+      Maikel's professionalism, attention to detail, and strong work ethic are truly commendable. He consistently meets deadlines, manages priorities effectively, and remains calm under pressure. His proactive approach to problem-solving has significantly contributed to the successful implementation of various IT solutions and the overall efficiency of our projects.
+      I have no doubt that Maikel's exceptional skills and dedication would be a valuable asset to any organization. His technical expertise, combined with his ability to teach and support others, makes him a standout professional in the field of IT. I highly recommend Maikel without reservation and believe that he will continue to excel in his future endeavours.`,
+  },
+  {
+    id: 2,
     name: "Dave Cottlehuber",
     role: "CEO @ SkunkWerks",
     content:
@@ -9,7 +22,7 @@ export const testimonials = [
     logo: "/clients/skunkwerks.webp",
   },
   {
-    id: 2,
+    id: 3,
     name: "Mike Burrows",
     role: "Former CTO @ Survation",
     logo: "/clients/surva.webp",
@@ -29,15 +42,7 @@ const fakers = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
   },
-  {
-    id: 4,
-    name: "Hina Hussain/",
-    role: "Office and Operations Manager @ Survation",
-    logo: "/clients/surva.webp",
-    link: "https://www.linkedin.com/in/hina-hussain/",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
-  },
+  
   {
     id: 5,
     name: "Rushaa Hamid",
