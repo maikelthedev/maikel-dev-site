@@ -44,19 +44,13 @@ function Navigation() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           {mainLinks.map((link) => (
-            <Link
-              href={link.href}
-              className="navigation-link"
-            >
+            <Link href={link.href} key={link.id} className="navigation-link">
               {link.name}
             </Link>
           ))}
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            href="/contact"
-            className="navigation-link"
-          >
+          <Link href="/contact" className="navigation-link">
             Contact <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -97,34 +91,17 @@ function Navigation() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y dark:divide-white divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link
-                  href="/"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 dark:text-white dark:hover:text-indigo-900 text-indigo-900 hover:bg-indigo-50"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/services"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 dark:text-white dark:hover:text-indigo-900 text-indigo-900 hover:bg-indigo-50"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/portfolio"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 dark:text-white dark:hover:text-indigo-900 text-indigo-900 hover:bg-indigo-50"
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  href="/testimonials"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 dark:text-white dark:hover:text-indigo-900 text-indigo-900 hover:bg-indigo-50"
-                >
-                  Testimonials
-                </Link>
+                {mainLinks.map((link) => (
+                  <Link
+                    href={link.href}
+                    key={link.id}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 dark:text-white dark:hover:text-indigo-900 text-indigo-900 hover:bg-indigo-50"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                
               </div>
               <div className="py-6">
                 <Link

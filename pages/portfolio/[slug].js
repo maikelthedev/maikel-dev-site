@@ -6,8 +6,10 @@ function Projects(props) {
   const { markdown } = props;
   return (
     <Fragment>
-      <div className="custom-bg-white">
-        <Post markdown={markdown} />
+      <div className="custom-bg-white ">
+        <div className="lg:max-w-7xl lg:mx-auto">
+          <Post markdown={markdown} />
+        </div>
       </div>
     </Fragment>
   );

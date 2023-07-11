@@ -15,7 +15,7 @@ function Testimonials() {
           <h1 className="custom-text-black text-3xl font-bold mb-8">Testimonials</h1>
           <div className="md:columns-2">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="w-full py-2">
+              <div key={testimonial.id} className="w-full break-inside-avoid-column py-2">
                 <div className="custom-bg-white rounded shadow relative">
                   <div className="p-6">
                     <p className="custom-text-gray-800 mb-2">{testimonial.content}</p>

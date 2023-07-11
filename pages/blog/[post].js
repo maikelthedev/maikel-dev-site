@@ -12,48 +12,76 @@ function Projects(props) {
   const { markdown, grayMatter } = props;
   const { title, image, excerpt, date } = grayMatter;
   const unformattedDate = new Date(date);
-  const options = { weekday:"long", year: "numeric", month: "long", day: "numeric", daySuffix: 'numeric'};
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    daySuffix: "numeric",
+  };
   const formattedDate = unformattedDate.toLocaleDateString("en-GB", options);
 
   return (
     <Fragment>
       <div className="custom-bg-white">
-      <Head>
-        <title>{"Maikel - " + title}</title>
-        <meta name="description" content={excerpt} key="description" />
-        <meta name="author" content="Maikel" key="author" />
-        <meta property="og:title" content={title} key="og-title" />
-        <meta
-          property="og:description"
-          content={excerpt}
-          key="og-description"
-        />
-        <meta property="og:image" content={"https://maikel.dev/" + image} key="og-image" />
-        <meta property="og:url" content={`https://maikel.dev/blog/${post}`} key="og-url" />
-        
-        <meta property="twitter:url" content={`https://maikel.dev/blog/${post}`} key="twitter:url"/>
-        <meta name="twitter:site" content="@maikelthedev" key="twitter:site" />
-        <meta
-          name="twitter:creator"
-          content="@maikelthedev"
-          key="twitter:creator"
-        />
-        <meta name="twitter:title" content={title} key="twitter:title" />
-        <meta
-          name="twitter:description"
-          content={excerpt}
-          key="twitter:description"
-        />
-        <meta name="twitter:image" content={"https://maikel.dev/" + image} key="twitter:image" />
-      </Head>
-      <div className=" flex text-sm   mx-auto text-center items-center justify-center space-x-2">
-        <CalendarDaysIcon
-          className="h-5 w-5 custom-text-slate-300"
-          aria-hidden="true"
-        />
-        <p className="custom-text-indigo-900">{formattedDate}</p>
-      </div>
-      <Post markdown={markdown} />
+        <Head>
+          <title>{"Maikel - " + title}</title>
+          <meta name="description" content={excerpt} key="description" />
+          <meta name="author" content="Maikel" key="author" />
+          <meta property="og:title" content={title} key="og-title" />
+          <meta
+            property="og:description"
+            content={excerpt}
+            key="og-description"
+          />
+          <meta
+            property="og:image"
+            content={"https://maikel.dev/" + image}
+            key="og-image"
+          />
+          <meta
+            property="og:url"
+            content={`https://maikel.dev/blog/${post}`}
+            key="og-url"
+          />
+
+          <meta
+            property="twitter:url"
+            content={`https://maikel.dev/blog/${post}`}
+            key="twitter:url"
+          />
+          <meta
+            name="twitter:site"
+            content="@maikelthedev"
+            key="twitter:site"
+          />
+          <meta
+            name="twitter:creator"
+            content="@maikelthedev"
+            key="twitter:creator"
+          />
+          <meta name="twitter:title" content={title} key="twitter:title" />
+          <meta
+            name="twitter:description"
+            content={excerpt}
+            key="twitter:description"
+          />
+          <meta
+            name="twitter:image"
+            content={"https://maikel.dev/" + image}
+            key="twitter:image"
+          />
+        </Head>
+        <div className="lg:max-w-7xl lg:mx-auto">
+          <div className=" flex text-sm   mx-auto text-center items-center justify-center space-x-2">
+            <CalendarDaysIcon
+              className="h-5 w-5 custom-text-slate-300"
+              aria-hidden="true"
+            />
+            <p className="custom-text-indigo-900">{formattedDate}</p>
+          </div>
+          <Post markdown={markdown} />
+        </div>
       </div>
     </Fragment>
   );
