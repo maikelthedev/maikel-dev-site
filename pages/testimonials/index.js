@@ -10,7 +10,7 @@ function Testimonials() {
   return (
     <Fragment>
       <Hero header={header} />
-      <div className="custom-bg-white p-8">
+      <div className="custom-white-background p-8">
         <div className="max-w-5xl mx-auto">
           
             
