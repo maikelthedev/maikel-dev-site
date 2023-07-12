@@ -49,29 +49,22 @@ function Hire() {
         <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div className="w-full md:w-8/12 md:p-10 p-5 space-y-5">
             <h1 className="text-2xl font-bold">Hiring Me: How does it work?</h1>
-            <p className="text-md">The whole process can be completed in less than half an hour. Which means I could be working for you <span className="font-bold">today</span> </p>
-
+            <p className="text-md">The entire process can be completed in under 30 minutes, so I can start working for you <span className="font-bold">today</span> </p>
             <p className="text-md">
-              <span className="font-bold">Step 1:You send me a message. </span> 
-              Use the form on this page, I will receive
-              an email with your message and I will reply as soon as possible.
-              If you're impatient use the link at the bottom in Matrix to talk instantly with me. 
-              Matrix is always open on my laptop and notifications enabled on my phone.
-              Be as descriptive or as short as you desire, if I have any questions I'll ask you. 
+              <span className="font-bold">Step 1: Send me a message using the form on this page. </span> 
+              I'll get an email with your message and reply as soon as possible. If you're in a hurry, you can also chat with me instantly through Matrix. I always have Matrix open on my laptop and notifications enabled on my phone. You can be as detailed or as brief as you like, and if I have any questions, I'll ask you.
             </p>
             <p className="text-md">
-              <span className="font-bold">Step 2: We sign a contract. </span> 
-              You don't need to go anywhere, it's all done over the internet with HelloSign. You'll be hiring me through my Estonian company, from anywhere in the world. Who doesn't love low friction? I made it as simple as subscribing to Netflix. 
-              I will send you a contract with the details, by this point we would have discussed my fees, the hours per week, my tasks, the payment method and the payment schedule. A non-disclosure agreement (NDA) is part of it so you can be sure your information is safe with me and allows you to be fully open about your project. 
+              <span className="font-bold">Step 2: We'll sign a contract. </span> 
+              No need to go anywhere, everything is done online with HelloSign. You'll be hiring me through my Estonian company, no matter where you are in the world. It's as easy as subscribing to Netflix. I'll send you a contract with all the details we've discussed, like my fees, weekly hours, tasks, payment method, and schedule. The contract will also include a non-disclosure agreement (NDA) to protect your information and allow you to freely share your project.
             </p>
             <p className="text-md">
-              <span className="font-bold">Step 3: You pay the deposit. </span> 
-              Every project or service requires a deposit that will be deducted from the first payment. So let's say we discussed a weekly payment of $800, the deposit might be $400 and the first payment will be $400. The deposit is non-refundable and is a way to ensure you are serious about the project. I can charge in EUR(default), GBP and USD.
-              The longer the payment schedule, the higher the deposit.
+              <span className="font-bold">Step 3: You'll pay a deposit. </span> 
+              Every project or service requires a deposit, which will be deducted from the first payment. For example, if we agreed on a weekly payment of $800, the deposit might be $400, and the first payment will also be $400. The deposit is non-refundable and shows your commitment to the project. I can charge in EUR (default), GBP, or USD. The longer the payment schedule, the higher the deposit.
             </p>
             <p className="text-md">
-              <span className="font-bold">Step 4: I start working. </span> 
-              As soon as the deposit is received I start working. You will be provided at this time too with my phone number. Whatsapp is also always open on my PC. I'll take into account what means of contact you prefer and we'll be updating each other through there. 
+              <span className="font-bold">Step 4: I'll start working. </span> 
+              Once I receive the deposit, I'll begin working on your project. You'll also receive my phone number at this point. I'm always available on WhatsApp on my PC. We'll communicate through your preferred method, and keep each other updated along the way.
             </p>
             <h1 className="text-2xl font-bold">Contact Me</h1>
             <p className="text-md">
@@ -147,13 +140,14 @@ function Hire() {
               </div>
               <div className="mb-6">
                 <label
-                  className="block custom-text-gray-700 text-sm font-bold mb-2"
+                  className="block custom-text-gray-700 text-sm font-bold mb-2 "
                   for="message"
                 >
                   Message
                 </label>
                 <textarea
                   className="custom-bg-white shadow appearance-none border rounded w-full py-2 px-3 custom-text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                  rows="10"
                   id="message"
                   placeholder="Message"
                   required

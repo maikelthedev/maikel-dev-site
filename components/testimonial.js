@@ -43,9 +43,9 @@ export default function Testimonial(props) {
     <Fragment>
       <div
         key={testimonial.name}
-        className="w-full break-inside-avoid-column py-2"
+        className="w-full  break-inside-avoid-column py-2"
       >
-        <div className="custom-bg-white rounded shadow relative">
+        <div className="custom-bg-gray-100 rounded shadow relative">
           <img
             src={testimonial.logo}
             alt="Company Logo"

@@ -8,11 +8,18 @@ export default function Client(props) {
   return (
     <Fragment>
       <div className="lg:max-w-7xl lg:mx-auto">
-        <div className="bg-indigo-700  rounded-lg md:mb-10 custom-text-white text-center text-4xl font-bold p-5 md:hover:bg-white md:hover:text-indigo-700 duration-200">
-          <Link href={"#" + client.name} id={client.name}>
-            <h1 className="mx-auto">{client.name}</h1>
-          </Link>
-        </div>
+      <Link href={"#" + client.name} id={client.name}>
+        <h1
+          className="custom-white-background custom-text-indigo-900 border-2 border-dashed border-indigo-700 text-center text-4xl 
+        font-bold mt-10 mx-auto max-w-xs p-5 rounded-lg
+         hover:bg-indigo-700 hover:text-white duration-200 md:mb-10
+        "
+        >
+          {client.name}
+        </h1>
+      </Link>
+
+
         <div className="md:columns-3">
           <div
             className="mt-5 flex mx-auto justify-center items-center  p-5 rounded-lg mb-10"
