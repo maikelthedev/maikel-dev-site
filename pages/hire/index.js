@@ -61,7 +61,7 @@ function Hire() {
             </p>
             <p className="text-md">
               <span className="font-bold">Step 2: We sign a contract. </span> 
-              You don't need to go anywhere, it's all done over the internet with HelloSign.
+              You don't need to go anywhere, it's all done over the internet with HelloSign. You'll be hiring me through my Estonian company, from anywhere in the world. Who doesn't love low friction? I made it as simple as subscribing to Netflix. 
               I will send you a contract with the details, by this point we would have discussed my fees, the hours per week, my tasks, the payment method and the payment schedule. A non-disclosure agreement (NDA) is part of it so you can be sure your information is safe with me and allows you to be fully open about your project. 
             </p>
             <p className="text-md">
