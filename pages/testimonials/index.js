@@ -12,7 +12,7 @@ function Testimonials() {
       <Hero header={header} />
       <div className="custom-bg-gray-100 p-8">
         <div className="max-w-5xl mx-auto">
-          <h1 className="custom-text-black text-3xl font-bold mb-8">Testimonials</h1>
+          <h1 className="custom-text-black text-3xl font-bold mb-8">Testimonials & Reviews</h1>
           <div className="md:columns-2">
             {testimonials.map((testimonial) => (
               <Testimonial testimonial={testimonial} key={testimonial.id}/>

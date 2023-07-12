@@ -39,7 +39,7 @@ function Footer() {
                 <Link href="/portfolio">Portfolio</Link>
               </div>
               <div className="basis-1/4 text-center md:text-left hover:text-indigo-500 hover:font-bold">
-                <Link href="/contact">Contact</Link>
+                <Link href="/hire">Hire Me</Link>
               </div>
             </div>
           </div>

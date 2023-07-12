@@ -1,6 +1,15 @@
 export const testimonials = [
   {
-    id: 1,
+
+    name: "Dave Cottlehuber",
+    role: "CEO @ SkunkWerks",
+    content:
+      "I think you did an incredible job of landing on all four feet (like a cat!) in quite unfamiliar terrain, picking up OCI like you used it already, and navigating a lot of incomplete information on FreeBSD as well.",
+    link: "https://www.linkedin.com/in/davecottlehuber/",
+    logo: "/clients/skunkwerks.webp",
+  },
+  {
+
     name: "Hina Hussain",
     role: "Office and Operations Manager @ Survation",
     logo: "/clients/surva.webp",
@@ -13,16 +22,14 @@ export const testimonials = [
       I have no doubt that Maikel's exceptional skills and dedication would be a valuable asset to any organization. His technical expertise, combined with his ability to teach and support others, makes him a standout professional in the field of IT. I highly recommend Maikel without reservation and believe that he will continue to excel in his future endeavours.`,
   },
   {
-    id: 2,
-    name: "Dave Cottlehuber",
-    role: "CEO @ SkunkWerks",
+    name: "Rushaa Hamid",
+    role: "Former Special Projects Manager @ Survation",
+    logo: "/clients/surva.webp",
+    link: "https://www.linkedin.com/in/rushaa/",
     content:
-      "I think you did an incredible job of landing on all four feet (like a cat!) in quite unfamiliar terrain, picking up OCI like you used it already, and navigating a lot of incomplete information on FreeBSD as well.",
-    link: "https://www.linkedin.com/in/davecottlehuber/",
-    logo: "/clients/skunkwerks.webp",
+      "I had the pleasure of working with Maikel at Survation where he single-handedly created our online panel from scratch and demonstrated exceptional skills and expertise throughout the entire process. His proficiency in front-end technologies, coupled with his expertise in back-end frameworks and databases, allowed him to develop a reliable and responsive panel. Maikel was always ready to tackle challenges head-on, providing innovative solutions to any issues that arose during the development process. He consistently communicated progress updates, sought feedback, incorporated suggestions promptly, and created plain language user guides making him an invaluable asset to the team. I am confident that Maikel will excel in any project he undertakes and contribute significantly to its success.",
   },
   {
-    id: 3,
     name: "Mike Burrows",
     role: "Former CTO @ Survation",
     logo: "/clients/surva.webp",
@@ -34,7 +41,7 @@ export const testimonials = [
 
 const fakers = [
   {
-    id: 3,
+ 
     name: "John Gibb",
     role: "Head of Projects @ Survation",
     logo: "/clients/surva.webp",
@@ -43,13 +50,5 @@ const fakers = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
   },
   
-  {
-    id: 5,
-    name: "Rushaa Hamid",
-    role: "Former Special Projects Manager @ Survation",
-    logo: "/clients/surva.webp",
-    link: "https://www.linkedin.com/in/rushaa/",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
-  },
+
 ];

@@ -50,8 +50,8 @@ function Navigation() {
           ))}
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/contact" className="navigation-link">
-            Contact <span aria-hidden="true">&rarr;</span>
+          <Link href="/hire" className="navigation-link">
+            Hire Me <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
       </nav>
@@ -105,11 +105,11 @@ function Navigation() {
               </div>
               <div className="py-6">
                 <Link
-                  href="/contact"
+                  href="/hire"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 dark:text-white dark:hover:text-indigo-900 text-indigo-900 hover:bg-indigo-50"
                 >
-                  Contact
+                  Hire Me
                 </Link>
               </div>
             </div>

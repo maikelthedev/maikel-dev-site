@@ -42,7 +42,7 @@ export default function Testimonial(props) {
   return (
     <Fragment>
       <div
-        key={testimonial.id}
+        key={testimonial.name}
         className="w-full break-inside-avoid-column py-2"
       >
         <div className="custom-bg-white rounded shadow relative">
