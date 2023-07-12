@@ -43,4 +43,7 @@
     .custom-text-gray-600  {
         @apply text-gray-600 dark:text-gray-400;
     }
+    .custom-text-gray-500 {
+        @apply text-gray-500 dark:text-gray-400;
+    }
   } 

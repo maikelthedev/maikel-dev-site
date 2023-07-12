@@ -23,14 +23,14 @@ export default function Testimonial(props) {
       {!isExpanded ? (
         <span
           onClick={expandedClicked}
-          className="text-gray-600 font-bold hover:underline"
+          className="custom-text-gray-600 font-bold hover:underline"
         >
           Read more
         </span>
       ) : (
         <span
           onClick={shrinkClicked}
-          className="text-gray-600 font-bold hover:underline"
+          className="custom-text-gray-600 font-bold hover:underline"
         >
           Read less
         </span>
@@ -53,11 +53,11 @@ export default function Testimonial(props) {
           />
           <div className="p-6">
             <Link href={testimonial.link}>
-              <p className="text-gray-600 font-medium hover:underline">
+              <p className="custom-text-gray-600 font-medium hover:underline">
                 {testimonial.name}
               </p>
             </Link>
-            <p className="text-gray-500 text-sm">{testimonial.role}</p>
+            <p className="custom-text-gray-500 text-sm">{testimonial.role}</p>
             <div className="pt-2">{content}</div>
           </div>
         </div>
