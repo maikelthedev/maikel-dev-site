@@ -6,7 +6,6 @@ import Testimonial from "@/components/testimonial";
 import Link from "next/link";
 function Testimonials() {
   const header = headers.testimonials;
-
   return (
     <Fragment>
       <Hero header={header} />
