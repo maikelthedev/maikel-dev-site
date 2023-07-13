@@ -54,6 +54,7 @@ export const headers = {
   home: {
     subtitle: [
       "Maikel the Developer",
+      "Maikel the Creator",
       "Maikel the Engineer",
       "Maikel the Systems Administrator",
       "Maikel the Cloud Architect",

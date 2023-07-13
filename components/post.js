@@ -96,7 +96,7 @@ export function Post(props) {
   };
   return (
     <Fragment >
-      <div className="custom-bg-white p-6 md:mx-20">
+      <div className="custom-bg-white md:mx-20">
         <ReactMarkdown components={customRenderers} remarkPlugins={[remarkGfm]}>
           {markdown}
         </ReactMarkdown>

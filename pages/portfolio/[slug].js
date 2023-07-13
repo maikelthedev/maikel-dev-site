@@ -7,7 +7,7 @@ function Projects(props) {
   return (
     <Fragment>
       <div className="custom-bg-white ">
-        <div className="lg:max-w-7xl lg:mx-auto">
+        <div className="lg:max-w-7xl lg:mx-auto pt-6">
           <Post markdown={markdown} />
         </div>
       </div>

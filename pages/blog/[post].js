@@ -73,9 +73,9 @@ function Projects(props) {
           />
         </Head>
         <div className="lg:max-w-7xl lg:mx-auto">
-          <div className=" flex text-sm   mx-auto text-center items-center justify-center space-x-2">
+          <div className=" flex text-sm  mx-auto text-center items-center justify-center space-x-2">
             <CalendarDaysIcon
-              className="h-5 w-5 custom-text-slate-300"
+              className="h-5 w-5 custom-text-slate-300 dark:pt-20"
               aria-hidden="true"
             />
             <p className="custom-text-indigo-900">{formattedDate}</p>

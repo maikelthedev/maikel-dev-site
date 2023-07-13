@@ -4,7 +4,7 @@ export const testimonials = [
     name: "Dave Cottlehuber",
     role: "CEO @ SkunkWerks",
     content:
-      "I think you did an incredible job of landing on all four feet (like a cat!) in quite unfamiliar terrain, picking up OCI like you used it already, and navigating a lot of incomplete information on FreeBSD as well.",
+    "Maikel has a wide range of tech skills already to draw from, and navigated our unfamiliar environment easily. He picked up our diverse tech stack very quickly, and made rapid progress with very little hand-holding. He was a pleasure to work with, and I'd gladly do so again.",
     link: "https://www.linkedin.com/in/davecottlehuber/",
     logo: "/clients/skunkwerks.webp",
   },
