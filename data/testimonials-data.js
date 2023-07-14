@@ -9,6 +9,15 @@ export const testimonials = [
     logo: "/clients/skunkwerks.webp",
   },
   {
+ 
+    name: "John Gibb",
+    role: "Head of Projects @ Survation",
+    logo: "/clients/surva.webp",
+    link: "https://www.linkedin.com/in/john-gibb-86b705a9/",
+    content:
+      "Maikel is a multi-talented maestro of tech, expertly managing code, clouds, and complexities to craft solutions that will push the boundaries of what's possible with your timescale and budget.",
+  },
+  {
 
     name: "Hina Hussain",
     role: "Office and Operations Manager @ Survation",
@@ -37,18 +46,4 @@ export const testimonials = [
     content:
       "Maikel designs systems to solve complete business problems, rapidly learning whatever is needed to detect, resolve and prevent issues for the long term. His effort and commitment in the workplace is always impressive and I recommend his services to anyone needing a rapid build-out of a stand-alone project or resolution to technical issues with existing deployments.",
   }
-]
-
-const fakers = [
-  {
- 
-    name: "John Gibb",
-    role: "Head of Projects @ Survation",
-    logo: "/clients/surva.webp",
-    link: "https://www.linkedin.com/in/john-gibb-86b705a9/",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget arcu eu ipsum sodales euismod.",
-  },
-  
-
 ];
