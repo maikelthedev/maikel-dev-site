@@ -2,7 +2,7 @@
 title: Web Developer Course
 image: "/posts/web-development.webp"
 excerpt: "Notes on a course web developer course that I'm doing"
-date: "2023-07-17"
+date: "2023-07-18"
 ---
 ## Notes
 
@@ -216,3 +216,148 @@ Clients are anxious people. Don't give them time to worry. Even if you just repl
 #### Clients can be wrong
 
 Again common sense. Document everything. 
+
+## Best practices
+
+Let's make a summary. 
+
+1. Under promise, over deliver. Cost/features/timeline mind those 3. 
+2. At the beginning cost is something you need to negotiate more because you need clients and a portafolio first. 
+3. If ability is a limit, negotiate on cost or time, "I can do that but it might take an extra month" because in that month you're learning that tool. 
+4. Decide on whether to use or not agile.
+5. Bigger budgets = better projects. Succesful projects = portfolio. Nothing stops you from rewriting the Survation Panel without ever looking at the original code in React instead of Angular and use it as a Maikel OU project instead of something you did for them. 
+6. Look for clients that have depth (ambition and tech kwnowledge are best). 
+7. Web presence clients aren't worth it. Those are the clients that just want a design to exist on the internet. These projects can be done with Wix/Wordpress, they don't help your portfolio. There's a lot of competition to do what they want, pointless. They have small budget. They don't stick around after you finish, you want long-term clients. So in a nutshell they are a distraction and not worth it. You want to build relationships with your clients not one offs. You can merge step 7 and 6 into one. 
+
+
+#### Should you: Agile?
+
+You could deliver stuff in chunks/sprints fully tested and ready to be deployed. It's more flexible. That's the point of Agile, nothing new to you. 
+
+Another advantage of using Agile is that the client can back out and still has code that other people can finish .
+
+He didn't really explain the advantage of not using it. 
+
+#### Getting paid:
+
+Two ways: price-per hour and price per project. 
+
+H = estimate, then charge aftwards, if you use agile that's no issue. 
+
+P = You break it down in tasks and you get paid for whatever the task took. 
+
+Time is always better because estimations are hard to predict. 
+
+Clients don't like PPH because it doesn't give them control upfront of the cost. 
+ 
+PPP waste your time in estimation a lot more. 
+
+PPP you can compete with other projects. 
+
+When you're starting you might have to use more PPP tha PPH. 
+
+#### Competition
+
+You shouldn't be worried about it because there's much work needed than developers. No company can dominate the market. There are infinite opportunities. 
+
+Just worried about what are they doing to stay on the edge and learn where you can improve. 
+
+#### Hedging your launch date. 
+
+Sticking for timelines clients are the worse and most unrealistic. 
+
+Set a range of dates. Plan to launch on a day but say the client you'll be launching 7 days later. Always leave more time and deliver early. 
+
+#### Designers matter
+
+Who you work with to design a site ultimately is what you show in your portfolio. The behaviour si what you design, you adapt what THEY design, your're the developer. If a client has a designer and their designs are shit and you have other clients you might not want to take that client. 
+
+Have your own designers too. 
+
+Design is the first thing clients see. You can't show off bad design. 
+
+#### Running without contracts
+
+Same as I did with DCH. 
+
+Just ensure you get a deposit to prove they actually have funds. Is always better to have a contract OBVIOUSLY. 
+
+Never relay on verbal agreements. 
+
+#### Red flags for bad clients
+
+Clients to avoid
+
+Common scenarios
+* Disagree with your estimates. 
+* Their project idea makes no sense (you know who did this....in Linkedin). 
+* They try to haggle with your rates. 
+* They give you multiple proposals at once...(?) they are not focused, not serious
+* They argue over trivial items. = Aren't able to prioritise, insecure, immmature, is going to drive you crazy. 
+* They are unprofessional. 
+
+#### Rich vs successful
+
+Don't go for big budgets but successful. Consistently pick ideas and do things with it. They'd be consistent business, similar referrals, they'll use your project for long while rich just get them to show off to investors then drop them (Survation). Both are fine but given the choice, you know who to go with. 
+
+#### Tell when you're getting fizzled. 
+
+Getting fizzled is when a client is backing off. 
+
+Signs:
+* Pyramid conversations. Initial abundance of information, then they start giving you less and less info, losing motivation. Their commitments is obviously gone. 
+* Slower and slower response times. 
+* Asking the same questions.....they are talking with too many people asking the same question. 
+* Using vague timelines (to hire you or extend a project). If they are interested they either give you a month to make a decision or a timeline to make it. You should also ask about it too. 
+
+
+#### Don't quote on the fly
+
+We've been here before. Above you already wrote about it. Take your time even for a ballpark. 
+
+#### Meeting in person
+
+* Preparedness
+* Confidence
+* Present your work
+* Demo what you did. 
+
+This is all opintless common sense. But write it down anyway. Is the same as when you do a job interview. 
+
+Emphatise with them and focus on listening. 
+
+Most meets are redundant, unless you MUST make them, avoid them. 
+
+Try to look like them if you're trying to sell you're a good fit. Dress professional but relaxed in case of doubt (smart casual, nothing new)
+
+#### Delivering early?
+
+Try not to do it. Finish early but do not deliver early. Just try to find bugs in that time. Delivering early might make you look like you overestimate it and they might get used to it and assume you always do. 
+
+#### Repeat customers are the best
+
+Getting new clients takes MORE TIME and effort than old clients work. 
+
+Repeat clients = you're doing something well. 
+Repeat clients bring you referrals. 
+
+Repeat clients build momentum. 
+
+At some point you can just work on referrals. 
+
+#### Avoid assumers
+
+This is the worst possible client. They aren't use to the level of specificity that is required for your job. They use imprecise language and assume you know what they need. Always ask for more details to know if they keep using vague versions. Avoid them if you notice they keep doing it. Never agree to something vague. 
+
+Only accept detailed work.
+
+## Section 11: Internal management is crucial
+
+This looks like an ad of Assana. 
+Just fluff
+
+I'm done
+
+![certificate](/posts/web-dev-certificate.webp)
+
+
