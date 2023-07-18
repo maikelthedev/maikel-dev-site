@@ -2,7 +2,7 @@
 title: Web Developer Course
 image: "/posts/web-development.webp"
 excerpt: "Notes on a course web developer course that I'm doing"
-date: "2023-07-12"
+date: "2023-07-17"
 ---
 ## Notes
 
@@ -114,3 +114,105 @@ You need a proper catalogue of services. This 13 list points is enough of value 
 
 ## Section 8: Building proposals
 
+You need to become profficient at doing this QUICKLY
+
+Proposals always start from vague ideas from the client. 
+
+You need to convince your proposal is the best possible solution. Compare the market. It's the final opportunity to make an impression before signing a contract. 
+
+#### There are three types
+
+* Casual (ballpark estimates). What do you need to have an estimate? Figure that out. 
+* Semi formal
+* Formal. 
+
+Use casual for very small projects. To make them feel they don't require a big amount of paperwork and you can do it quickly. e.g.: Jero's BIO page. 
+
+Use S.F. for a timeline, total hours. Use Excel, go through each item. 
+
+Use Complex/Formal for: projects that require multiple people to approve it so you need something that they can show to others on the team. This can take a full day to write. Use a presentation. For example a PDF. Introduction of who you are, then go through each part of their project. 
+
+#### Components of proposals (complex)
+
+You can use this even as a FAQ in your page
+
+When you write a proposal you want to minimise friction. 
+
+1. About you (no more than 1 page, what you have achieved in the past). 
+2. Overview of the project (pitch the project back to the client, show then you understand the project). Do soem background check. 
+3. How you work (agile? describe your step by step process, tech you use, how would you provide feedback)
+4. Timeline (this is your Achilles heel, the area where you should improve the most because you normally finish quicker than expected, it needs a basis of how long it might take, don't give excesssive details or you'll set yourself for failure)
+5. Price (the one they'll check the most, don't be vague)
+7. Next Steps (payment terms, deliverables you need)
+6. Disclaimers (if there's changest then timeline might change, NDAs, if any new features are added blablabal, stuff to avoid requirements creep)What could cause delays
+
+You could add case studies if you added something related before. 
+
+Don't add development contracts on your proposal, those are for once they say yes. 
+
+#### Types of estimates
+
+You want to be clear, easy to understand, digestible. 
+
+* All Together. Just a ballpark cost, no itemised. Save you time. If the client already trusts you and knows how you work. 
+* Section by Section. THe name defines it. 
+* Piece by piece. Even more detailed, you'll use it in Agile, the sprints. 
+
+The more you show, the more itemised, the more trust you build. 
+
+There are tools for complex proposals. He shows [Proposify](https://www.proposify.com/), it also has templates. 
+
+You typically want to add due dates for estimates because it might only be valid for certain time. 
+
+[Nusii](https://nusii.com/) is another one, you can find more with "proposal generator"
+
+You could use [99design](https://en.99designs.es/) for people to compete on designs you need (eg. your company logo). 
+
+When giving a ballpark always use a range and ALWAYS tell any changes will affect the range. Give always quick ballpark estimates because you need ot be the first giving one before they go elsewhere. Take your time to give a ballpark. 
+
+#### Constant estimation
+
+ADDONS: For every sprint, include extra estimations for other features the client might have forgotten and might want. 
+
+Customise the proposals, otherwise the clients will notice. Some parts will always be the same. 
+
+## Managing clients
+
+Plan for growth. Underpromise and overdeliver. One of your USP is exclusivity. 
+
+#### The right amount of distance
+1. Gauge each client
+2. Set the tone (in the proposal). Clients usually default to your judgement. 
+3. Make them feel they are in the loop. 
+4. Enforce your own schedule. 
+
+This can on itself be a selling point thought carefully. 
+
+When you don't know something, give a time when you'll knwo when something can be fixed. 
+
+#### Jargon
+
+This is all common sense.
+
+Do not minimise it but don't use too much, balance is key. Too little jargon makes it sound like a project is simpler than it should be. 
+
+#### Sniffing out their budget
+
+If you know you can adapt what you deliver to their budget, also avoid wasting time if they don't have any budget at all to spend on you. 
+
+Never ask teh budget upfront. Some ways to figure it out:
+1. They assure you that their project is really simple = signaling budget is a concern. 
+2. How much specificity they give you = More aware of how big a project is = no budget problems. 
+3. I vs We. If they use "we" then you know multiple people = they can pay for it. 
+4. Consider how much you know about the client. <-- What a stupid advice. What were you doing on the previous 3?
+5. How quickly they go through their process --> Fast = money is no issue. 
+6. They ask for extra estimates they don't use --> They can't afford it. Constrained budget
+7. Give ballpark estimates to avoid wasting time with people who don't have a budget. 
+
+#### Speed is important when replying. 
+
+Clients are anxious people. Don't give them time to worry. Even if you just reply with "I received your email, I'll respond in X time". 
+
+#### Clients can be wrong
+
+Again common sense. Document everything. 
