@@ -12,11 +12,9 @@ export default function Donations() {
 
         <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div class="px-8 py-4 space-y-6">
-            <p class="text-lg">
-              <strong>
-                tl;dr: Click on your currency symbol below to donate.
-              </strong>
-            </p>
+          <p class="text-2xl font-bold text-center text-red-600">
+    TL;DR: Click on your currency symbol below to donate.
+  </p>
             <h1 class="text-3xl font-bold">Support My Journey</h1>
             <p class="text-lg">
               Your generosity makes a significant impact on my life. While I
