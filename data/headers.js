@@ -54,9 +54,6 @@ export const headers = {
   donations: {
     subtitle: ["Donations"],
     title: [
-      "Make a Difference Today",
-      "Transform a Life",
-      "One Act of Kindness, Infinite Impact",
       "Donate to Make a Difference",
     ],
     slogan:
