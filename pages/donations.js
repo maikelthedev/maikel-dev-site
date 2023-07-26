@@ -74,7 +74,9 @@ export default function Donations() {
               </div>
               
             </div>
-
+            <p className="tex-md">
+              You can also use <Link className="font-bold" href="https://liberapay.com/maikelthedev/">LiberaPay</Link> but it'll again take longer to reach me. 
+            </p>
             <h1 class="text-3xl font-bold">How Your Donation Helps</h1>
             <p class="text-lg">
               Your support goes a long way in helping me navigate through this
