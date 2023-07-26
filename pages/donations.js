@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import Hero from "@/components/hero";
 import { headers } from "@/data/headers";
+import Currencies from "@/components/currencies";
 
 export default function Donations() {
   const header = headers.donations;
@@ -12,9 +13,17 @@ export default function Donations() {
 
         <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div class="px-8 py-4 space-y-6">
-          <p class="text-2xl font-bold text-center text-red-600">
-    TL;DR: Click on your currency symbol below to donate.
-  </p>
+            <div>
+              <div className="custom-bg-gray-100 rounded-lg border border-gray-300 p-4">
+                <p className="text-2xl font-bold text-center text-red-600">
+                  TL;DR: Click on your currency symbol below to donate
+                </p>
+                <div className="pt-10">
+                  <Currencies />
+                </div>
+              </div>
+            </div>
+
             <h1 class="text-3xl font-bold">Support My Journey</h1>
             <p class="text-lg">
               Your generosity makes a significant impact on my life. While I
@@ -29,53 +38,8 @@ export default function Donations() {
               just a click:
             </p>
 
-            <div class="flex justify-center space-x-8">
-              <div class="flex flex-col items-center">
-                <Link
-                  class="text-5xl font-bold hover:text-red-600"
-                  href="https://donate.stripe.com/fZedTZ3Y47vjfyUaEE"
-                >
-                  $
-                </Link>
-                <p class="text-xs text-gray-500">USD</p>
-              </div>
-              <div class="flex flex-col items-center">
-                <Link
-                  class="text-5xl font-bold hover:text-red-600"
-                  href="https://donate.stripe.com/eVa03966ceXLfyU9AB"
-                >
-                  €
-                </Link>
-                <p class="text-xs text-gray-500">EUR</p>
-              </div>
-              <div class="flex flex-col items-center">
-                <Link
-                  class="text-5xl font-bold hover:text-red-600"
-                  href="https://donate.stripe.com/dR69DJ3Y4dTHbiE146"
-                >
-                  £
-                </Link>
-                <p class="text-xs text-gray-500">GBP</p>
-              </div>
-              <div class="flex flex-col items-center">
-                <Link
-                  class="text-5xl font-bold hover:text-red-600"
-                  href="https://donate.stripe.com/4gw6rx8ek3f3gCY5kn"
-                >
-                  $
-                </Link>
-                <p class="text-xs text-gray-500">AUD</p>
-              </div>
-              <div class="flex flex-col items-center">
-                <Link
-                  class="text-5xl font-bold hover:text-red-600"
-                  href="https://donate.stripe.com/14k7vB9iog1PcmI6os"
-                >
-                  ¥
-                </Link>
-                <p class="text-xs text-gray-500">JPY</p>
-              </div>
-            </div>
+            <Currencies />
+
             <p className="tex-md">
               You can also use{" "}
               <Link
