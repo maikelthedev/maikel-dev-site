@@ -13,8 +13,8 @@ export const socials = [
   },
   {
     id: 3,
-    name: "Calckey",
-    url: "https://fedi.maikel.dev/maikel",
+    name: "Firefish",
+    url: "https://firefish.maikel.dev/@maikel",
     logo: "/logos/calckey.webp",
   },
 ];

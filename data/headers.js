@@ -51,6 +51,17 @@ export const headers = {
     slogan:
       "I can help you with your existing services or build new ones entirely from scratch",
   },
+  donations: {
+    subtitle: ["Donations"],
+    title: [
+      "Make a Difference Today",
+      "Transform a Life",
+      "One Act of Kindness, Infinite Impact",
+      "Donate to Make a Difference",
+    ],
+    slogan:
+      "Extend a hand, transform a life: Your support uplifts, inspires hope, and creates lasting change.",
+  },
   home: {
     subtitle: [
       "Maikel the Developer",

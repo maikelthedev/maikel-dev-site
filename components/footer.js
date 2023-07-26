@@ -44,7 +44,7 @@ function Footer() {
             </div>
           </div>
           <div className="mt-10 flex justify-between mr-2 py-1 md:mt-0">
-            <Link href="https://fedi.maikel.dev/@maikel" target="_blank">
+            <Link href="https://firefish.maikel.dev/@maikel" target="_blank">
               <Image
                 className="hover:scale-150 duration-200"
                 src="/logos/calckey.webp"
