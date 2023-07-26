@@ -12,6 +12,11 @@ export default function Donations() {
 
         <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div class="px-8 py-4 space-y-6">
+            <p class="text-lg">
+              <strong>
+                tl;dr: Click on your currency symbol below to donate.
+              </strong>
+            </p>
             <h1 class="text-3xl font-bold">Support My Journey</h1>
             <p class="text-lg">
               Your generosity makes a significant impact on my life. While I
@@ -72,10 +77,16 @@ export default function Donations() {
                 </Link>
                 <p class="text-xs text-gray-500">JPY</p>
               </div>
-              
             </div>
             <p className="tex-md">
-              You can also use <Link className="font-bold" href="https://liberapay.com/maikelthedev/">LiberaPay</Link> but it'll again take longer to reach me. 
+              You can also use{" "}
+              <Link
+                className="font-bold"
+                href="https://liberapay.com/maikelthedev/"
+              >
+                LiberaPay
+              </Link>{" "}
+              but it'll again take longer to reach me
             </p>
             <h1 class="text-3xl font-bold">How Your Donation Helps</h1>
             <p class="text-lg">
