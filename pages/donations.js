@@ -16,10 +16,10 @@ export default function Donations() {
             <div>
               <div className="custom-bg-gray-100 rounded-lg border border-gray-300 p-4">
                 <p className="text-2xl font-bold text-center text-red-600">
-                  TL;DR: Donate with debit or credit card in any currency
+                  TL;DR: Donate by clicking on your currency
                 </p>
                 <div className="pt-10 text-center">
-                  <Link className="text-xl font-bold text-center hover:text-red-600" href="https://revolut.me/maikelthedev">Click here</Link>
+                  <Currencies />
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@ export default function Donations() {
               The immediate way to reach me right now is via Revolut.me, by using it you put
               the donation directly in the bank account I use. To use that 
               <Link className="font-bold hover:text-red-600" href="https://revolut.me/maikelthedev"> click here. </Link>
-               If that fails and you don't have Monzo, use Stripe below. 
+               If that fails and you don't have Monzo, use Stripe below by clicking on your currency symbol. 
             </p>
             <p className="text-lg">
               Another way to reach me instantly yet only in GBP is Monzo using this 
