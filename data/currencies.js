@@ -2,32 +2,22 @@ export const currencies = [
     {
       denomination: "USD",
       symbol: "$",
-      link: "https://donate.stripe.com/fZedTZ3Y47vjfyUaEE",
+      link: "https://donate.stripe.com/dR68zsg2R74KbIcaEE",
     },
     {
       denomination: "EUR",
       symbol: "€",
-      link: "https://donate.stripe.com/eVa03966ceXLfyU9AB",
+      link: "https://donate.stripe.com/7sI3f803Tbl0fYs6op",
     },
     {
       denomination: "GBP",
       symbol: "£",
-      link: "https://donate.stripe.com/dR69DJ3Y4dTHbiE146",
+      link: "https://donate.stripe.com/aEU6rk4k974K8w0146",
     },
     {
       denomination: "AUD",
       symbol: "$",
-      link: "https://donate.stripe.com/4gw6rx8ek3f3gCY5kn",
-    },
-    {
-      denomination: "JPY",
-      symbol: "¥",
-      link: "https://donate.stripe.com/14k7vB9iog1PcmI6os",
-    },
-    {
-      denomination: "AMD",
-      symbol: "֏",
-      link: "https://donate.stripe.com/cN22bh3Y4aHvfyU005",
-    },
+      link: "https://donate.stripe.com/cN23f89EtgFk4fKeUX",
+    }
   ];
   
