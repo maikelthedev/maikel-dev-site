@@ -1,0 +1,41 @@
+import { Fragment } from "react";
+
+export default function Preview() {
+  return (
+    <Fragment>
+      <div className="custom-bg-white">
+        <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl items-center">
+          <div className="px-8 py-4 space-y-6">
+            <h1 className="text-3xl font-bold">
+              This is a preview of a payment page
+            </h1>
+            <p className="text-lg">
+              Don't go through these payments because they are active. I'm using
+              Stripe and its customer portal for this. The widget below has been
+              created directly in stripe.
+              Ultimately once I get my business up and running I want to make it easy for clients to choose their packs/hours per week
+            </p>
+          </div>
+        </div>
+        <div className="bg-white">
+          <div className="flex flex-col md:flex-row p-5 md:mx-auto md:max-w-6xl items-center">
+            <div className="px-8 py-4 space-y-6">
+              <h1 className="text-3xl font-bold">Packages</h1>
+              <p className="text-lg">This of text bit is still outside Stripe control</p>
+            </div>
+          </div>
+          <div className="p-10">
+            <script
+              async
+              src="https://js.stripe.com/v3/pricing-table.js"
+            ></script>
+            <stripe-pricing-table
+              pricing-table-id="prctbl_1Na2GGC0LFj1sWyoDx9zgxat"
+              publishable-key="pk_live_QjNTULEFU7z65fw1pO4wZ5zG"
+            ></stripe-pricing-table>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  );
+}
