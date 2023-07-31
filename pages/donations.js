@@ -34,25 +34,28 @@ export default function Donations() {
             <p className="text-lg">
               The immediate way to reach me right now is via Revolut.me, by using it you put
               the donation directly in the bank account I use. To use that 
-              <Link className="font-bold hover:text-red-600" href="https://revolut.me/maikelthedev"> click here.</Link>
+              <Link className="font-bold hover:text-red-600" href="https://revolut.me/maikelthedev"> click here. </Link>
+               If that fails and you don't have Monzo, use Stripe below. 
             </p>
             <p className="text-lg">
-              The second fastest (yet much slower) is a direct link to my personal
-              Stripe account with all the currencies below. You can contribute with your preferred currency in
-              just a click:
+              Another way to reach me instantly yet only in GBP is Monzo using this 
+              <Link className="font-bold hover:text-red-600" href="https://monzo.me/miguelfriasmosquea"> link</Link>.
+              This is the way I'd recommend to anyone in the UK. 
             </p>
-
+            <p className="text-lg">
+              The simplest (yet much slower) is a direct link to my personal
+              Stripe account with all the currencies below. You can contribute with your preferred currency in
+              just a click from anywhere in the world.
+            </p>
             <Currencies />
-
             <p className="tex-md">
-              You can also use{" "}
+              You can also use LiberaPay
               <Link
-                className="font-bold"
+                className="font-bold hover:text-red-600"
                 href="https://liberapay.com/maikelthedev/"
-              >
-                LiberaPay
+              > here 
               </Link>{" "}
-              but it'll again take even longer to reach me
+              but it'll again take even longer to reach me.
             </p>
             <h1 className="text-3xl font-bold">How Your Donation Helps</h1>
             <p className="text-lg">
