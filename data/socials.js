@@ -8,7 +8,7 @@ export const socials = [
   {
     id: 2,
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/maikelfrias/",
+    url: "https://www.linkedin.com/in/maikelthedev/",
     logo: "/logos/linkedin.webp",
   },
   {
