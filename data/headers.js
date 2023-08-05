@@ -54,10 +54,10 @@ export const headers = {
   donations: {
     subtitle: ["Donations"],
     title: [
-      "Donate to Make a Difference",
+      "Help me get food",
     ],
     slogan:
-      "Extend a hand, transform a life: Your support uplifts, inspires hope, and creates lasting change.",
+      "Get ready for the de-ChatGPT-fied donation page",
   },
   home: {
     subtitle: [

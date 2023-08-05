@@ -164,7 +164,7 @@ There are tools for complex proposals. He shows [Proposify](https://www.proposif
 
 You typically want to add due dates for estimates because it might only be valid for certain time. 
 
-[Nusii](https://nusii.com/) is another one, you can find more with "proposal generator"
+[Nusii](https://nusii.com/) is another one, you can find more with "proposal generator". Cost 29 USD per month minimum. 
 
 You could use [99design](https://en.99designs.es/) for people to compete on designs you need (eg. your company logo). 
 
