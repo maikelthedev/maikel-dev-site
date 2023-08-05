@@ -159,7 +159,8 @@ export default function Donations() {
               I had a job if I had it secured. If it was up to me I'd be back in
               London, get a McJob and move on with life. But as you know I tried
               that in December 2022/January 2023, and all I did was to run out
-              of time to find accommodation.
+              of time to find accommodation and get the credit card that bought me a few months
+              extra since I've got an excellent credit report in the UK (and only there).
             </p>
             <p className="text-lg">
               I need <span className="font-bold">serious help </span>to get back
