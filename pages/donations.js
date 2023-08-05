@@ -52,7 +52,7 @@ export default function Donations() {
               reason I de-chatGPTfied this page, I want you to TRULY KNOW how
               bad things are right now
             </p>
-            <p className="text-lg line-through">
+            <p className="text-lg">
               The immediate way to reach me right now is via Revolut.me, by
               using it you put the donation directly in the bank account I use.
               To use that
