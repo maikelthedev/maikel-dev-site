@@ -79,6 +79,16 @@ export default function Donations() {
               . This is the way I'd recommend to anyone in the UK.
             </p>
             <p className="text-lg">
+              If you have an account with PayPal you can use my{" "}
+              <Link
+                className="font-bold hover:text-red-600"
+                href="https://paypal.me/maikelthedev"
+              >
+                Paypal.me link
+              </Link>{" "}
+              here. I don't really know long it takes from payment to withdrawal into my account using this method.
+            </p>
+            <p className="text-lg">
               The simplest (yet much slower) is a direct link to my personal
               Stripe account with all the currencies below. You can contribute
               with your preferred currency in just a click from anywhere in the
@@ -159,8 +169,9 @@ export default function Donations() {
               I had a job if I had it secured. If it was up to me I'd be back in
               London, get a McJob and move on with life. But as you know I tried
               that in December 2022/January 2023, and all I did was to run out
-              of time to find accommodation and get the credit card that bought me a few months
-              extra since I've got an excellent credit report in the UK (and only there).
+              of time to find accommodation and get the credit card that bought
+              me a few months extra since I've got an excellent credit report in
+              the UK (and only there).
             </p>
             <p className="text-lg">
               I need <span className="font-bold">serious help </span>to get back
@@ -170,11 +181,13 @@ export default function Donations() {
               charge 20€ per hour, what else do I need to do, work for free? How
               low must I go to just get a steady income? It feel as if I'm
               asking something that doesn't exist. Aren't we suppose to be the
-              never-jobless workforce? How's it even possible that I'm unemployed.
-              Is it all about having the right contacts? How do I get them? What do I do while get them? Can I get them before the 2nd of September?  
+              never-jobless workforce? How's it even possible that I'm
+              unemployed. Is it all about having the right contacts? How do I
+              get them? What do I do while get them? Can I get them before the
+              2nd of September?
             </p>
             <p className="text-lg">
-              I don't see a way out. Help me. I need to be hired. 
+              I don't see a way out. Help me. I need to be hired.
             </p>
           </div>
         </div>

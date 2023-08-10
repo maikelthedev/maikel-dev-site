@@ -97,7 +97,7 @@ export async function getStaticProps(context) {
   if (image) {
     imagePrefix = `![${grayMatter.title}](${grayMatter.image})`;
   } else {
-    imagePrefix = `![${grayMatter.title}](/posts/blog.jpg)`;
+    imagePrefix = `![${grayMatter.title}](/posts/blog.webp)`;
   }
 
   const markdown = `# ${grayMatter.title}\n ${imagePrefix}\n  ${
