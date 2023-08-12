@@ -44,10 +44,10 @@ function Footer() {
             </div>
           </div>
           <div className="mt-10 flex justify-between mr-2 py-1 md:mt-0">
-            <Link href="https://firefish.maikel.dev/@maikel" target="_blank">
+            <Link href="https://mastodon.social/@maikelfrias" rel="me" target="_blank">
               <Image
                 className="hover:scale-150 duration-200"
-                src="/logos/calckey.webp"
+                src="/logos/mastodon.svg"
                 width={30}
                 height={30}
               />
