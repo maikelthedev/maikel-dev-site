@@ -93,6 +93,14 @@ export function Post(props) {
         </p>
       );
     },
+    pre(details) {
+      return (
+        <p className=" bg-black text-white border-2 border-green-300 p-2  mx-5 md:mx-20 mb-5 text-lg">
+          {" "}
+          {details.children}{" "}
+        </p>
+      );
+    },
   };
   return (
     <Fragment >
