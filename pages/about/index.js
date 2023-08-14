@@ -20,7 +20,7 @@ function About() {
               <span className="font-bold">2020</span>. OÜ means the same as
               Limited in the UK or LLC in the US. The company is registered in
               the Estonian Business Register under the registry code{" "}
-              <span className="font-bold">16006677.</span>
+              <span className="font-bold">16006677</span> and EU VAT ID <span className="font-bold">EE102644089</span>
             </p>
             <p className="text-md">
               The full legal address is:{" "}
