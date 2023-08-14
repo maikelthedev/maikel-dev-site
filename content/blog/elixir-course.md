@@ -1,7 +1,7 @@
 ---
 title: Elixir and Phoenix Course
 image: "/posts/phoenix-elixir.webp"
-excerpt: "Notes on a course web developer course that I'm doing"
+excerpt: "Notes on an Elixir course that I'm doing"
 date: "2023-08-14"
 ---
 ## Notes
