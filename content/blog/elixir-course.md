@@ -4,9 +4,8 @@ image: "/posts/phoenix-elixir.webp"
 excerpt: "Notes on an Elixir course that I'm doing"
 date: "2023-08-14"
 ---
-## Notes
 
-### Section 1: Elixir Warmup
+## Section 1: Elixir Warmup
 Installing is as simple as 
 
 ```bash
@@ -46,6 +45,85 @@ List comprehension looks a lot like in Python with zip()
 
 MOst common operations in Elixir have their own methods in the standard library
 
-### Section 2: Elixir's Amazing Pattern Matching
+## Section 2: Elixir's Amazing Pattern Matching
 
-TBC
+Pattern matching is elixir replacement for variable assignment???? That's what he says
+
+Is a bit like destructuring with Javascript so if Cards.deal() returns a bunch of cards AND another bunch of cards you cal name it
+
+```bash
+{bunch_of_cards, another_bunch_of_cards} = Cards.deal(deck,2)
+```
+
+Oh this section is only 57 minutes, I should be fast going through it. 
+
+UNRELATED NOTE: I need to set feeding timers now that I'm back in bulking
+
+BEAM = Bogdan's Erlang Abstract Machine. Like the JVM. 
+
+The reason to knwo the relationship between Elixir and Erlang is that some exceptional times you might need to call Erlang code, his example is to save stuff. 
+
+Atom are like values that are like, kind of strings. I'm not really getting what he means with this. Two most commons are :ok and :error. 
+I think I need to figure this atom thing out of this course. 
+
+If you hard code a value on the left hand side, elixir is going to require the same one on the left
+
+e.g.
+
+```bash
+["red", colour] = ["red", "blue"] # YES
+["red", colour] = ["green", "blue"] # NO, won't compile
+```
+
+To ignore an element use _element. So that the compilter (eg: _reason) doesn't alert you you're not using that variable. You still need it for pattern, matching. 
+
+Pipe operator needs very consistent first arguments as they will be replaced with the result of the previous code. 
+
+## Section 3: Testing and Documentation
+
+Install the Xdoc? package. Go to mix.exs, inside deps add {:ex_doc} then 
+
+```bash
+mix deps.get
+```
+
+For some reason mix docs doesn't work. I get this error
+/usr/lib/erlang/lib/parsetools-2.3.2/include/yeccpre.hrl: no such file or directory
+
+But as someone metions goes away with sudo apt install erlang
+
+Fuck me, that's beautiful docs. 
+
+If you want to add examples, use ## examples and add 3 tabs to separate it. Then it'll show formated. 
+
+Testing comes already from Elixir, not additional library needed (same a Rust)
+
+You use "mix test" for that
+
+Anything you put as ## Examples becomes a test too. 
+When you write those examples, which happen to become tests, ensure you only paste the code result of the end one, there's no point on pasting the code of the middle or first part fo the example. Otherwise you're creatin assertions for no reason (retesting what should have been tested before). 
+
+Is important to follow the right formating (pound pound exmaples, 3 tabs for the first command)
+
+Example of a test inside a test file like cardS_test.ex
+
+```elixir
+defmodule CardsTest do
+  use ExUnit.Case
+  doctest Cards
+
+  test "create_deck_makes 20 cards" do
+    deck_length = length(Cards.create_deck)
+    assert deck_length == 20
+  end
+end
+```
+
+You can use two keywords for **testing** assert and **refute**
+
+## Section 4: Side topics
+
+Maps are like javascript objects. 
+
+Youc reate them with % like colors = ${primary: "red"} would be equivalent to javascript const colours = {primary: "red"}
+
