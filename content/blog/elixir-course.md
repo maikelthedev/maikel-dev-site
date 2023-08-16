@@ -127,3 +127,66 @@ Maps are like javascript objects.
 
 Youc reate them with % like colors = ${primary: "red"} would be equivalent to javascript const colours = {primary: "red"}
 
+Imagine you use Map.put(colors, :primary, "blue") to update a map called colors, a key on it called primary (not explanation of why it has to be an atom), to the colour blue. What you get is NOT EVER a modified original colors map, but a new map. As usual, sstructures an immutable. Is like every structure in Elixir is like a String in Java. 
+
+Keyboards list is a list with tuples with atoms, but name, like colors = [{:primary, "red"}, {:secondary, "green"}] to get the value of primary you'd use
+
+colors[:primary]
+
+he's really bad at explaining atoms. 
+
+## Section 5: Image manipulation with Elixir
+
+You really need to figure this ":" atom thing. 
+
+He's now using :crypto.hash() library with a half-arsed explanation of what does that : <-- do. 
+
+## Section 6: Struts - Elixir's Data Modelling Tool. 
+
+Not sure why he divided these two sections. 
+
+structs are maps with advantages (default values, compile check properties)
+
+To create a struct use defstruct , example
+
+```elixir
+defmodule Identicon.Image do
+  defstruct hex: nil
+end
+```
+
+nil is nothing in Elixir?
+
+You cannot attach functions into a struct (unlike a class in other languages), this is a lot like Rust. 
+
+For parttiern matching with arbitrarily long use tail as in 
+
+[r,g,b | tail] = hex_list
+
+This is how you call a function from another one, you use the ampersand and also the arithwahtever it has to identify it from the other versions. 
+
+|> Enum.map(&mirror_row/1)
+
+Notice one thing in the code below
+
+The first thing you pass is the input but since that has been transformed time and time again, you pass it again to the last one save_image because what it is reciveing is not anymore the input as first argument, so is like (what_others_have_done, input)
+
+```bash
+  def main(input) do
+    input
+    |> hash_input
+    |> pick_color
+    |> build_grid
+    |> filter_odd_squares
+    |> build_pixel_map
+    |> draw_image
+    |> save_image(input)
+  end
+```
+
+## Review notes FOR LATER once I finish the course. 
+
+The course is dated, here https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/learn/lecture/5911740#questions/10868796
+
+you cannot know what's missing unless you search for what other users of this course put there, he doesn't explain you need egb and is not in standard lib. 
+

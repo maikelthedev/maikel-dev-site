@@ -25,12 +25,18 @@ export function Post(props) {
     },
     h3(details) {
       return (
-        <h3 className="pb-5 text-2xl custom-text-indigo-900"> {details.children} </h3>
+        <h3 className="pb-5 text-2xl custom-text-indigo-900">
+          {" "}
+          {details.children}{" "}
+        </h3>
       );
     },
     h4(details) {
       return (
-        <h4 className="pb-5 text-xl custom-text-indigo-900"> {details.children} </h4>
+        <h4 className="pb-5 text-xl custom-text-indigo-900">
+          {" "}
+          {details.children}{" "}
+        </h4>
       );
     },
     blockquote(details) {
@@ -42,7 +48,10 @@ export function Post(props) {
     },
     h5(details) {
       return (
-        <h5 className="pb-5 text-lg custom-text-indigo-900"> {details.children} </h5>
+        <h5 className="pb-5 text-lg custom-text-indigo-900">
+          {" "}
+          {details.children}{" "}
+        </h5>
       );
     },
     img(image) {
@@ -63,7 +72,10 @@ export function Post(props) {
     },
     ul(details) {
       return (
-        <ul className="custom-text-black pb-5 list-disc md:mx-20 mx-14"> {details.children} </ul>
+        <ul className="custom-text-black pb-5 list-disc md:mx-20 mx-14">
+          {" "}
+          {details.children}{" "}
+        </ul>
       );
     },
     ol(details) {
@@ -95,15 +107,15 @@ export function Post(props) {
     },
     pre(details) {
       return (
-        <p className=" bg-black text-white border-2 border-green-300 p-2  mx-5 md:mx-20 mb-5 text-lg">
-          {" "}
-          {details.children}{" "}
-        </p>
+        <pre
+          className=" bg-black text-white border-2 border-green-300 p-2  mx-5 md:mx-20 mb-5 text-lg">
+          {details.children}
+        </pre>
       );
     },
   };
   return (
-    <Fragment >
+    <Fragment>
       <div className="custom-bg-white md:mx-20">
         <ReactMarkdown components={customRenderers} remarkPlugins={[remarkGfm]}>
           {markdown}
