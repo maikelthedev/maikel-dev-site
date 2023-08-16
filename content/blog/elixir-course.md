@@ -4,6 +4,9 @@ image: "/posts/phoenix-elixir.webp"
 excerpt: "Notes on an Elixir course that I'm doing"
 date: "2023-08-14"
 ---
+## What is this?
+
+This is the course [on elixir](https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/) that I'm doing from Udemy
 
 ## Section 1: Elixir Warmup
 Installing is as simple as 
