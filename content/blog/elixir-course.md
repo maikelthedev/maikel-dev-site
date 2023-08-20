@@ -6,7 +6,7 @@ date: "2023-08-14"
 ---
 ## What is this?
 
-This is the course [on elixir](https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/) that I'm doing from Udemy
+This is the course [on elixir](https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/) that I'm doing from Udemy to create the backend for [[Fedigrindr]]
 
 ## Section 1: Elixir Warmup
 Installing is as simple as 
@@ -73,7 +73,7 @@ If you hard code a value on the left hand side, elixir is going to require the s
 
 e.g.
 
-```bash
+```elixir
 ["red", colour] = ["red", "blue"] # YES
 ["red", colour] = ["green", "blue"] # NO, won't compile
 ```
@@ -174,17 +174,17 @@ Notice one thing in the code below
 
 The first thing you pass is the input but since that has been transformed time and time again, you pass it again to the last one save_image because what it is reciveing is not anymore the input as first argument, so is like (what_others_have_done, input)
 
-```bash
-  def main(input) do
-    input
-    |> hash_input
-    |> pick_color
-    |> build_grid
-    |> filter_odd_squares
-    |> build_pixel_map
-    |> draw_image
-    |> save_image(input)
-  end
+```elixir
+def main(input) do
+	input
+	|> hash_input
+	|> pick_color
+	|> build_grid
+	|> filter_odd_squares
+	|> build_pixel_map
+	|> draw_image
+	|> save_image(input)
+end
 ```
 
 ## Section 7: On to Phoenix
@@ -208,7 +208,7 @@ mix ecto.gen.migration name_of_the_migration
 
 Example migratoin
 
-```bash
+```elixir
 def module Discuss.Repo.Migrations.AddTopics do
   use Ecto.migratoin
   
@@ -222,6 +222,22 @@ end
 
 That would be a migration to create a table, with a string with name title. 
 
+#### Code reuse
+
+Import, alias and use are used for this. 
+
+```elixir
+IO.Puts "message" # Is what you use as console.log("message")
+```
+The conn struct is basically the same as req in Express
+
+In any request you get conn and params. Params is clear by the name what it contains. If you want to debug you can alwasy do 
+
+```elixir
+IO.Puts params
+```
+
+## Section 9: Models in Phoenix
 
 
 
