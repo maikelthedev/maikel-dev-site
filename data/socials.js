@@ -14,7 +14,7 @@ export const socials = [
   {
     id: 3,
     name: "Firefish",
-    url: "https://firefish.maikel.dev/@maikel",
-    logo: "/logos/calckey.webp",
+    url: "https://vmst.io/@maikel",
+    logo: "/logos/mastodon.webp",
   },
 ];
