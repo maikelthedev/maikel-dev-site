@@ -13,8 +13,8 @@ export const socials = [
   },
   {
     id: 3,
-    name: "Firefish",
+    name: "Mastodon",
     url: "https://vmst.io/@maikel",
-    logo: "/logos/mastodon.webp",
+    logo: "/logos/mastodon.svg",
   },
 ];
