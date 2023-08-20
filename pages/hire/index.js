@@ -76,9 +76,9 @@ function Hire() {
               Matrix account.
             </p>
             <p className="text-md">
-              If you use Mastodon or any Fediverse flavour (I use Calckey), you
+              If you use Mastodon, you
               can find me as{" "}
-              <span className="font-bold">@maikel@fedi.maikel.dev</span>
+              <span className="font-bold">@maikel@vmst.io</span>
             </p>
             <p className="text-md">
               I do not regularly check my Linkedin account.
