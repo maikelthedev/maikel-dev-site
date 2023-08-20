@@ -187,9 +187,49 @@ The first thing you pass is the input but since that has been transformed time a
   end
 ```
 
+## Section 7: On to Phoenix
+
+NOTE: From here, since I've noticed the course is pretty dated, i'm speed-running through the sections
+
+mix ecto.create creates the connection to the Phoenix app database
+
+mix phoenix.server works same as npm start with Expressjs
+
+## Section 8: MVC in Phoenix
+
+The folders created basically say what each thing is, this is no different than the structure of a typical ExpressJS project, with its router, templates, etc. 
+There's an intrinsict name between the view of a page and the template, if you call a view PageView, Phoneix is going to find a template called Page. 
+
+Same as Django you have to migrations...you have to generate a migration file. 
+
+```bash
+mix ecto.gen.migration name_of_the_migration
+```
+
+Example migratoin
+
+```bash
+def module Discuss.Repo.Migrations.AddTopics do
+  use Ecto.migratoin
+  
+  def change do
+    create table(:topics) do
+      add :title, :string
+    end
+  end
+end
+```
+
+That would be a migration to create a table, with a string with name title. 
+
+
+
+
 ## Review notes FOR LATER once I finish the course. 
 
 The course is dated, here https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/learn/lecture/5911740#questions/10868796
 
 you cannot know what's missing unless you search for what other users of this course put there, he doesn't explain you need egb and is not in standard lib. 
+
+
 
