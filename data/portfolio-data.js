@@ -6,7 +6,7 @@ export const clients = [
     logo: "surva.webp",
     id: uuidv4(),
     description:
-      "Survation is a Market Research & Political Pooling company based in London, UK.",
+      "Survation is a Market Research & Political Polling company based in London, UK.",
     projects: [
       {
         name: "Panel Frontend",
