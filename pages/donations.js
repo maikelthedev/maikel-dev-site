@@ -23,21 +23,15 @@ export default function Donations() {
                 </div>
               </div>
             </div>
-
-            <h1 className="text-3xl font-bold  line-through">
-              Support My Journey
-            </h1>
-            <p className="text-lg">THis isn't a journey, I'm not on a train</p>
-            <h1 className="text-3xl font-bold">Help me get food</h1>
-            <p className="text-lg line-through">
-              Your generosity makes a significant impact on my life. While I
-              appreciate past donations on Ko-fi.com, I've found a more direct
-              way to receive your support without delays or currency
-              limitations.
-            </p>
+            <h1 className="text-3xl font-bold">I have nowhere to go on the 1st of October</h1>
             <p className="text-lg">
-              So, you're seeing the crossed out text generated from chatGPT
-              because I don't think an AI can convey any message better than me.
+              I'm on temporary accommodation, the place where I am won't be available past the 1st of October because its owner is coming back 
+              and she wants it. 
+              I need enough funds to rent a place <span class="font-bold">now</span> in AirBnB (can't rent long-term without a salary) for at least 2 months. All places I'm seeing are vanishing from the listing very quickly. I need at least 1000€ to cover two months. 
+            </p>
+            <h1 className="text-3xl font-bold">Help me get food</h1>
+
+            <p className="text-lg">
               When you donate you{" "}
               <span className="font-bold">very literally</span> get me from
               rationing my meals, to getting food. You get me from a constant
@@ -107,12 +101,7 @@ export default function Donations() {
               but it'll again take even longer to reach me.
             </p>
             <h1 className="text-3xl font-bold">How Your Donation Helps</h1>
-            <p className="text-lg line-through">
-              Your support goes a long way in helping me navigate through this
-              challenging time. I'm currently working hard to secure permanent
-              clients and get back on my feet. Your contribution assists me in
-              several ways:
-            </p>
+            
 
             <p className="text-lg">
               We're not a boat, there's nothing to navigate. Your donation puts
@@ -123,11 +112,7 @@ export default function Donations() {
 
             <ul className="list-disc px-8 space-y-2">
               <li className="list-item">
-                <span className="line-through">
-                  Meeting Basic Needs: Your donation ensures I have food on my
-                  table and covers my monthly rent, which enables me to focus on
-                  finding stable work opportunities.
-                </span>{" "}
+            
                 Food on table. It doesn't cover rent. The fact it doesn't cover
                 rent is why I'm in Triana and not in Amate (both in Seville)
                 taking space on the flat of a friend who is on holidays. And the
@@ -136,19 +121,9 @@ export default function Donations() {
                 leave before yet I have no idea where.
               </li>
               <li className="list-item">
-                <span className="line-through">
-                  Maintaining Well-being: With your support, I can afford my gym
-                  membership, which plays a vital role in managing stress and
-                  staying positive throughout this journey.
-                </span>{" "}
                 Pays the gym.
               </li>
               <li className="list-item">
-                <span className="line-through">
-                  Essential Expenses: Your donation also covers monthly
-                  utilities and other unavoidable costs, like my Estonian
-                  accountants, necessary for my business's legal structure.
-                </span>
                 35€ of Xolo.io, 40€ of the gym, 25 GBP of my Virgin credit card
                 very minimum payment, 30GBP of my monzo Flex loan, both maxed
                 out because I eat. 6€ of my Spanish phone number around 10 GBP
@@ -160,8 +135,7 @@ export default function Donations() {
             <p className="text-lg">
               Please note that none of the funds raised here are used for my
               business. Your donation goes directly to my personal Stripe
-              account to support my immediate needs during this{" "}
-              <span className="line-through">transitional phase.</span> messed
+              account to support my immediate needs during this messed
               up time. It won't solve anything on the long-term, nor medium
               term, I'm fully transparent on what comes through on my toots on
               the fedi. I don't have the right to any benefits, here or in the
