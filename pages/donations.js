@@ -23,13 +23,12 @@ export default function Donations() {
                 </div>
               </div>
             </div>
-            <h1 className="text-3xl font-bold">I have nowhere to go on the 1st of October</h1>
+            <h1 className="text-3xl font-bold">I have no income and 300€ left for E-V-E-R-Y-T-H-I-N-G</h1>
             <p className="text-lg">
-              I'm on temporary accommodation, the place where I am won't be available past the 1st of October because its owner is coming back 
-              and she wants it. 
-              I need enough funds to rent a place <span class="font-bold">now</span> in AirBnB (can't rent long-term without a salary) for at least 2 months. All places I'm seeing are vanishing from the listing very quickly. I need at least 1000€ to cover two months. 
+              I have roughly 300€ left and no income after booking a place for October (which cost me 450€ per month) and December. 
+              This aren't enough funds to cover food at all. Let alone other expenses. I'm at a <span class="font-bold">very real risk of starvation and homelessness.</span>
             </p>
-            <h1 className="text-3xl font-bold">Help me get food</h1>
+            <h1 className="text-3xl font-bold">Help me get food and a roof above my head</h1>
 
             <p className="text-lg">
               When you donate you{" "}
@@ -39,12 +38,8 @@ export default function Donations() {
               attention isn't kidnapped by basic survival adrenalinergic
               worries. You get me from thinking how to commit suicide, to wonder
               whether I should change my gym workout table from cutting to a
-              bulking cycle.
-            </p>
-            <p className="text-lg">
-              Take every word I say here very literally because that's the
-              reason I de-chatGPTfied this page, I want you to TRULY KNOW how
-              bad things are right now
+              bulking cycle. You get me from total paralysis to enough calm to 
+              figure new strategies to get clients and a stable income. 
             </p>
             <p className="text-lg">
               The immediate way to reach me right now is via Revolut.me, by
@@ -104,21 +99,18 @@ export default function Donations() {
             
 
             <p className="text-lg">
-              We're not a boat, there's nothing to navigate. Your donation puts
-              food on the table so that I can keep trying different ways to do
+              Your donation puts food on the table so that I can keep trying different ways to do
               that myself, is that simple. I've got a killer IT skillset but for
               some reason that escapes my understanding I am still jobless.
             </p>
 
             <ul className="list-disc px-8 space-y-2">
               <li className="list-item">
-            
-                Food on table. It doesn't cover rent. The fact it doesn't cover
-                rent is why I'm in Triana and not in Amate (both in Seville)
-                taking space on the flat of a friend who is on holidays. And the
-                main reason for my sleepless nights as he comes back on the 3rd
-                of September and I have no idea what to do but I'll have to
-                leave before yet I have no idea where.
+                Food on table. 
+              </li>
+              <li className="list-item">
+                Pays rent (currently 450€ per month) of shared accommodation. Without a stable income
+                I am limited to what I can find in AirBnB. 
               </li>
               <li className="list-item">
                 Pays the gym.
