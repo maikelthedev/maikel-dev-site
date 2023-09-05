@@ -2,6 +2,60 @@ import { v4 as uuidv4 } from "uuid";
 
 export const clients = [
   {
+    name: " Headbright Group",
+    logo: "headbright1.webp",
+    id: uuidv4(),
+    description:
+      "Headbright Group creates for the Web and Mobile. ",
+    projects: [
+      {
+        name: "Min.io cluster deployment",
+        id: uuidv4(),
+        description:
+          "Scripts to deploy a custom-made Min.io deployment in Hetzner Cloud",
+        technologies: [
+          { name: "bash", id: uuidv4() },
+          { name: "cloud-init", id: uuidv4() },
+          { name: "hetzner", id: uuidv4() },
+        ],
+        link: "minio-deployment-headbright",
+      },
+    ],
+  },
+  {
+    name: "SkunkWerks",
+    logo: "skunkwerks.webp",
+    id: uuidv4(),
+    description:
+      "SkunkWerks specialises in designing, building and providing ongoing support for distributed computer systems and multi-peer networking technologies",
+    projects: [
+      {
+        name: "OCI Development Cloud",
+        id: uuidv4(),
+        description:
+          "Oracle Cloud Infrastructure as Code with custom-made FreeBSD image",
+        technologies: [
+          { name: "terraform", id: uuidv4() },
+          { name: "oracle", id: uuidv4() },
+          { name: "freebsd", id: uuidv4() },
+        ],
+        link: "oci-dev-cloud",
+      },
+      {
+        name: "Automated FreeBSD Builds for OCI",
+        id: uuidv4(),
+        description: "Ansible script to run a builder machine that builds FreeBSD in & for OCI, launch it and test it",
+        technologies: [
+          { name: "ansible", id: uuidv4() },
+          { name: "oracle", id: uuidv4() },
+          { name: "freebsd", id: uuidv4() },
+          { name: "qemu", id: uuidv4() },
+        ],
+        link: "automated-freebsd-oci",
+      },
+    ],
+  },
+  {
     name: "Survation",
     logo: "surva.webp",
     id: uuidv4(),
@@ -66,39 +120,6 @@ export const clients = [
           { name: "wordpress", id: uuidv4() },
         ],
         link: "survation-cloud",
-      },
-    ],
-  },
-  {
-    name: "SkunkWerks",
-    logo: "skunkwerks.webp",
-    id: uuidv4(),
-    description:
-      "SkunkWerks specialises in designing, building and providing ongoing support for distributed computer systems and multi-peer networking technologies",
-    projects: [
-      {
-        name: "OCI Development Cloud",
-        id: uuidv4(),
-        description:
-          "Oracle Cloud Infrastructure as Code with custom-made FreeBSD image",
-        technologies: [
-          { name: "terraform", id: uuidv4() },
-          { name: "oracle", id: uuidv4() },
-          { name: "freebsd", id: uuidv4() },
-        ],
-        link: "oci-dev-cloud",
-      },
-      {
-        name: "Automated FreeBSD Builds for OCI",
-        id: uuidv4(),
-        description: "Ansible script to run a builder machine that builds FreeBSD in & for OCI, launch it and test it",
-        technologies: [
-          { name: "ansible", id: uuidv4() },
-          { name: "oracle", id: uuidv4() },
-          { name: "freebsd", id: uuidv4() },
-          { name: "qemu", id: uuidv4() },
-        ],
-        link: "automated-freebsd-oci",
       },
     ],
   },

@@ -34,8 +34,8 @@ export default function Client(props) {
                 <Image
                   className=""
                   src={"/clients/" + client.logo}
-                  width={300}
-                  height={300}
+                  width={200}
+                  height={200}
                 />
               </div>
             </div>
