@@ -149,7 +149,7 @@ export default function Donations() {
               asking something that doesn't exist. Aren't we suppose to be the
               never-jobless workforce? How's it even possible that I'm
               unemployed. Is it all about having the right contacts? How do I
-              get them? What do I do while get them? Can I get them before the
+              get them? What do I do while get them? Can I get them before the 
               end of September?
             </p>
             <p className="text-lg">
