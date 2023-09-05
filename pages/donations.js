@@ -25,7 +25,7 @@ export default function Donations() {
             </div>
             <h1 className="text-3xl font-bold">I have no income and 300€ left for E-V-E-R-Y-T-H-I-N-G</h1>
             <p className="text-lg">
-              I have roughly 300€ left and no income after booking a place for October (which cost me 450€ per month) and December. 
+              I have roughly 300€ left and no income after booking a place for October (which cost me 450€ per month) and November. 
               This aren't enough funds to cover food at all. Let alone other expenses. I'm at a <span class="font-bold">very real risk of starvation and homelessness.</span>
             </p>
             <h1 className="text-3xl font-bold">Help me get food and a roof above my head</h1>
