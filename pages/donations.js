@@ -83,7 +83,7 @@ export default function Donations() {
               here. I don't really know long it takes from payment to withdrawal into my account using this method.
             </p>
             <p className="text-lg">
-              The simplest (yet much slower) is a direct link to my personal
+              The simplest (<span class="line-through">yet much slower</span> not anymore now takes only 3 days to reach me) is a direct link to my personal
               Stripe account with all the currencies below. You can contribute
               with your preferred currency in just a click from anywhere in the
               world.
