@@ -150,7 +150,7 @@ export default function Donations() {
               never-jobless workforce? How's it even possible that I'm
               unemployed. Is it all about having the right contacts? How do I
               get them? What do I do while get them? Can I get them before the
-              2nd of September?
+              end of September?
             </p>
             <p className="text-lg">
               I don't see a way out. Help me. I need to be hired.
