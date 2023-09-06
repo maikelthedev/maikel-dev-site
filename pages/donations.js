@@ -11,19 +11,25 @@ const title = "Donations to Maikel";
 const excerpt = "Donations to Maikel to keep the light on";
 const image = "donations.webp";
 const donations = [
-  { initial: "K", symbol: "$", amount: 25, euros: 22.83, provider: "Stripe"},
-  { initial: "Z", symbol: "$", amount: 20, euros: 18.26, provider: "Stripe"},
-  { initial: "P", symbol: "AU$", amount: 100, euros: 58.25, provider: "Stripe"},
+  { initial: "K", symbol: "$", amount: 25, euros: 22.83, provider: "Stripe" },
+  { initial: "Z", symbol: "$", amount: 20, euros: 18.26, provider: "Stripe" },
+  {
+    initial: "P",
+    symbol: "AU$",
+    amount: 100,
+    euros: 58.25,
+    provider: "Stripe",
+  },
   { initial: "B", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
-  { initial: "A", symbol: "$", amount: 70, euros: 65.26, provider: "Stripe"},
+  { initial: "A", symbol: "$", amount: 70, euros: 65.26, provider: "Stripe" },
 ];
 
 const totalEuros = donations.reduce((accumulator, donation) => {
   return accumulator + donation.euros;
 }, 0);
 
-const currentPercentage = totalEuros * 100 / 1500
-const currentPercentageString = currentPercentage + "%"
+const currentPercentage = (totalEuros * 100) / 1500;
+const currentPercentageString = currentPercentage + "%";
 
 export default function Donations() {
   const header = headers.donations;
@@ -169,64 +175,10 @@ export default function Donations() {
               worries. You get me from thinking how to commit suicide, to wonder
               whether I should change my gym workout table from cutting to a
               bulking cycle. You get me from total paralysis to enough calm to
-              figure new strategies to get clients and a stable income.
+              figure new strategies to get clients and{" "}
+              <span className="font-bold">a stable income.</span>
             </p>
-            <p className="text-lg">
-              The immediate way to reach me right now is via Revolut.me, by
-              using it you put the donation directly in the bank account I use.
-              To use that
-              <Link
-                className="font-bold hover:text-red-600"
-                href="https://revolut.me/maikelthedev"
-              >
-                {" "}
-                click here.{" "}
-              </Link>
-              If that fails and you don't have Monzo, use Stripe below by
-              clicking on your currency symbol.
-            </p>
-            <p className="text-lg">
-              Another way to reach me instantly yet only in GBP is Monzo using
-              this
-              <Link
-                className="font-bold hover:text-red-600"
-                href="https://monzo.me/miguelfriasmosquea"
-              >
-                {" "}
-                link
-              </Link>
-              . This is the way I'd recommend to anyone in the UK.
-            </p>
-            <p className="text-lg">
-              If you have an account with PayPal you can use my{" "}
-              <Link
-                className="font-bold hover:text-red-600"
-                href="https://paypal.me/maikelthedev"
-              >
-                Paypal.me link
-              </Link>{" "}
-              here. I don't really know long it takes from payment to withdrawal
-              into my account using this method.
-            </p>
-            <p className="text-lg">
-              The simplest (<span class="line-through">yet much slower</span>{" "}
-              not anymore now takes only 3 days to reach me) is a direct link to
-              my personal Stripe account with all the currencies below. You can
-              contribute with your preferred currency in just a click from
-              anywhere in the world.
-            </p>
-            <Currencies />
-            <p className="tex-md">
-              You can also use LiberaPay
-              <Link
-                className="font-bold hover:text-red-600"
-                href="https://liberapay.com/maikelthedev/"
-              >
-                {" "}
-                here
-              </Link>{" "}
-              but it'll again take even longer to reach me.
-            </p>
+
             <h1 className="text-3xl font-bold">How Your Donation Helps</h1>
 
             <p className="text-lg">
@@ -237,19 +189,27 @@ export default function Donations() {
             </p>
 
             <ul className="list-disc px-8 space-y-2">
-              <li className="list-item">Food on table.</li>
+              <li className="list-item">Food on table. ~300€ month</li>
               <li className="list-item">
                 Pays rent (currently 450€ per month) of shared accommodation.
                 Without a stable income I am limited to what I can find in
                 AirBnB.
               </li>
-              <li className="list-item">Pays the gym.</li>
+              <li className="list-item">Pays the gym. 39€</li>
               <li className="list-item">
-                35€ of Xolo.io, 40€ of the gym, 25 GBP of my Virgin credit card
-                very minimum payment, 30GBP of my monzo Flex loan, both maxed
-                out because I eat. 6€ of my Spanish phone number around 10 GBP
-                every 3 months to maintain my British number (dual sim phone).
-                That's literally it.
+                35€ of Xolo.io the accountants that keep Maikel OÜ alive.{" "}
+              </li>
+              <li className="list-item">
+                25 GBP of my maxed-out Virgin credit card minimum payment
+              </li>
+              <li className="list-item">
+                30 GBP of my maxed-out Monzo Flex loan
+              </li>
+              <li className="list-item">
+                6€ of my Spanish mobile phone number and broadband
+              </li>
+              <li className="list-item">
+                10 GBP to keep my British mobile phone number every 3 months
               </li>
             </ul>
 
@@ -260,7 +220,7 @@ export default function Donations() {
               It won't solve anything on the long-term, nor medium term, I'm
               fully transparent on what comes through on my toots on the fedi. I
               don't have the right to any benefits, here or in the UK nor access
-              to any social services. I would fly blindly wherever I had a job
+              to any social services (except healthcare). I would fly blindly wherever I had a job
               if I had it secured. If it was up to me I'd be back in London, get
               a McJob and move on with life. But as you know I tried that in
               December 2022/January 2023, and all I did was to run out of time
@@ -291,16 +251,19 @@ export default function Donations() {
               accountability here is the list.
             </p>
             <ul className="list-disc px-8 space-y-2">
-              {
-                donations.map((donations) => (
-                  <li className="list-item"> 
-                  {donations.initial + ": " +donations.symbol + donations.amount + " (" + donations.euros + "€) using " + 
-                  donations.provider}
-                  </li>    
-              
-                ))
-              }
-              
+              {donations.map((donations) => (
+                <li className="list-item">
+                  {donations.initial +
+                    ": " +
+                    donations.symbol +
+                    donations.amount +
+                    " (" +
+                    donations.euros +
+                    "€) using " +
+                    donations.provider}
+                </li>
+              ))}
+
               <li className="list-item">
                 <span className="font-bold">Total: </span>
                 {totalEuros}€ of 1500€ needed.
