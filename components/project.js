@@ -8,10 +8,10 @@ export default function Project(props) {
   const { id, description, technologies, link, name } = project;
 
   return (
-    <Fragment>
+    <Fragment >
       <div
-        key={id}
-        className="group mb-8 w-full break-inside-avoid-column"
+        key={id} 
+        className="group mt-5  p-2 mb-10  basis-1/3"
         onClick={() => router.push("/portfolio/" + link)}
       >
         <div className="bg-white border-indigo-700 border-2 rounded-lg md:group-hover:border-dashed">
