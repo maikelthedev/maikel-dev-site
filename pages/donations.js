@@ -7,67 +7,77 @@ import Image from "next/image";
 import { providers } from "@/data/currencies";
 import Head from "next/head";
 
-const title = "Donations to Maikel"
-const excerpt = "Donations to Maikel to keep the light on"
-const image = "donations.webp"
+const title = "Donations to Maikel";
+const excerpt = "Donations to Maikel to keep the light on";
+const image = "donations.webp";
+const donations = [
+  { initial: "K", symbol: "$", amount: 25, euros: 22.83 },
+  { initial: "Z", symbol: "$", amount: 20, euros: 18.26 },
+  { initial: "P", symbol: "AU$", amount: 100, euros: 58.25 },
+  { initial: "B", symbol: "$", amount: 30, euros: 27.92 },
+  { initial: "A", symbol: "$", amount: 70, euros: 65.26 },
+];
+
+const totalEuros = donations.reduce((accumulator, donation) => {
+  return accumulator + donation.euros;
+}, 0);
+
+const currentPercentage = totalEuros * 100 / 1500
+const currentPercentageString = currentPercentage + "%"
 
 export default function Donations() {
   const header = headers.donations;
   return (
     <Fragment>
       <Head>
-          <title>{title}</title>
-          <meta name="description" content={excerpt} key="description" />
-          <meta name="author" content="Maikel" key="author" />
-          <meta property="og:title" content={title} key="og-title" />
-          <meta
-            property="og:description"
-            content={excerpt}
-            key="og-description"
-          />
-          <meta
-            property="og:image"
-            content={"https://maikel.dev/" + image}
-            key="og-image"
-          />
-          <meta
-            property="og:url"
-            content="https://maikel.dev/donations"
-            key="og-url"
-          />
+        <title>{title}</title>
+        <meta name="description" content={excerpt} key="description" />
+        <meta name="author" content="Maikel" key="author" />
+        <meta property="og:title" content={title} key="og-title" />
+        <meta
+          property="og:description"
+          content={excerpt}
+          key="og-description"
+        />
+        <meta
+          property="og:image"
+          content={"https://maikel.dev/" + image}
+          key="og-image"
+        />
+        <meta
+          property="og:url"
+          content="https://maikel.dev/donations"
+          key="og-url"
+        />
 
-          <meta
-            property="twitter:url"
-            content="https://maikel.dev/donations"
-            key="twitter:url"
-          />
-          <meta
-            name="twitter:site"
-            content="@maikelthedev"
-            key="twitter:site"
-          />
-          <meta
-            name="twitter:creator"
-            content="@maikelthedev"
-            key="twitter:creator"
-          />
-          <meta name="twitter:title" content={title} key="twitter:title" />
-          <meta
-            name="twitter:description"
-            content={excerpt}
-            key="twitter:description"
-          />
-          <meta
-            name="twitter:image"
-            content={"https://maikel.dev/" + image}
-            key="twitter:image"
-          />
-          <meta
-            name="twitter:summary_large_image "
-            content={"https://maikel.dev/" + image}
-            key="twitter:summary_large_image"
-          />
-        </Head>
+        <meta
+          property="twitter:url"
+          content="https://maikel.dev/donations"
+          key="twitter:url"
+        />
+        <meta name="twitter:site" content="@maikelthedev" key="twitter:site" />
+        <meta
+          name="twitter:creator"
+          content="@maikelthedev"
+          key="twitter:creator"
+        />
+        <meta name="twitter:title" content={title} key="twitter:title" />
+        <meta
+          name="twitter:description"
+          content={excerpt}
+          key="twitter:description"
+        />
+        <meta
+          name="twitter:image"
+          content={"https://maikel.dev/" + image}
+          key="twitter:image"
+        />
+        <meta
+          name="twitter:summary_large_image "
+          content={"https://maikel.dev/" + image}
+          key="twitter:summary_large_image"
+        />
+      </Head>
       <div className="custom-bg-white">
         <Hero header={header} />
 
@@ -86,16 +96,16 @@ export default function Donations() {
                 Donations Raised
               </span>
               <span class="text-sm font-medium text-blue-700 dark:text-white">
-                10% from Total
+                {totalEuros}€ of 1500€
               </span>
             </div>
             <div className="w-full bg-gray-400 rounded-full dark:bg-gray-700">
               <div
                 className="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
-                style={{ width: "10%" }}
+                style={{ width: currentPercentageString }}
               >
                 {" "}
-                10%
+                {currentPercentage.toFixed(2)}%
               </div>
             </div>
             <p>Updated: 6th September 2023</p>
@@ -281,14 +291,18 @@ export default function Donations() {
               accountability here is the list.
             </p>
             <ul className="list-disc px-8 space-y-2">
-              <li className="list-item"> K: $25 (22.83€)</li>
-              <li className="list-item"> Z: $20 (18.26€)</li>
-              <li className="list-item"> P: AU$100 (58.25€)</li>
-              <li className="list-item"> B: $30 (27.92€)</li>
-              <li className="list-item"> A: $70 (65.26€)</li>
+              {
+                donations.map((donations) => (
+                  <li className="list-item"> 
+                  {donations.initial + ": " +donations.symbol + donations.amount + " (" + donations.euros + "€)"}
+                  </li>    
+              
+                ))
+              }
+              
               <li className="list-item">
                 <span className="font-bold">Total: </span>
-                192.52€
+                {totalEuros}€ of 1500€ needed.
               </li>
             </ul>
           </div>
