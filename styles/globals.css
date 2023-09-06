@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 400px)  {
+    thead {
+        display: none;
+      }
+}
 @media (min-width: 640px) {
     table {
-      display: inline-table !important;
+        display: inline-table !important;
     }
 
     thead tr:not(:first-child) {

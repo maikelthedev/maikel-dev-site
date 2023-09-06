@@ -6,7 +6,6 @@ import Currencies from "@/components/currencies";
 import Image from "next/image";
 import { providers } from "@/data/currencies";
 
-
 export default function Donations() {
   const header = headers.donations;
   return (
@@ -14,8 +13,8 @@ export default function Donations() {
       <div className="custom-bg-white">
         <Hero header={header} />
 
-        <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl items-center">
-          <div className="px-8 py-4 space-y-6">
+        <div className="custom-text-black flex flex-col md:flex-row p-2 custom-bg-white md:mx-auto md:max-w-6xl items-center">
+          <div className="px-2 md:px-8 py-4 space-y-6">
             <h1 className="text-3xl font-bold">
               I'm at a very real risk of starvation and homelessness
             </h1>
@@ -42,52 +41,48 @@ export default function Donations() {
               </div>
             </div>
             <p>Updated: 6th September 2023</p>
-
-            <table class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
-              <thead class="text-white">
-                {providers.map((provider) => (
-                  <tr class="custom-bg-gray-100 flex flex-col flex-no wrap custom-text-black sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
-                    <th class="p-3 text-left">Provider</th>
-                    <th class="p-3 text-left">Link</th>
-                    <th class="p-3 text-left" width="150px">
-                      Observations
-                    </th>
-                  </tr>
-                ))}
-              </thead>
-              <tbody class="flex-1 sm:flex-none">
-                {providers.map((provider) => (
-                  <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
-                    <td class="custom-bg-white border-grey-900 border p-3">
-                      <div class="block md:hidden">
-                      {provider.name}
-                      </div>
-                      <div className="hidden md:block">
-                        <Image
-                          src={provider.logoSrc}
-                          className="bg-white"
-                          width={200}
-                          height={200}
-                          alt={provider.name}
-                        />
-                      </div>
-                    </td>
-                    <td class="custom-bg-white group border-grey-900 border hover:bg-gray-100 p-3 ">
-                      <Link
-                        className="font-bold group-hover:text-red-600"
-                        href={provider.link}
-                      >
-                        {provider.linkCaption}
-                      </Link>
-                    </td>
-                    <td class="custom-bg-white border-grey-900 border p-3 text-red-400  ">
-                      
-                      {provider.observations}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="">
+              <table class="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
+                <thead class="custom-text-black">
+                  {providers.map((provider) => (
+                    <tr class="custom-bg-gray-100 flex flex-col flex-nowrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+                      <th class="p-3 text-left">Provider</th>
+                      <th class="p-3 text-left">Link</th>
+                      <th class="p-3 text-left">Observations</th>
+                    </tr>
+                  ))}
+                </thead>
+                <tbody class="flex-1 sm:flex-none">
+                  {providers.map((provider) => (
+                    <tr class="flex flex-col flex-nowrap sm:table-row mb-2 sm:mb-0">
+                      <td class="custom-bg-white border-grey-900 border p-3">
+                        <div class="block md:hidden">{provider.name}</div>
+                        <div className="hidden md:block">
+                          <Image
+                            src={provider.logoSrc}
+                            className="bg-white"
+                            width={200}
+                            height={200}
+                            alt={provider.name}
+                          />
+                        </div>
+                      </td>
+                      <td class="custom-bg-white group border-grey-900 border hover:bg-gray-100 p-3 ">
+                        <Link
+                          className="font-bold group-hover:text-red-600"
+                          href={provider.link}
+                        >
+                          {provider.linkCaption}
+                        </Link>
+                      </td>
+                      <td class="custom-bg-white border-grey-900 border p-3 text-red-400  ">
+                        {provider.observations}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
             <h1 id="useStripe" className="text-3xl font-bold">
               Quick donate via Stripe
             </h1>
@@ -232,9 +227,10 @@ export default function Donations() {
               <li className="list-item"> Z: $20 (18.26€)</li>
               <li className="list-item"> P: AU$100 (58.25€)</li>
               <li className="list-item"> B: $30 (27.92€)</li>
+              <li className="list-item"> A: $70 (65.26€)</li>
               <li className="list-item">
                 <span className="font-bold">Total: </span>
-                127.26€
+                192.52€
               </li>
             </ul>
           </div>
