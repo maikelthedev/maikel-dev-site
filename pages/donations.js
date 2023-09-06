@@ -9,7 +9,7 @@ import Head from "next/head";
 
 const title = "Donations to Maikel"
 const excerpt = "Donations to Maikel to keep the light on"
-const image = "/donations.webp"
+const image = "donations.webp"
 
 export default function Donations() {
   const header = headers.donations;
@@ -62,6 +62,11 @@ export default function Donations() {
             content={"https://maikel.dev/" + image}
             key="twitter:image"
           />
+          <meta
+            name="twitter:summary_large_image "
+            content={"https://maikel.dev/" + image}
+            key="twitter:summary_large_image"
+          /
         </Head>
       <div className="custom-bg-white">
         <Hero header={header} />
