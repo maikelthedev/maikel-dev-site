@@ -107,10 +107,12 @@ export function Post(props) {
     },
     pre(details) {
       return (
-        <pre
-          className=" bg-black text-white border-2 border-green-300 p-2  mx-5 md:mx-20 mb-5 text-lg">
+        
+        <pre  
+          className="bg-black text-white border-2 border-green-300 p-2  mx-5 md:mx-20 mb-5 text-sm overflow-scroll">
           {details.children}
         </pre>
+        
       );
     },
   };
