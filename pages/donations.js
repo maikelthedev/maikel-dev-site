@@ -46,7 +46,7 @@ export default function Donations() {
             <table class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
               <thead class="text-white">
                 {providers.map((provider) => (
-                  <tr class="custom-bg-gray-100 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+                  <tr class="custom-bg-gray-100 flex flex-col flex-no wrap custom-text-black sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
                     <th class="p-3 text-left">Provider</th>
                     <th class="p-3 text-left">Link</th>
                     <th class="p-3 text-left" width="150px">
