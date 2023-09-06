@@ -34,10 +34,9 @@ export default function Project(props) {
             space-y-5 space-x-5 
             pb-5 rounded-lg"
           >
-            <div className="grid justify-items-end">
+            <div className="flex justify-end">
               <div
-                className="bg-white rounded-lg border border-dashed border-indigo-700 grid col-auto gap-2 grid-flow-col auto-cols-auto justify-items-end  p-2 space-x-1
-                "
+                className="bg-white rounded-lg border border-dashed border-indigo-700 grid col-auto gap-2 grid-flow-col auto-cols-auto justify-items-end  p-2 space-x-1"
               >
                 {technologies.map((technology) => (
                   <Image
