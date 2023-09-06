@@ -14,30 +14,34 @@ export default function Donations() {
 
         <div className="custom-text-black flex flex-col md:flex-row p-5 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div className="px-8 py-4 space-y-6">
-            <div>
-              <div className="custom-bg-gray-100 rounded-lg border border-gray-300 p-4">
-                <p className="text-2xl font-bold text-center text-red-600">
-                  TL;DR: Donate by clicking on your currency
-                </p>
-                <div className="pt-10 text-center">
-                  <Currencies />
-                </div>
-              </div>
-            </div>
             <h1 className="text-3xl font-bold">
-              I have no income and 300€ left for E-V-E-R-Y-T-H-I-N-G
+              I'm at a very real risk of starvation and homelessness
             </h1>
             <p className="text-lg">
-              I have roughly 300€ left and no income after booking a place for
+              I have less than 300€ left and no income after booking a place for
               October (which cost me 450€ per month) and November. This aren't
-              enough funds to cover food at all. Let alone other expenses. I'm
-              at a{" "}
-              <span class="font-bold">
-                very real risk of starvation and homelessness.
-              </span>
+              enough funds to cover food at all. Let alone any other expenses.
             </p>
-            <h1 className="text-3xl font-bold">All the ways to donate</h1>
+            <div class="flex justify-between mb-1">
+              <span class="text-base font-medium text-blue-700 dark:text-white">
+                Donations Raised
+              </span>
+              <span class="text-sm font-medium text-blue-700 dark:text-white">
+                10% from Total
+              </span>
+            </div>
+            <div className="w-full bg-gray-400 rounded-full dark:bg-gray-700">
+              <div
+                className="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                style={{ width: "10%" }}
+              >
+                {" "}
+                10%
+              </div>
+            </div>
+            <p>Updated: 6th September 2023</p>
             <table className="border-collapse border border-slate-500 mx-auto">
+              <caption class="caption-bottom">All the ways to donate</caption>
               <thead>
                 <tr>
                   <th class="border border-slate-600">Provider</th>
@@ -45,25 +49,23 @@ export default function Donations() {
                   <th class="border border-slate-600">Observations</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="border-collapse">
                 <tr>
-                  <td className="border border-slate-300">
+                  <td className="border border-slate-300 bg-white">
                     <Image
-                      className="bg-white"
                       src="/stripe.webp"
                       width={200}
                       height={200}
                       alt="Stripe"
                     />
                   </td>
-                  <td className="border border-slate-300">
-                    <tr>Click on your currency symbol</tr>
-                    <tr>
-                      <Currencies />
-                    </tr>
+                  <td className="border border-slate-300 text-center p-5">
+                    Click on your currency symbol
+                    <br />
+                    <Currencies />
                   </td>
                   <td className="border border-slate-300 text-center p-5">
-                    Easiest worlwide
+                    Easiest worldwide
                   </td>
                 </tr>
                 <tr>
@@ -85,7 +87,9 @@ export default function Donations() {
                   </td>
                   <td className="border border-slate-300 text-center p-5">
                     Reaches me instantly
-                    <br/><span className="font-bold">RECOMMENDED:</span> if in European Union
+                    <br />
+                    <span className="font-bold">RECOMMENDED:</span> if in
+                    European Union
                   </td>
                 </tr>
                 <tr>
@@ -108,7 +112,8 @@ export default function Donations() {
                   </td>
                   <td className="border border-slate-300 text-center p-5">
                     Reaches me instantly
-                    <br/><span className="font-bold">RECOMMENDED:</span> if in the UK
+                    <br />
+                    <span className="font-bold">RECOMMENDED:</span> if in the UK
                   </td>
                 </tr>
                 <tr>
@@ -306,6 +311,21 @@ export default function Donations() {
             <p className="text-lg">
               I don't see a way out. Help me. I need to be hired.
             </p>
+            <h1 className="text-3xl font-bold">Thank you </h1>
+            <p className="text-lg">
+              To all those who have donated. For safety and privacy reasons I'm
+              not going to disclose your names but for transparency and
+              accountability here is the list.
+            </p>
+            <ul className="list-disc px-8 space-y-2">
+              <li className="list-item"> K: $25 (22.83€)</li>
+              <li className="list-item"> Z: $20 (18.26€)</li>
+              <li className="list-item"> P: AU$100 (58.25€)</li>
+              <li className="list-item"> B: $30 (27.92€)</li>
+              <li className="list-item">
+                <span className="text-bold">Total: </span>
+                 127.26€</li>
+            </ul>
           </div>
         </div>
       </div>
