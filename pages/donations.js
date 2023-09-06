@@ -4,6 +4,8 @@ import Hero from "@/components/hero";
 import { headers } from "@/data/headers";
 import Currencies from "@/components/currencies";
 import Image from "next/image";
+import { providers } from "@/data/currencies";
+
 
 export default function Donations() {
   const header = headers.donations;
@@ -40,149 +42,57 @@ export default function Donations() {
               </div>
             </div>
             <p>Updated: 6th September 2023</p>
-            <table className="border-collapse border border-slate-500 mx-auto">
-              <caption class="caption-bottom">All the ways to donate</caption>
-              <thead>
-                <tr>
-                  <th class="border border-slate-600">Provider</th>
-                  <th class="border border-slate-600">Link</th>
-                  <th class="border border-slate-600">Observations</th>
-                </tr>
+
+            <table class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
+              <thead class="text-white">
+                {providers.map((provider) => (
+                  <tr class="custom-bg-gray-100 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+                    <th class="p-3 text-left">Provider</th>
+                    <th class="p-3 text-left">Link</th>
+                    <th class="p-3 text-left" width="150px">
+                      Observations
+                    </th>
+                  </tr>
+                ))}
               </thead>
-              <tbody className="border-collapse">
-                <tr>
-                  <td className="border border-slate-300 bg-white">
-                    <Image
-                      src="/stripe.webp"
-                      width={200}
-                      height={200}
-                      alt="Stripe"
-                    />
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    Click on your currency symbol
-                    <br />
-                    <Currencies />
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    Easiest worldwide
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300">
-                    <Image
-                      src="/revolut.webp"
-                      width={200}
-                      height={200}
-                      alt="Revolut"
-                    />
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    <Link
-                      className="font-bold hover:text-red-600"
-                      href="https://revolut.me/maikelthedev"
-                    >
-                      revolut.me/maikelthedev
-                    </Link>
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    Reaches me instantly
-                    <br />
-                    <span className="font-bold">RECOMMENDED:</span> if in
-                    European Union
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300">
-                    {" "}
-                    <Image
-                      src="/monzo.webp"
-                      width={200}
-                      height={200}
-                      alt="Monzo"
-                    />
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    <Link
-                      className="font-bold hover:text-red-600"
-                      href="https://monzo.me/miguelfriasmosquea"
-                    >
-                      monzo.me/miguelfriasmosquea
-                    </Link>
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    Reaches me instantly
-                    <br />
-                    <span className="font-bold">RECOMMENDED:</span> if in the UK
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300">
-                    <Image
-                      src="/paypal.webp"
-                      width={200}
-                      height={200}
-                      alt="PayPal"
-                    />
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    <Link
-                      className="font-bold hover:text-red-600"
-                      href="https://paypal.me/maikelthedev"
-                    >
-                      paypal.me/maikelthedev
-                    </Link>
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    Convenient if you have an account already
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300">
-                    <Image
-                      src="/liberapay.webp"
-                      width={200}
-                      height={200}
-                      alt="LiberaPay"
-                    />
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    <Link
-                      className="font-bold hover:text-red-600"
-                      href="https://liberapay.com/maikelthedev/"
-                    >
-                      liberapay.com/maikelthedev/
-                    </Link>
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    If there's any advantage I'm yet to discover it
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300">
-                    <Image
-                      src="/kofi.webp"
-                      className="bg-white"
-                      width={200}
-                      height={150}
-                      alt="KoFi"
-                    />
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    <Link
-                      className="font-bold hover:text-red-600"
-                      href="https://ko-fi.com/maikelthedev"
-                    >
-                      ko-fi.com/maikelthedev
-                    </Link>
-                  </td>
-                  <td className="border border-slate-300 text-center p-5">
-                    Same as Stripe
-                  </td>
-                </tr>
+              <tbody class="flex-1 sm:flex-none">
+                {providers.map((provider) => (
+                  <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                    <td class="custom-bg-white border-grey-900 border p-3">
+                      <div class="block md:hidden">
+                      {provider.name}
+                      </div>
+                      <div className="hidden md:block">
+                        <Image
+                          src={provider.logoSrc}
+                          className="bg-white"
+                          width={200}
+                          height={200}
+                          alt={provider.name}
+                        />
+                      </div>
+                    </td>
+                    <td class="custom-bg-white group border-grey-900 border hover:bg-gray-100 p-3 ">
+                      <Link
+                        className="font-bold group-hover:text-red-600"
+                        href={provider.link}
+                      >
+                        {provider.linkCaption}
+                      </Link>
+                    </td>
+                    <td class="custom-bg-white border-grey-900 border p-3 text-red-400  ">
+                      
+                      {provider.observations}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
-
+            <h1 id="useStripe" className="text-3xl font-bold">
+              Quick donate via Stripe
+            </h1>
+            <Currencies />
+            <p className="text-center">Just click on your currency symbol</p>
             <h1 className="text-3xl font-bold">
               Help me get food and a roof above my head
             </h1>
@@ -324,7 +234,8 @@ export default function Donations() {
               <li className="list-item"> B: $30 (27.92€)</li>
               <li className="list-item">
                 <span className="font-bold">Total: </span>
-                 127.26€</li>
+                127.26€
+              </li>
             </ul>
           </div>
         </div>
