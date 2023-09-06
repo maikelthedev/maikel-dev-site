@@ -7,7 +7,7 @@ export default function Client(props) {
   const { client } = props;
   return (
     <Fragment>
-      <div className="bg-indigo-700 md:py-5 md:pb-10 pt-5 md:pt-10 lg:max-w-7xl lg:mx-auto">
+      <div className="custom-white-background  lg:max-w-7xl mx-auto">
         <Link href={"#" + client.name} id={client.name}>
           <h1
             className="custom-white-background custom-text-indigo-900 border-2 border-dashed border-indigo-700 text-center text-4xl 

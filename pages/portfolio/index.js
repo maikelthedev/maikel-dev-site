@@ -10,7 +10,7 @@ function Portfolio() {
   return (
     <Fragment>
       <Hero header={header} />
-      <div className="custom-white-background p-5">
+      <div className="custom-white-background p-5 ">
         {clients.map((client) => (
           <Client key={client.id} client={client} />
         ))}
