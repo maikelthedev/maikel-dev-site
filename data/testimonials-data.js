@@ -9,6 +9,15 @@ export const testimonials = [
     logo: "/clients/skunkwerks.webp",
   },
   {
+
+    name: "Konstantin Kostov",
+    role: "CEO @ Headbright Group",
+    content:
+    "I recently had the opportunity to engage Maikel for a DevOps assignment. His proficiency and dedication were evident from the onset. Maikel not only delivered the task with precision but also ensured that every detail was addressed with the utmost professionalism. His proactive communication and comprehensive domain knowledge ensured a seamless and efficient completion of the assignment. I wholeheartedly believe that Maikel would be an invaluable asset to any project, both for his technical prowess and his commendable human qualities.",
+    link: "https://www.linkedin.com/in/kkostov/",
+    logo: "/clients/headbright1.webp",
+  },
+  {
  
     name: "John Gibb",
     role: "Head of Projects @ Survation",
