@@ -66,7 +66,7 @@ export default function Donations() {
             name="twitter:summary_large_image "
             content={"https://maikel.dev/" + image}
             key="twitter:summary_large_image"
-          /
+          />
         </Head>
       <div className="custom-bg-white">
         <Hero header={header} />
