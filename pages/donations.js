@@ -5,11 +5,64 @@ import { headers } from "@/data/headers";
 import Currencies from "@/components/currencies";
 import Image from "next/image";
 import { providers } from "@/data/currencies";
+import Head from "next/head";
+
+const title = "Donations to Maikel"
+const excerpt = "Donations to Maikel to keep the light on"
+const image = "/donations.webp"
 
 export default function Donations() {
   const header = headers.donations;
   return (
     <Fragment>
+      <Head>
+          <title>{title}</title>
+          <meta name="description" content={excerpt} key="description" />
+          <meta name="author" content="Maikel" key="author" />
+          <meta property="og:title" content={title} key="og-title" />
+          <meta
+            property="og:description"
+            content={excerpt}
+            key="og-description"
+          />
+          <meta
+            property="og:image"
+            content={"https://maikel.dev/" + image}
+            key="og-image"
+          />
+          <meta
+            property="og:url"
+            content="https://maikel.dev/donations"
+            key="og-url"
+          />
+
+          <meta
+            property="twitter:url"
+            content="https://maikel.dev/donations"
+            key="twitter:url"
+          />
+          <meta
+            name="twitter:site"
+            content="@maikelthedev"
+            key="twitter:site"
+          />
+          <meta
+            name="twitter:creator"
+            content="@maikelthedev"
+            key="twitter:creator"
+          />
+          <meta name="twitter:title" content={title} key="twitter:title" />
+          <meta
+            name="twitter:description"
+            content={excerpt}
+            key="twitter:description"
+          />
+          <meta
+            name="twitter:image"
+            content={"https://maikel.dev/" + image}
+            key="twitter:image"
+          />
+        </Head>
       <div className="custom-bg-white">
         <Hero header={header} />
 
