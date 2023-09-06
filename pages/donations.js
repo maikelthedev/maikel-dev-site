@@ -323,7 +323,7 @@ export default function Donations() {
               <li className="list-item"> P: AU$100 (58.25€)</li>
               <li className="list-item"> B: $30 (27.92€)</li>
               <li className="list-item">
-                <span className="text-bold">Total: </span>
+                <span className="font-bold">Total: </span>
                  127.26€</li>
             </ul>
           </div>
