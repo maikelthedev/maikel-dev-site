@@ -11,11 +11,11 @@ const title = "Donations to Maikel";
 const excerpt = "Donations to Maikel to keep the light on";
 const image = "donations.webp";
 const donations = [
-  { initial: "K", symbol: "$", amount: 25, euros: 22.83 },
-  { initial: "Z", symbol: "$", amount: 20, euros: 18.26 },
-  { initial: "P", symbol: "AU$", amount: 100, euros: 58.25 },
-  { initial: "B", symbol: "$", amount: 30, euros: 27.92 },
-  { initial: "A", symbol: "$", amount: 70, euros: 65.26 },
+  { initial: "K", symbol: "$", amount: 25, euros: 22.83, provider: "Stripe"},
+  { initial: "Z", symbol: "$", amount: 20, euros: 18.26, provider: "Stripe"},
+  { initial: "P", symbol: "AU$", amount: 100, euros: 58.25, provider: "Stripe"},
+  { initial: "B", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
+  { initial: "A", symbol: "$", amount: 70, euros: 65.26, provider: "Stripe"},
 ];
 
 const totalEuros = donations.reduce((accumulator, donation) => {
@@ -294,7 +294,8 @@ export default function Donations() {
               {
                 donations.map((donations) => (
                   <li className="list-item"> 
-                  {donations.initial + ": " +donations.symbol + donations.amount + " (" + donations.euros + "€)"}
+                  {donations.initial + ": " +donations.symbol + donations.amount + " (" + donations.euros + "€) using " + 
+                  donations.provider}
                   </li>    
               
                 ))
