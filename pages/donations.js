@@ -22,6 +22,7 @@ const donations = [
   },
   { initial: "B", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
   { initial: "A", symbol: "$", amount: 70, euros: 65.26, provider: "Stripe" },
+  { initial: "J", symbol: "€", amount: 150, euros: 150, provider: "PayPal" }
 ];
 
 const totalEuros = donations.reduce((accumulator, donation) => {
@@ -229,7 +230,7 @@ export default function Donations() {
               business. Your donation goes directly to my personal bank
               accounts to support my immediate needs during this messed up time.
               It won't solve anything on the long-term, nor medium term, I'm
-              fully transparent on what comes through on my toots on the fedi and here below. I
+              fully transparent on what comes through on my toots on the fedi and here below  . I
               don't have the right to any benefits, here or in the UK nor access
               to any social services (except healthcare). I would fly blindly wherever I had a job
               if I had it secured. If it was up to me I'd be back in London, get
