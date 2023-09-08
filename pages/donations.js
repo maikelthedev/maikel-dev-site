@@ -116,7 +116,7 @@ export default function Donations() {
                 {currentPercentage.toFixed(2)}%
               </div>
             </div>
-            <p>Updated: 6th September 2023</p>
+            <p>Updated: 8th September 2023</p>
             <div className="">
               <table class="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
                 <thead class="custom-text-black">
