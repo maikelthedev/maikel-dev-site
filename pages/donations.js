@@ -93,10 +93,11 @@ export default function Donations() {
               I'm at a very real risk of starvation and homelessness
             </h1>
             <p className="text-lg">
-              I have less than 300€ left and no income after booking a place for
+              I have less than 300€ left and no income after booking a place to stay for
               October (which cost me 450€ per month) and November. This aren't
               enough funds to cover food at all. Let alone any other expenses.
             </p>
+            <p>By the end of this month <span className="font-bold">I will run out of funds to get food</span> that's the issue.</p>
             <div class="flex justify-between mb-1">
               <span class="text-base font-medium text-blue-700 dark:text-white">
                 Donations Raised
@@ -158,43 +159,53 @@ export default function Donations() {
               </table>
             </div>
             <h1 id="useStripe" className="text-3xl font-bold">
-              Quick donate via Stripe
+              Donate now by clicking on your currency symbol
             </h1>
             <Currencies />
-            <p className="text-center">Just click on your currency symbol</p>
             <h1 className="text-3xl font-bold">
-              Help me get food and a roof above my head
+              Help me avoid starvation
             </h1>
 
             <p className="text-lg">
+
               When you donate you{" "}
               <span className="font-bold">very literally</span> get me from
               rationing my meals, to getting food. You get me from a constant
               never ending level of paralysis panic, to a better place where my
-              attention isn't kidnapped by basic survival adrenalinergic
-              worries. You get me from thinking how to commit suicide, to wonder
+              attention isn't kidnapped by basic survival anxiety. You get me from thinking how to commit suicide, to wonder
               whether I should change my gym workout table from cutting to a
               bulking cycle. You get me from total paralysis to enough calm to
               figure new strategies to get clients and{" "}
               <span className="font-bold">a stable income.</span>
             </p>
-
+            <h1 className="text-3xl font-bold">What is the actual plan: for this to be the final fundraise</h1>
+            <p className="text-lg"> 
+            There was some speak of a possible job by September, guess what? We are on September, <span className="underline">nothing came to fruition.</span> 
+            Yet I was almost certain that it would.
+            So plan B, <span className="font-bold">I intend for this to be the final fundraise I ever do </span>because they are
+            horribly taxing and humiliating. I'm trying to buy enough time until the 1st of December. This matches with the time I booked
+            the place in AirBnB. And if (and when) I manage to reach the needed amount of money and I'm out of risk, I'll focus on getting
+            a McJob locally. Because I rather flip burgers, clean places, or do anything out of IT, than wait to desperation until I 
+            run down the clock and see myself YET again, fighting to avoid starvation. <span className="font-bold">That is the plan</span> I
+            might hate it but I hate fundraising more. 
+            </p>
             <h1 className="text-3xl font-bold">How Your Donation Helps</h1>
 
             <p className="text-lg">
-              Your donation puts food on the table so that I can keep trying
-              different ways to do that myself, is that simple. I've got a
-              killer IT skillset but for some reason that escapes my
-              understanding I am still jobless.
+              The first sum up to 450€ will cover the extra month of rent that AirBnB hasn't charged me yet. 
+              Why? There's no point in being able to feed myself if I live on the streets. Homelessness creates 
+              much more complicated and bigger issues than lack of food. To reduce risk, the first thing is having a roof above my head. 
+
+              Once the 450€ are reached, it covers foo and from there the expenses, in order below.  
             </p>
 
             <ul className="list-disc px-8 space-y-2">
-              <li className="list-item">Food on table. ~300€ month</li>
               <li className="list-item">
                 Pays rent (currently 450€ per month) of shared accommodation.
                 Without a stable income I am limited to what I can find in
                 AirBnB.
               </li>
+              <li className="list-item">Food on table. ~300€ month</li>
               <li className="list-item">Pays the gym. 39€</li>
               <li className="list-item">
                 35€ of Xolo.io the accountants that keep Maikel OÜ alive.{" "}
@@ -215,10 +226,10 @@ export default function Donations() {
 
             <p className="text-lg">
               Please note that none of the funds raised here are used for my
-              business. Your donation goes directly to my personal Stripe
-              account to support my immediate needs during this messed up time.
+              business. Your donation goes directly to my personal bank
+              accounts to support my immediate needs during this messed up time.
               It won't solve anything on the long-term, nor medium term, I'm
-              fully transparent on what comes through on my toots on the fedi. I
+              fully transparent on what comes through on my toots on the fedi and here below. I
               don't have the right to any benefits, here or in the UK nor access
               to any social services (except healthcare). I would fly blindly wherever I had a job
               if I had it secured. If it was up to me I'd be back in London, get
