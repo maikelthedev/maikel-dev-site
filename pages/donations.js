@@ -99,11 +99,11 @@ export default function Donations() {
               enough funds to cover food at all. Let alone any other expenses.
             </p>
             <p>By the end of this month <span className="font-bold">I will run out of funds to get food</span> that's the issue.</p>
-            <div class="flex justify-between mb-1">
-              <span class="text-base font-medium text-blue-700 dark:text-white">
+            <div className="flex justify-between mb-1">
+              <span className="text-base font-medium text-blue-700 dark:text-white">
                 Donations Raised
               </span>
-              <span class="text-sm font-medium text-blue-700 dark:text-white">
+              <span className="text-sm font-medium text-blue-700 dark:text-white">
                 {totalEuros}€ of 1500€
               </span>
             </div>
@@ -118,21 +118,21 @@ export default function Donations() {
             </div>
             <p>Updated: 8th September 2023</p>
             <div className="">
-              <table class="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
-                <thead class="custom-text-black">
+              <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
+                <thead className="custom-text-black">
                   {providers.map((provider) => (
-                    <tr class="custom-bg-gray-100 flex flex-col flex-nowrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
-                      <th class="p-3 text-left">Provider</th>
-                      <th class="p-3 text-left">Link</th>
-                      <th class="p-3 text-left">Observations</th>
+                    <tr className="custom-bg-gray-100 flex flex-col flex-nowrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0" key={provider.name}>
+                      <th className="p-3 text-left">Provider</th>
+                      <th className="p-3 text-left">Link</th>
+                      <th className="p-3 text-left">Observations</th>
                     </tr>
                   ))}
                 </thead>
-                <tbody class="flex-1 sm:flex-none">
+                <tbody className="flex-1 sm:flex-none">
                   {providers.map((provider) => (
-                    <tr class="flex flex-col flex-nowrap sm:table-row mb-2 sm:mb-0">
-                      <td class="custom-bg-white border-grey-900 border p-3">
-                        <div class="block md:hidden">{provider.name}</div>
+                    <tr className="flex flex-col flex-nowrap sm:table-row mb-2 sm:mb-0" key={provider.name}>
+                      <td className="custom-bg-white border-grey-900 border p-3">
+                        <div className="block md:hidden">{provider.name}</div>
                         <div className="hidden md:block">
                           <Image
                             src={provider.logoSrc}
@@ -143,7 +143,7 @@ export default function Donations() {
                           />
                         </div>
                       </td>
-                      <td class="custom-bg-white group border-grey-900 border hover:bg-gray-100 p-3 ">
+                      <td className="custom-bg-white group border-grey-900 border hover:bg-gray-100 p-3 ">
                         <Link
                           className="font-bold group-hover:text-red-600"
                           href={provider.link}
@@ -151,7 +151,7 @@ export default function Donations() {
                           {provider.linkCaption}
                         </Link>
                       </td>
-                      <td class="custom-bg-white border-grey-900 border p-3 text-red-400  ">
+                      <td className="custom-bg-white border-grey-900 border p-3 text-red-400  ">
                         {provider.observations}
                       </td>
                     </tr>
@@ -263,16 +263,16 @@ export default function Donations() {
               accountability here is the list.
             </p>
             <ul className="list-disc px-8 space-y-2">
-              {donations.map((donations) => (
-                <li className="list-item">
-                  {donations.initial +
+              {donations.map((donation) => (
+                <li className="list-item" key={donation.amount * donation.euros}>
+                  {donation.initial +
                     ": " +
-                    donations.symbol +
-                    donations.amount +
+                    donation.symbol +
+                    donation.amount +
                     " (" +
-                    donations.euros +
+                    donation.euros +
                     "€) using " +
-                    donations.provider}
+                    donation.provider}
                 </li>
               ))}
 
