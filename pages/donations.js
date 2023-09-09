@@ -28,7 +28,7 @@ const donations = [
 ];
 const totalEuros = donations.reduce((accumulator, donation) => {
   return accumulator + donation.euros;
-}, 0);
+}, 0).toFixed(2);
 
 const currentPercentage = (totalEuros * 100) / 1500;
 const currentPercentageString = currentPercentage + "%";
