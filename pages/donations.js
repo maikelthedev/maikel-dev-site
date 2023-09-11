@@ -24,7 +24,8 @@ const donations = [
   { initial: "A", symbol: "$", amount: 70, euros: 65.26, provider: "Stripe" },
   { initial: "J", symbol: "€", amount: 150, euros: 150, provider: "PayPal" },
   { initial: "J", symbol: "€", amount: 120, euros: 120, provider: "PayPal" },
-  { initial: "L", symbol: "€", amount: 22.84, euros: 22.84, provider: "PayPal" }
+  { initial: "L", symbol: "€", amount: 22.84, euros: 22.84, provider: "PayPal" },
+  { initial: "S", symbol: "£", amount: 250, euros: 290.99, provider: "Monzo", observations: "as part of a job." }
 ];
 const totalEuros = donations.reduce((accumulator, donation) => {
   return accumulator + donation.euros;
@@ -32,6 +33,14 @@ const totalEuros = donations.reduce((accumulator, donation) => {
 
 const currentPercentage = (totalEuros * 100) / 1500;
 const currentPercentageString = currentPercentage + "%";
+
+const getObservations = (donation) => {
+  if (donation.observations) {
+    return " " + donation.observations
+  } else {
+    return ""
+  }
+}
 
 export default function Donations() {
   const header = headers.donations;
@@ -257,7 +266,7 @@ export default function Donations() {
             <p className="text-lg">
               I don't see a way out. Help me. I need to be hired.
             </p>
-            <h1 className="text-3xl font-bold">Thank you </h1>
+            <h1 className="text-3xl font-bold" id="thankYou">Thank you </h1>
             <p className="text-lg">
               To all those who have donated. For safety and privacy reasons I'm
               not going to disclose your names but for transparency and
@@ -273,7 +282,7 @@ export default function Donations() {
                     " (" +
                     donation.euros +
                     "€) using " +
-                    donation.provider}
+                    donation.provider + getObservations(donation)}
                 </li>
               ))}
 
