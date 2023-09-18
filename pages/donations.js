@@ -105,7 +105,7 @@ export default function Donations() {
               I'm at a very real risk of starvation and homelessness
             </h1>
             <p className="text-lg">
-              I have less than 300€ left and no income after booking a place to stay for
+              I have less than 100€ left and no income after booking a place to stay for
               October (which cost me 450€ per month) and November. This aren't
               enough funds to cover food at all. Let alone any other expenses.
             </p>
@@ -127,7 +127,7 @@ export default function Donations() {
                 {currentPercentage.toFixed(2)}%
               </div>
             </div>
-            <p>Updated: 9th September 2023</p>
+            <p>Updated: 18th September 2023</p>
             <div className="">
               <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
                 <thead className="custom-text-black">
@@ -212,21 +212,21 @@ export default function Donations() {
             </p>
 
             <ul className="list-disc px-8 space-y-2">
-              <li className="list-item">
+              <li className="list-item"><span class="line-through">
                 Pays rent (currently 450€ per month) of shared accommodation.
                 Without a stable income I am limited to what I can find in
-                AirBnB.
+                AirBnB.</span> We've achieved rent until 1st of December. 
               </li>
-              <li className="list-item">Food on table. ~300€ month</li>
+              <li className="list-item">Food on table. ~300€ month</li> We have not achieved this. 
               <li className="list-item">Pays the gym. 39€</li>
               <li className="list-item">
-                35€ of Xolo.io the accountants that keep Maikel OÜ alive.{" "}
+                <span class="line-through">35€</span> 120€ (they saw activity so they reactivated it) of Xolo.io the accountants that keep Maikel OÜ alive.{" "}
               </li>
               <li className="list-item">
                 25 GBP of my maxed-out Virgin credit card minimum payment
               </li>
               <li className="list-item">
-                30 GBP of my maxed-out Monzo Flex loan
+                90 GBP of my maxed-out Monzo Flex loan
               </li>
               <li className="list-item">
                 6€ of my Spanish mobile phone number and broadband
