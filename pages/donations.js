@@ -29,6 +29,8 @@ const donations = [
   { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "Stripe" },
   { initial: "K", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
   { initial: "C", symbol: "€", amount: 50, euros: 50, provider: "PayPal" }
+  { initial: "S", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" }
+
 ];
 const totalEuros = donations.reduce((accumulator, donation) => {
   return accumulator + donation.euros;
