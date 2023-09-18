@@ -26,7 +26,9 @@ const donations = [
   { initial: "J", symbol: "€", amount: 120, euros: 120, provider: "PayPal" },
   { initial: "L", symbol: "€", amount: 22.84, euros: 22.84, provider: "PayPal" },
   { initial: "S", symbol: "£", amount: 250, euros: 290.99, provider: "Monzo", observations: "as part of a job." },
-  { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "Stripe" }
+  { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "Stripe" },
+  { initial: "K", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" }
+
 ];
 const totalEuros = donations.reduce((accumulator, donation) => {
   return accumulator + donation.euros;
@@ -212,7 +214,7 @@ export default function Donations() {
             </p>
 
             <ul className="list-disc px-8 space-y-2">
-              <li className="list-item"><span class="line-through">
+              <li className="list-item"><span className="line-through">
                 Pays rent (currently 450€ per month) of shared accommodation.
                 Without a stable income I am limited to what I can find in
                 AirBnB.</span> We've achieved rent until 1st of December. 
@@ -220,7 +222,7 @@ export default function Donations() {
               <li className="list-item">Food on table. ~300€ month</li> We have not achieved this. 
               <li className="list-item">Pays the gym. 39€</li>
               <li className="list-item">
-                <span class="line-through">35€</span> 120€ (they saw activity so they reactivated it) of Xolo.io the accountants that keep Maikel OÜ alive.{" "}
+                <span className="line-through">35€</span> 120€ (they saw activity so they reactivated it) of Xolo.io the accountants that keep Maikel OÜ alive.{" "}
               </li>
               <li className="list-item">
                 25 GBP of my maxed-out Virgin credit card minimum payment
