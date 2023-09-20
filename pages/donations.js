@@ -29,7 +29,9 @@ const donations = [
   { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "Stripe" },
   { initial: "K", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
   { initial: "C", symbol: "€", amount: 50, euros: 50, provider: "PayPal" },
-  { initial: "S", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" }
+  { initial: "S", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
+  { initial: "S", symbol: "€", amount: 46.33, euros: 46.33, provider: "Revolut" }
+
 
 ];
 const totalEuros = donations.reduce((accumulator, donation) => {
@@ -131,7 +133,7 @@ export default function Donations() {
                 {currentPercentage.toFixed(2)}%
               </div>
             </div>
-            <p>Updated: 18th September 2023</p>
+            <p>Updated: 20th September 2023</p>
             <div className="">
               <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
                 <thead className="custom-text-black">
