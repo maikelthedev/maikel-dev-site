@@ -64,5 +64,12 @@ export const currencies = [
       linkCaption: "ko-fi.com/maikelthedev",
       observations: "Same as Stripe",
     },
+    {
+      name: "Bizum",
+      logoSrc: "/bizum.webp",
+      link: "https://bizum.es/",
+      linkCaption: "Use +34 635 850 980 as payment destination",
+      observations: "Easiest for anyone within Spain",
+    },
     
   ];
