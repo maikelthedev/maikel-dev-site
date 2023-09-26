@@ -9,7 +9,7 @@ import Head from "next/head";
 
 const title = "Donations to Maikel";
 const excerpt = "Donations to Maikel to keep the light on";
-const image = "donations.webp";
+const image = "eattherich.webp";
 const donations = [
   { initial: "K", symbol: "$", amount: 25, euros: 22.83, provider: "Stripe" },
   { initial: "Z", symbol: "$", amount: 20, euros: 18.26, provider: "Stripe" },
