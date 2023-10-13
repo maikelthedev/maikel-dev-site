@@ -113,11 +113,14 @@ export default function Donations() {
               I'm at a very real risk of starvation and homelessness
             </h1>
             <p className="text-lg">
-              I have less than 100€ left and no income after booking a place to stay for
-              October (which cost me 450€ per month) and November. This aren't
-              enough funds to cover food at all. Let alone any other expenses.
+              I have less than 100€ left and no income <span className="line-through">after booking a place to stay for
+              October (which cost me 450€ per month) and November. </span> As you might know
+              on moving date the place was a mess, I even created a video about it <Link className="text-red-700 font-bold" href="https://youtu.be/TYOApga6pxA">
+              here</Link> explaining the whole thing. 
+              Luckily I found an alternative place cheaper and yet better in under 24 hours which is where I live now. But I still can't cover November. 
+              There aren't enough funds to cover food at all. Let alone any other expenses. But rent is due in less than 20 days and I cannot avoid that one. 
             </p>
-            <p>By the end of this month <span className="font-bold">I will run out of funds to get food</span> that's the issue.</p>
+            <p>By the end of this month <span className="font-bold">I will run out of funds to get food</span> and pay rent that's the issue.</p>
             <div className="flex justify-between mb-1">
               <span className="text-base font-medium text-blue-700 dark:text-white">
                 Donations Raised
@@ -135,7 +138,7 @@ export default function Donations() {
                 {currentPercentage.toFixed(2)}%
               </div>
             </div>
-            <p>Updated: 26th September 2023</p>
+            <p>Updated: 13th October 2023</p>
             <div className="">
               <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
                 <thead className="custom-text-black">
@@ -200,11 +203,11 @@ export default function Donations() {
             </p>
             <h1 className="text-3xl font-bold">What is the actual plan: for this to be the final fundraise</h1>
             <p className="text-lg"> 
-            There was some speak of a possible job by September, guess what? We are on September, <span className="underline">nothing came to fruition.</span> 
+            There was some speak of a possible job by September, guess what? We <span className="line-through">are </span>were on September, <span className="underline">nothing came to fruition.</span> 
             Yet I was almost certain that it would.
             So plan B, <span className="font-bold">I intend for this to be the final fundraise I ever do </span>because they are
-            horribly taxing and humiliating. I'm trying to buy enough time until the 1st of December. This matches with the time I booked
-            the place in AirBnB. And if (and when) I manage to reach the needed amount of money and I'm out of risk, I'll focus on getting
+            horribly taxing and humiliating. I'm trying to buy enough time until the 1st of December. This matches <span className="line-through">with the time I booked
+            the place in AirBnB</span> with the time I planned to get a McJob. And if (and when) I manage to reach the needed amount of money and I'm out of risk, I'll focus on getting
             a McJob locally. Because I rather flip burgers, clean places, or do anything out of IT, than wait to desperation until I 
             run down the clock and see myself YET again, fighting to avoid starvation. <span className="font-bold">That is the plan</span> I
             might hate it but I hate fundraising more. 
@@ -212,18 +215,18 @@ export default function Donations() {
             <h1 className="text-3xl font-bold">How Your Donation Helps</h1>
 
             <p className="text-lg">
-              The first sum up to 450€ will cover the extra month of rent that AirBnB hasn't charged me yet. 
+              The first sum up to 400€ (255 rent + bills) will cover the extra month of rent.
               Why? There's no point in being able to feed myself if I live on the streets. Homelessness creates 
               much more complicated and bigger issues than lack of food. To reduce risk, the first thing is having a roof above my head. 
 
-              Once the 450€ are reached, it covers foo and from there the expenses, in order below.  
+              Once the 400€ are reached, it covers food and from there the expenses, in order below.  
             </p>
 
             <ul className="list-disc px-8 space-y-2">
               <li className="list-item"><span className="line-through">
-                Pays rent (currently 450€ per month) of shared accommodation.
+                Pays rent (currently 255€+bills = roughly 400 per month) of shared accommodation.
                 Without a stable income I am limited to what I can find in
-                AirBnB.</span> We've achieved rent until 1st of December. 
+                AirBnB. We've achieved rent until 1st of December. </span> No we have not, because as this is a long-term accom, I had to leave a deposit. 
               </li>
               <li className="list-item">Food on table. ~300€ month</li> We have not achieved this. 
               <li className="list-item">Pays the gym. 39€</li>
