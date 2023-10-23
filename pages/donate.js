@@ -4,38 +4,13 @@ import Hero from "@/components/hero";
 import { headers } from "@/data/headers";
 import Currencies from "@/components/currencies";
 import Image from "next/image";
-import { providers } from "@/data/currencies";
+import { donations, providers } from "@/data/currencies";
 import Head from "next/head";
 
 const title = "Donations to Maikel";
 const excerpt = "Donations to Maikel to keep the light on";
 const image = "eatthem.webp";
-const donations = [
-  { initial: "K", symbol: "$", amount: 25, euros: 22.83, provider: "Stripe" },
-  { initial: "Z", symbol: "$", amount: 20, euros: 18.26, provider: "Stripe" },
-  {
-    initial: "P",
-    symbol: "AU$",
-    amount: 100,
-    euros: 58.25,
-    provider: "Stripe",
-  },
-  { initial: "B", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
-  { initial: "A", symbol: "$", amount: 70, euros: 65.26, provider: "Stripe" },
-  { initial: "J", symbol: "€", amount: 150, euros: 150, provider: "PayPal" },
-  { initial: "J", symbol: "€", amount: 120, euros: 120, provider: "PayPal" },
-  { initial: "L", symbol: "€", amount: 22.84, euros: 22.84, provider: "PayPal" },
-  { initial: "S", symbol: "£", amount: 250, euros: 290.99, provider: "Monzo", observations: "as part of a job." },
-  { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "Stripe" },
-  { initial: "K", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
-  { initial: "C", symbol: "€", amount: 50, euros: 50, provider: "PayPal" },
-  { initial: "S", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
-  { initial: "S", symbol: "€", amount: 46.33, euros: 46.33, provider: "Revolut" },
-  { initial: "J", symbol: "€", amount: 100, euros: 100, provider: "Bizum" },
-  { initial: "A", symbol: "€", amount: 20, euros: 20, provider: "PayPal" }
 
-
-];
 const totalEuros = donations.reduce((accumulator, donation) => {
   return accumulator + donation.euros;
 }, 0).toFixed(2);
@@ -110,17 +85,19 @@ export default function Donations() {
         <div className="custom-text-black flex flex-col md:flex-row p-2 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div className="px-2 md:px-8 py-4 space-y-6">
             <h1 className="text-3xl font-bold">
-              I'm at a very real risk of starvation and homelessness
+            What can I say here that I haven't already?
             </h1>
             <p className="text-lg">
-              I have less than 100€ left and no income <span className="line-through">after booking a place to stay for
-              October (which cost me 450€ per month) and November. </span> As you might know
-              on moving date the place was a mess, I even created a video about it <Link className="text-red-700 font-bold" href="https://youtu.be/TYOApga6pxA">
-              here</Link> explaining the whole thing. 
-              Luckily I found an alternative place cheaper and yet better in under 24 hours which is where I live now. But I still can't cover November. 
-              There aren't enough funds to cover food at all. Let alone any other expenses. But rent is due in less than 20 days and I cannot avoid that one. 
+              Do you need a sobbing story to contribute? Sorry, not doing it. I definitely could, but why would I need to? Really, think about it. What's the deal with this? Is this culture of milking your tears getting any different than fake-fluencers of instagram? I honestly prefer authenticity. 
+              Yes, I am eating lately only cheap protein shakes. Am i panicking? Not really, considering I'm on a PSMF diet, it kinds of has a silver lining. 
+              Yes, I'm 7 days to bankrupcy. Am I panicking? Not really either, I've reached a point that's so so so deeply low at this stage of poverty that I no longer feel anxious about it, it is what it is. Will any panic or anxiety help me get through this? Not really. It might drive some donations out of people identifying with oneself, but at the expense of not finding a solution but being paralysed by feelings. 
+              </p>
+              <p className="text-lg">
+              I choose not to feel. I choose focusing my attention span in finding a solution, not on living on donations. I want THIS to end. 
+              </p>
+              <p className="text-lg">
+              Sorry, I'm not going to cry, donate if you can, don't if you need me to fuel your clicking a few buttons, with crippling description of paralysing anxiety. I'm not going to do that. 
             </p>
-            <p>By the end of this month <span className="font-bold">I will run out of funds to get food</span> and pay rent that's the issue.</p>
             <div className="flex justify-between mb-1">
               <span className="text-base font-medium text-blue-700 dark:text-white">
                 Donations Raised
@@ -138,7 +115,7 @@ export default function Donations() {
                 {currentPercentage.toFixed(2)}%
               </div>
             </div>
-            <p>Updated: 13th October 2023</p>
+            <p>Updated: 23th October 2023</p>
             <div className="">
               <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
                 <thead className="custom-text-black">
@@ -186,97 +163,17 @@ export default function Donations() {
             </h1>
             <Currencies />
             <h1 className="text-3xl font-bold">
-              Help me avoid starvation
+              How's your donation used:
             </h1>
 
             <p className="text-lg">
-
-              When you donate you{" "}
-              <span className="font-bold">very literally</span> get me from
-              rationing my meals, to getting food. You get me from a constant
-              never ending level of paralysis panic, to a better place where my
-              attention isn't kidnapped by basic survival anxiety. You get me from thinking how to commit suicide, to wonder
-              whether I should change my gym workout table from cutting to a
-              bulking cycle. You get me from total paralysis to enough calm to
-              figure new strategies to get clients and{" "}
-              <span className="font-bold">a stable income.</span>
-            </p>
-            <h1 className="text-3xl font-bold">What is the actual plan: for this to be the final fundraise</h1>
-            <p className="text-lg"> 
-            There was some speak of a possible job by September, guess what? We <span className="line-through">are </span>were on September, <span className="underline">nothing came to fruition.</span> 
-            Yet I was almost certain that it would.
-            So plan B, <span className="font-bold">I intend for this to be the final fundraise I ever do </span>because they are
-            horribly taxing and humiliating. I'm trying to buy enough time until the 1st of December. This matches <span className="line-through">with the time I booked
-            the place in AirBnB</span> with the time I planned to get a McJob. And if (and when) I manage to reach the needed amount of money and I'm out of risk, I'll focus on getting
-            a McJob locally. Because I rather flip burgers, clean places, or do anything out of IT, than wait to desperation until I 
-            run down the clock and see myself YET again, fighting to avoid starvation. <span className="font-bold">That is the plan</span> I
-            might hate it but I hate fundraising more. 
-            </p>
-            <h1 className="text-3xl font-bold">How Your Donation Helps</h1>
-
-            <p className="text-lg">
-              The first sum up to 400€ (255 rent + bills) will cover the extra month of rent.
-              Why? There's no point in being able to feed myself if I live on the streets. Homelessness creates 
-              much more complicated and bigger issues than lack of food. To reduce risk, the first thing is having a roof above my head. 
-
-              Once the 400€ are reached, it covers food and from there the expenses, in order below.  
-            </p>
-
-            <ul className="list-disc px-8 space-y-2">
-              <li className="list-item"><span className="line-through">
-                Pays rent (currently 255€+bills = roughly 400 per month) of shared accommodation.
-                Without a stable income I am limited to what I can find in
-                AirBnB. We've achieved rent until 1st of December. </span> No we have not, because as this is a long-term accom, I had to leave a deposit. 
-              </li>
-              <li className="list-item">Food on table. ~300€ month</li> We have not achieved this. 
-              <li className="list-item">Pays the gym. 39€</li>
-              <li className="list-item">
-                <span className="line-through">35€</span> 120€ (they saw activity so they reactivated it) of Xolo.io the accountants that keep Maikel OÜ alive.{" "}
-              </li>
-              <li className="list-item">
-                25 GBP of my maxed-out Virgin credit card minimum payment
-              </li>
-              <li className="list-item">
-                90 GBP of my maxed-out Monzo Flex loan
-              </li>
-              <li className="list-item">
-                6€ of my Spanish mobile phone number and broadband
-              </li>
-              <li className="list-item">
-                10 GBP to keep my British mobile phone number every 3 months
-              </li>
-            </ul>
-
-            <p className="text-lg">
-              Please note that none of the funds raised here are used for my
-              business. Your donation goes directly to my personal bank
-              accounts to support my immediate needs during this messed up time.
-              It won't solve anything on the long-term, nor medium term, I'm
-              fully transparent on what comes through on my toots on the fedi and here below  . I
-              don't have the right to any benefits, here or in the UK nor access
-              to any social services (except healthcare). I would fly blindly wherever I had a job
-              if I had it secured. If it was up to me I'd be back in London, get
-              a McJob and move on with life. But as you know I tried that in
-              December 2022/January 2023, and all I did was to run out of time
-              to find accommodation and get the credit card that bought me a few
-              months extra since I've got an excellent credit report in the UK
-              (and only there).
+              You donate = I jobseek. If I'm focused on how to get food, then I don't have enough brain space to do any job seeking. It is that simple. I don't have any rights to job seeker allowance or anything similar. Not in Spain (yes in the UK, but I'm not there nor would I need JSA if I were there).  
             </p>
             <p className="text-lg">
-              I need <span className="font-bold">serious help </span>to get back
-              on my feet. I need TO WORK. I know how to do the rest. Even just
-              20 hours per week doing what I do, would make a gigantic
-              difference, allow me to travel wherever there're more jobs. I only
-              charge 20€ per hour, what else do I need to do, work for free? How
-              low must I go to just get a steady income? It feel as if I'm
-              asking something that doesn't exist. Aren't we suppose to be the
-              never-jobless workforce? How's it even possible that I'm
-              unemployed. Is it all about having the right contacts? How do I
-              get them? What do I do while get them? Can I get them before the
-              end of September?
+              My first concern is always a roof above my head, so I rather not eat while I reach my rent amount of 255€ per month + 10€ of internet + bills excl. 
             </p>
             <p className="text-lg">
-              I don't see a way out. Help me. I need to be hired.
+              Whatever comes after that pays all other bills and THEN it starts to cover for food. 
             </p>
             <h1 className="text-3xl font-bold" id="thankYou">Thank you </h1>
             <p className="text-lg">
