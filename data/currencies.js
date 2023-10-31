@@ -115,7 +115,9 @@ export const donations = [
   },
   { initial: "J", symbol: "€", amount: 100, euros: 100, provider: "Bizum" },
   { initial: "A", symbol: "€", amount: 20, euros: 20, provider: "PayPal" },
-  { initial: "B", symbol: "$", amount: 50, euros: 44.64, provider: "Stripe" },
+  { initial: "B", symbol: "$", amount: 50, euros: 44.64, provider: "Stripe" }, 
+  { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "PayPal" },
+  { initial: "M", symbol: "€", amount: 50, euros: 50, provider: "PayPal" },
   { initial: "M", symbol: "€", amount: 25, euros: 25, provider: "Stripe" }
 
 ];
