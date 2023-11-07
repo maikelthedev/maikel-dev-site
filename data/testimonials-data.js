@@ -18,6 +18,18 @@ export const testimonials = [
     logo: "/clients/headbright1.webp",
   },
   {
+    name: "Stephen Newey",
+    role: "Manager, SW Engineering @ Roku, Inc",
+    content:
+    `I engaged Maikel's services to develop an open source architecture and Infrastructure-as-Code (Terraform) project that enables enterprise-level capabilities (Kubernetes, GitOps) on low cost hosting services (Hetzner Cloud) with a focus on low maintenance burden (Talos Linux, Helm, Velero). Maikel took the time to understand the requirements, asking the right questions and producing a schedule of work we agreed upon.
+
+    Throughout the project Maikel's communication was excellent, providing regular feedback on progress. I was continually impressed at how quickly Maikel was able to learn about and fully utilise tools he'd not previously used, and how dedicated he is to solving challenging problems to improve user experience.
+    
+    It was a pleasure to work with Maikel and based on my experience, I would not hesitate to recommend him to anyone looking for a skilled engineer, especially in the cloud/devops space.`,
+    link: "https://www.linkedin.com/in/stephen-newey/",
+    logo: "/clients/stephen.jpeg",
+  },
+  {
  
     name: "John Gibb",
     role: "Head of Projects @ Survation",
