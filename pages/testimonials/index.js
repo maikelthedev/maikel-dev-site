@@ -25,7 +25,7 @@ function Testimonials() {
           </Link>
           <div className="md:columns-2">
             {testimonials.map((testimonial) => (
-              <Testimonial testimonial={testimonial} key={testimonial.id} />
+              <Testimonial testimonial={testimonial} key={testimonial.name} />
             ))}
           </div>
         </div>
