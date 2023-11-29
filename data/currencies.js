@@ -58,6 +58,13 @@ export const providers = [
     observations: "Recurring",
   },
   {
+    name: "Wise",
+    logoSrc: "/wise.webp",
+    link: "https://wise.com/pay/me/miguelf622",
+    linkCaption: "wise.com/pay/me/miguelf622",
+    observations: "For those used to TransferWise",
+  },
+  {
     name: "Ko-Fi",
     logoSrc: "/kofi.webp",
     link: "https://ko-fi.com/maikelthedev",
