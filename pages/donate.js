@@ -16,8 +16,8 @@ const image = "eatthem.webp";
 // }, 0).toFixed(2);
 
 const totalEuros = 0;
-
-const currentPercentage = (totalEuros * 100) / 500;
+const neededAmount = 500
+const currentPercentage = (totalEuros * 100) / neededAmount;
 const currentPercentageString = currentPercentage + "%";
 
 const getObservations = (donation) => {
@@ -107,7 +107,7 @@ export default function Donations() {
                 Donations Raised
               </span>
               <span className="text-sm font-medium text-blue-700 dark:text-white">
-                {totalEuros}€ of 1500€
+                {totalEuros}€ of {neededAmount}€
               </span>
             </div>
             <div className="w-full bg-gray-400 rounded-full dark:bg-gray-700">
