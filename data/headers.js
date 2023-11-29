@@ -54,10 +54,10 @@ export const headers = {
   donations: {
     subtitle: ["Donations"],
     title: [
-      "Help me get a roof above my head and food",
+      "Help me pay the bills",
     ],
     slogan:
-      "I don't have enough funds to survive the rest of September at all after a steep expense in rent",
+      "I don't have enough funds to cover some bills without dipping onto my overdraft",
   },
   home: {
     subtitle: [
