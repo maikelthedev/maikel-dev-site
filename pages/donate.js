@@ -16,7 +16,7 @@ const image = "eatthem.webp";
 // }, 0).toFixed(2);
 
 const totalEuros = 0;
-const neededAmount = 500
+const neededAmount = 100
 const currentPercentage = (totalEuros * 100) / neededAmount;
 const currentPercentageString = currentPercentage + "%";
 
@@ -86,7 +86,7 @@ export default function Donations() {
 
         <div className="custom-text-black flex flex-col md:flex-row p-2 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div className="px-2 md:px-8 py-4 space-y-6">
-            <h1 className="text-3xl font-bold">What is the issue?</h1>
+            <h1 className="text-3xl font-bold">What is the context?</h1>
             <p className="text-lg">
               I do have a job (finally) but getting to this stage has meant
               putting myself into a giant pile of debt. I owe Virgin MOney 2400
@@ -96,11 +96,14 @@ export default function Donations() {
             <p className="text-lg">
               Do not look for a sobbing story, this is just a matter of debt.
             </p>
+            <h1 className="text-3xl font-bold">What is the issue?</h1>
             <p className="text-lg">
-              All I need is to reach the end of December for everything to go
-              back to normal, to do that I need to avoid dipping into my
-              overdraft for that I think I only need 500€ as I've already paid
-              December's rent.
+              My ANC headphones broke. And if you know me enough you'll know I have problems to fall asleep as I have a diagnosed overproduction of adrenaline. NOISE is a big issue that can keep me awake and I normally sleep with ANC headphones. 
+              I use to sleep with SOny XM4 but found after they broke a year ago that Anker Q45 could do the job nicely. 
+
+              What I need is to be able to purchase headphones but I have only 200€ for food and fun for this month due to the giant pile of debt I've accumulated. Which means I can't spend ~100€ getting active-noise-cancelling headphones again. 
+
+              Ideally I want again the Anker Q45 but the Anker Space One seem pretty similar yet cheaper and capable of doing the same job. They tend to go on offer in Amazon so I don't mind either, whichever one comes under 100€. 
             </p>
             <div className="flex justify-between mb-1">
               <span className="text-base font-medium text-blue-700 dark:text-white">
@@ -119,7 +122,7 @@ export default function Donations() {
                 {currentPercentage.toFixed(2)}%
               </div>
             </div>
-            <p>Updated: 29th November 2023</p>
+            <p>Updated: 21st December 2023</p>
             <div className="">
               <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
                 <thead className="custom-text-black">
@@ -175,9 +178,7 @@ export default function Donations() {
             <h1 className="text-3xl font-bold">How's your donation used:</h1>
 
             <p className="text-lg">
-              Any funds go towards paying the bills of December first, then to
-              cover for December's food. That's all. Otherwise it'll all be
-              covered from my overdraft which is very pricey. No further fundraising should be needed after this since by the end of December I get my paycheque. 
+              Any funds go towards getting those headphones
             </p>
             {/* <h1 className="text-3xl font-bold" id="thankYou">
               Thank you{" "}
