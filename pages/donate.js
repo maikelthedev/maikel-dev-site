@@ -178,7 +178,7 @@ export default function Donations() {
             <h1 className="text-3xl font-bold">How's your donation used:</h1>
 
             <p className="text-lg">
-              Any funds go towards getting those headphones
+              Any funds go towards getting those headphones, anything above 100 will go into paying the overdraft I'm using right now. 
             </p>
             {/* <h1 className="text-3xl font-bold" id="thankYou">
               Thank you{" "}
