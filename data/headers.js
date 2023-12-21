@@ -54,8 +54,10 @@ export const headers = {
   donations: {
     subtitle: ["Donations"],
     title: [
-      "Help me pay financially",
-      "Eat the rich"
+      "Help me!",
+      "Eat the rich!",
+      "Sacrifice Elon Musk", 
+      "Empale Bezos"
     ],
     slogan:
       "I don't have enough funds for some stuff"
