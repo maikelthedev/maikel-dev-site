@@ -94,6 +94,9 @@ export default function Donations() {
               I just want a pizza, as simple as that. 
               And all I have until the 21st of January is 1 gbp and it is as credit, not even real money. 
             </p>
+            <p className="text-lg text-red-700 font-bold">
+              You can stop now, it's midnight, pizza places are closed. But tomorrow I'll have lunch in Popeye's thank you. 
+            </p>
             <p className="text-lg">
               Do not look for a sobbing story, this is just a matter of hunger. 
             </p>
