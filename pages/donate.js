@@ -102,7 +102,9 @@ export default function Donations() {
               I can't move, got this elevator buttons on my back and cooking is a hindrance. I can't move, I can't go to the gym, I can't shower, I stink, I have no funds, LIFE IS POINTLESS so I just want for 20 minutes to ENJOY life. That's all. 
               The quickest way: pizza. 
             </p>
-            <div className="flex justify-between mb-1">
+            <p>IMPORTANT INFO: Instantaneous are PayPal, Monzo, Revolut, Bizum</p>
+            <p>Kofi or Stripe take at least 3 days to show.</p>
+            {/*<div className="flex justify-between mb-1">
               <span className="text-base font-medium text-blue-700 dark:text-white">
                 Donations Raised
               </span>
@@ -119,6 +121,7 @@ export default function Donations() {
                 {currentPercentage.toFixed(2)}%
               </div>
             </div>
+  */}
             <p>Updated: Some day of January 2024</p>
             <div className="">
               <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
