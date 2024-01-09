@@ -21,13 +21,27 @@ export const currencies = [
   },
 ];
 
-export const providers = [
+export const providers = [  
   {
-    name: "Stripe",
-    logoSrc: "/stripe.webp",
-    link: "#useStripe",
-    linkCaption: "Below on this page",
-    observations: "Easiest Worldwide",
+    name: "PayPal",
+    logoSrc: "/paypal.webp",
+    link: "https://paypal.me/maikelthedev",
+    linkCaption: "paypal.me/maikelthedev",
+    observations: "Convenient if you have an account",
+  },
+  {
+    name: "Wise",
+    logoSrc: "/wise.webp",
+    link: "https://wise.com/pay/me/miguelf622",
+    linkCaption: "wise.com/pay/me/miguelf622",
+    observations: "For those used to TransferWise",
+  },
+  {
+    name: "Bizum",
+    logoSrc: "/bizum.webp",
+    link: "https://bizum.es/",
+    linkCaption: "Use +34 635 850 980 as payment destination",
+    observations: "Easiest for anyone within Spain",
   },
   {
     name: "Revolut",
@@ -44,11 +58,11 @@ export const providers = [
     observations: "Fastest for UK",
   },
   {
-    name: "PayPal",
-    logoSrc: "/paypal.webp",
-    link: "https://paypal.me/maikelthedev",
-    linkCaption: "paypal.me/maikelthedev",
-    observations: "Convenient if you have an account",
+    name: "Stripe",
+    logoSrc: "/stripe.webp",
+    link: "#useStripe",
+    linkCaption: "Below on this page",
+    observations: "Easiest Worldwide",
   },
   {
     name: "LiberaPay",
@@ -57,13 +71,7 @@ export const providers = [
     linkCaption: "liberapay.com/maikelthedev/",
     observations: "Recurring",
   },
-  {
-    name: "Wise",
-    logoSrc: "/wise.webp",
-    link: "https://wise.com/pay/me/miguelf622",
-    linkCaption: "wise.com/pay/me/miguelf622",
-    observations: "For those used to TransferWise",
-  },
+  
   {
     name: "Ko-Fi",
     logoSrc: "/kofi.webp",
@@ -71,16 +79,11 @@ export const providers = [
     linkCaption: "ko-fi.com/maikelthedev",
     observations: "Same as Stripe",
   },
-  {
-    name: "Bizum",
-    logoSrc: "/bizum.webp",
-    link: "https://bizum.es/",
-    linkCaption: "Use +34 635 850 980 as payment destination",
-    observations: "Easiest for anyone within Spain",
-  },
+  
 ];
 
 export const donations = [
-  { initial: "O.B.", symbol: "GBP", amount: 10, euros: 11.63, provider: "Monzo" },
-  { initial: "N.B.", symbol: "$", amount: 20, euros: 18.32, provider: "Stripe" }
+  { initial: "O.B.", symbol: "£", amount: 10, euros: 11.63, provider: "Monzo" },
+  { initial: "N.B.", symbol: "$", amount: 20, euros: 18.32, provider: "Stripe" },
+  { initial: "B.W.", symbol: "$", amount: 25, euros: 22.85, provider: "Stripe" }
 ];
