@@ -81,50 +81,5 @@ export const providers = [
 ];
 
 export const donations = [
-  { initial: "K", symbol: "$", amount: 25, euros: 22.83, provider: "Stripe" },
-  { initial: "Z", symbol: "$", amount: 20, euros: 18.26, provider: "Stripe" },
-  {
-    initial: "P",
-    symbol: "AU$",
-    amount: 100,
-    euros: 58.25,
-    provider: "Stripe",
-  },
-  { initial: "B", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
-  { initial: "A", symbol: "$", amount: 70, euros: 65.26, provider: "Stripe" },
-  { initial: "J", symbol: "€", amount: 150, euros: 150, provider: "PayPal" },
-  { initial: "J", symbol: "€", amount: 120, euros: 120, provider: "PayPal" },
-  {
-    initial: "L",
-    symbol: "€",
-    amount: 22.84,
-    euros: 22.84,
-    provider: "PayPal",
-  },
-  {
-    initial: "S",
-    symbol: "£",
-    amount: 250,
-    euros: 290.99,
-    provider: "Monzo",
-    observations: "as part of a job.",
-  },
-  { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "Stripe" },
-  { initial: "K", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
-  { initial: "C", symbol: "€", amount: 50, euros: 50, provider: "PayPal" },
-  { initial: "S", symbol: "$", amount: 30, euros: 27.92, provider: "Stripe" },
-  {
-    initial: "S",
-    symbol: "€",
-    amount: 46.33,
-    euros: 46.33,
-    provider: "Revolut",
-  },
-  { initial: "J", symbol: "€", amount: 100, euros: 100, provider: "Bizum" },
-  { initial: "A", symbol: "€", amount: 20, euros: 20, provider: "PayPal" },
-  { initial: "B", symbol: "$", amount: 50, euros: 44.64, provider: "Stripe" }, 
-  { initial: "S", symbol: "€", amount: 25, euros: 25, provider: "PayPal" },
-  { initial: "M", symbol: "€", amount: 50, euros: 50, provider: "PayPal" },
-  { initial: "M", symbol: "€", amount: 25, euros: 25, provider: "Stripe" },
-  { initial: "D", symbol: "€", amount: 500, euros: 500, provider: "Transfer" }
+  { initial: "O.B.", symbol: "10", amount: 10, euros: 11.63, provider: "Monzo" }
 ];
