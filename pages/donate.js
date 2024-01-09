@@ -32,6 +32,7 @@ const getObservations = (donation) => {
 
 export default function Donations() {
   const header = headers.donations;
+  const url = "https://maikel.dev/donate"
   return (
     <Fragment>
       <Head>
@@ -51,13 +52,13 @@ export default function Donations() {
         />
         <meta
           property="og:url"
-          content="https://maikel.dev/donations"
+          content={url}
           key="og-url"
         />
 
         <meta
           property="twitter:url"
-          content="https://maikel.dev/donations"
+          content={url}
           key="twitter:url"
         />
         <meta name="twitter:site" content="@maikelthedev" key="twitter:site" />
