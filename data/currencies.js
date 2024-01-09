@@ -86,5 +86,6 @@ export const donations = [
   { initial: "O.B.", symbol: "£", amount: 10, euros: 11.63, provider: "Monzo" },
   { initial: "N.B.", symbol: "$", amount: 20, euros: 18.32, provider: "Stripe" },
   { initial: "B.W.", symbol: "$", amount: 25, euros: 22.85, provider: "Stripe" },
-  { initial: "M.Z.", symbol: "€", amount: 10, euros: 10, provider: "Stripe" }
+  { initial: "M.Z.", symbol: "€", amount: 10, euros: 10, provider: "Stripe" },
+  { initial: "K.K.", symbol: "€", amount: 26.23, euros: 26.23, provider: "PayPal" }
 ];
