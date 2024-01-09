@@ -103,6 +103,7 @@ export default function Donations() {
               The quickest way: pizza. 
             </p>
             <p>IMPORTANT INFO: Instantaneous are PayPal, Monzo, Revolut, Bizum</p>
+            <p>With <span className="text-3xl">PAYPAL</span> I could do it today</p>
             <p>Kofi or Stripe take at least 3 days to show.</p>
             {/*<div className="flex justify-between mb-1">
               <span className="text-base font-medium text-blue-700 dark:text-white">
