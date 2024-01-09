@@ -15,7 +15,9 @@ const image = "eatthem.webp";
 //   return accumulator + donation.euros;
 // }, 0).toFixed(2);
 
-const totalEuros = 0;
+const totalEuros = donations.reduce((accumulator, donation) => {
+  return accumulator + donation.euros;
+}, 0).toFixed(2)
 const neededAmount = 20
 const currentPercentage = (totalEuros * 100) / neededAmount;
 const currentPercentageString = currentPercentage + "%";
@@ -174,7 +176,7 @@ export default function Donations() {
             <p className="text-lg">
               Any funds go towards ordering pizza, anything above that will go to do some remote grocery shopping so I have some extra snacks while I'm bed bound. 
             </p>
-            {/* <h1 className="text-3xl font-bold" id="thankYou">
+            <h1 className="text-3xl font-bold" id="thankYou">
               Thank you{" "}
             </h1>
             <p className="text-lg">
@@ -202,9 +204,9 @@ export default function Donations() {
 
               <li className="list-item">
                 <span className="font-bold">Total: </span>
-                {totalEuros}€ of 1500€ needed.
+                {totalEuros}€ of {neededAmount}€ needed.
               </li>
-            </ul> */}
+            </ul> 
           </div>
         </div>
       </div>
