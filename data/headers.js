@@ -1,4 +1,10 @@
 export const headers = {
+  spanish: {
+    subtitle: ["Sobre Mi"],
+    title: ["Maikel Frias Mosquea"],
+    slogan:
+      "Desarrollador de software Full Stack y arquitecto de redes e ingeniero DevOps",
+  },
   about: {
     subtitle: ["About"],
     title: ["Maikel Frias Mosquea"],
