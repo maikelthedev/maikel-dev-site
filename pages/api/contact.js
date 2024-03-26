@@ -1,12 +1,12 @@
 const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
-    host: "mail.gandi.net",
+    host: "smtp.gmail.com",
     port: 465,
     secure: true,
     auth: {
       // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-      user: "everything@maikel.dev",
-      pass: "NhaNk93AHeXaF5",
+      user: "NOT_HERE_EITHER@gmail.com",
+      pass: "NOT_HERE",
     },
   });
 
@@ -18,8 +18,8 @@ async function handler(req, res) {
     return res.status(400).json({ data: "Name, Email or Message not found" });
   }
   const info = await transporter.sendMail({
-    from: '"Maikel OÜ Site" <everything@maikel.dev>', // sender address
-    to: "maikel@maikel.uk", 
+    from: '"Maikel OÜ Site" <NOT_HERE_EITHER@gmail.com>', // sender address
+    to: "yourwebsite@maikel.dev", 
     subject: "Contact from Site", 
     text: `${name}\n${email}\n${message}`, 
     html: `
