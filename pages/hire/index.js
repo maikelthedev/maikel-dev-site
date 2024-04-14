@@ -21,7 +21,7 @@ function Hire() {
     const data = {
       name: event.target.name.value,
       email: event.target.email.value,
-      message: event.target.message.value,
+      message: event.target.message.value
     };
     await fetch("/api/contact", {
       method: "POST",
@@ -112,7 +112,7 @@ function Hire() {
               <div className="mb-4">
                 <label
                   className="block custom-text-gray-700 text-sm font-bold mb-2"
-                  for="name"
+                  htmlFor="name"
                 >
                   Name
                 </label>
@@ -127,7 +127,7 @@ function Hire() {
               <div className="mb-6">
                 <label
                   className="block custom-text-gray-700 text-sm font-bold mb-2"
-                  for="email"
+                  htmlFor="email"
                 >
                   Email
                 </label>
@@ -141,7 +141,7 @@ function Hire() {
               <div className="mb-6">
                 <label
                   className="block custom-text-gray-700 text-sm font-bold mb-2 "
-                  for="message"
+                  htmlFor="message"
                 >
                   Message
                 </label>
