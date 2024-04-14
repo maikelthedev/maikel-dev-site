@@ -9,15 +9,15 @@ export default function Skill(props) {
     <Fragment>
       <div key={id} className="group mt-5  p-2 mb-10  basis-1/3">
         <div className="bg-white border-indigo-700 border-2 rounded-lg md:group-hover:border-dashed">
-          <div className=" p-2 bg-indigo-700 md:group-hover:bg-white text-white md:group-hover:text-indigo-700 rounded-lg border-solid border-white border">
-            <div className="float-left mb-0 ml-2 mt-2 mr-3 flex h-20 w-20 items-center justify-center rounded-full bg-white">
+          <div className="p-2 bg-indigo-700 md:group-hover:bg-white text-white md:group-hover:text-indigo-700 rounded-lg border-solid border-white border">
+            <div className="float-left mb-0 ml-2 mt-2 mr-3 flex h-14 w-14 items-center justify-center rounded-full bg-white">
               <skill.icon
                 className="h-10 w-10 text-indigo-700"
                 aria-hidden="true"
               />
             </div>
             <div className="lg:m-2 p-2 relative top-0">
-              <h2 className="text-2xl font-semibold">{title}</h2>
+              <h2 className="text-1xl font-semibold">{title}</h2>
               <p className="text-sm">{description}</p>
             </div>
           </div>
