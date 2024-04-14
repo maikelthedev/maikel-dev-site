@@ -5,7 +5,7 @@ export const services = [
     id: uuidv4(),
     name: "Full Stack Web Development",
     description:
-      "Using Angular, React, Flask or Django I can build your website backend and frontend from scratch.",
+      "Using Angular, React, Flask, Django or Phoenix in Elixir I can build your website backend and frontend from scratch.",
   },
   {
     id: uuidv4(),
