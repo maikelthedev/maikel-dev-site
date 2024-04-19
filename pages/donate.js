@@ -89,22 +89,20 @@ export default function Donations() {
 
         <div className="custom-text-black flex flex-col md:flex-row p-2 custom-bg-white md:mx-auto md:max-w-6xl items-center">
           <div className="px-2 md:px-8 py-4 space-y-6">
-            <h1 className="text-3xl font-bold">PIZZAAAAAHHHHH!!</h1>
+            <h1 className="text-3xl font-bold">I'm on a very tight budged 😅 </h1>
             <p className="text-lg">
-              I just want a pizza, as simple as that. 
-              And all I have until the 21st of January is 1 gbp and it is as credit, not even real money. 
+              As you might or might not know I'm running on a very tight budget to get rid of all the credit card debt. 
+              That means every month I spend the least possible to keep my sanity while paying as much as possible on credit card debt. 
+              There's still a few days to payday and I run out of funds so this is about a bit of a stretch to get there slightly more comfortably. 
+              If you have anyone on the fediverse with more urgent needs PLEASE DO consider donating to them instead. 
             </p>
             <p className="text-lg text-red-700 font-bold">
-              You can stop now, it's midnight, pizza places are closed. But tomorrow I'll have lunch in Popeye's thank you. 
             </p>
             <p className="text-lg">
-              Do not look for a sobbing story, this is just a matter of hunger. 
+              Do not look for a sobbing story, this is just a matter of being stretched to thin with debt repayment. 
             </p>
-            <h1 className="text-3xl font-bold">What is the issue?</h1>
-            <p className="text-lg">
-              I can't move, got this elevator buttons on my back and cooking is a hindrance. I can't move, I can't go to the gym, I can't shower, I stink, I have no funds, LIFE IS POINTLESS so I just want for 20 minutes to ENJOY life. That's all. 
-              The quickest way: pizza. 
-            </p>
+            <h1 className="text-3xl font-bold">What is the goal?</h1>
+            <p>I think with ~300 extra euros I can get over the line. Anything above that will go towards reducing my debt pressure.</p>
             <p>IMPORTANT INFO: Instantaneous are PayPal, Monzo, Revolut, Bizum</p>
             <p>With <span className="text-3xl">PAYPAL</span> I could do it today</p>
             <p>Kofi or Stripe take at least 3 days to show.</p>
@@ -126,7 +124,7 @@ export default function Donations() {
               </div>
             </div>
   */}
-            <p>Updated: Some day of January 2024</p>
+            <p>Updated: Friday 19th of April of 2024</p>
             <div className="">
               <table className="w-full flex flex-row flex-nowrap sm:bg-white rounded-lg  sm:shadow-lg my-5">
                 <thead className="custom-text-black">
@@ -182,8 +180,15 @@ export default function Donations() {
             <h1 className="text-3xl font-bold">How's your donation used:</h1>
 
             <p className="text-lg">
-              Any funds go towards ordering pizza, anything above that will go to do some remote grocery shopping so I have some extra snacks while I'm bed bound. 
+              Any funds go towards food and other expenses all the way until payday. If anything is spared past that, it'll go towards debt repayment. 
+              Right now my debts are:
             </p>
+              <ol>
+                <li>Virgin Money: 1787.03 GBP</li>
+                <li>Monzo Flex:  234.98 GBP </li>
+                <li>Zable credit card: 272.25 GBP</li>
+              </ol>
+            <p>Of the al Virgin is the urgent one because that's the one with the highest interest, the others are month rolling so 0% so I'm keeping Virgin not higher than 2000€ (my monthly salary which converst to roughly 1700 GBP) so on next payday I can pay it in full and reset the APR to 0%. But that also means I'm quickly running out of funds in the  other two, which have a much lower allowance.</p>
             <h1 className="text-3xl font-bold" id="thankYou">
               Thank you{" "}
             </h1>
@@ -192,29 +197,31 @@ export default function Donations() {
               not going to disclose your names but for transparency and
               accountability here is the list.
             </p>
-            <ul className="list-disc px-8 space-y-2">
-              {donations.map((donation) => (
-                <li
-                  className="list-item"
-                  key={donation.amount * donation.euros}
-                >
-                  {donation.initial +
-                    ": " +
-                    donation.symbol +
-                    donation.amount +
-                    " (" +
-                    donation.euros +
-                    "€) using " +
-                    donation.provider +
-                    getObservations(donation)}
-                </li>
-              ))}
-
-              <li className="list-item">
-                <span className="font-bold">Total: </span>
-                {totalEuros}€ of {neededAmount}€ needed.
-              </li>
-            </ul> 
+            {
+            // <ul className="list-disc px-8 space-y-2">
+            //   {donations.map((donation) => (
+            //     <li
+            //       className="list-item"
+            //       key={donation.amount * donation.euros}
+            //     >
+            //       {donation.initial +
+            //         ": " +
+            //         donation.symbol +
+            //         donation.amount +
+            //         " (" +
+            //         donation.euros +
+            //         "€) using " +
+            //         donation.provider +
+            //         getObservations(donation)}
+            //     </li>
+            //   ))}
+            //
+            //   <li className="list-item">
+            //     <span className="font-bold">Total: </span>
+            //     {totalEuros}€ of {neededAmount}€ needed.
+            //   </li>
+            // </ul> 
+            }
           </div>
         </div>
       </div>
