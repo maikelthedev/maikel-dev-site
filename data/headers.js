@@ -60,11 +60,10 @@ export const headers = {
   donations: {
     subtitle: ["Donations"],
     title: [
-      "Help me spark joy!",
-      "Let's get pizza"
+      "I'm drowning in debt"
     ],
     slogan:
-      "I seriously just want a pizza, with mushrooms, ham, double cheese and bacon"
+    "I just want to be debt-free, it is as simple as that."
   },
   home: {
     subtitle: [

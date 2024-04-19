@@ -180,7 +180,7 @@ export default function Donations() {
             <h1 className="text-3xl font-bold">How's your donation used:</h1>
 
             <p className="text-lg">
-              Any funds go towards food and other expenses all the way until payday. If anything is spared past that, it'll go towards debt repayment. 
+              Any funds go towards food and other expenses all the way until payday. If anything is spared past that, it'll go towards debt repayment. If I am in the black by next month, anything above it goes to the Moshidon project.  
               Right now my debts are:
             </p>
               <ol>
