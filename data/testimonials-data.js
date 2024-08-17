@@ -19,7 +19,7 @@ export const testimonials = [
   },
   {
     name: "Stephen Newey",
-    role: "Manager, SW Engineering @ Roku, Inc",
+    role: "Senior Software Engineer @ Roku, Inc",
     content:
     `I engaged Maikel's services to develop an open source architecture and Infrastructure-as-Code (Terraform) project that enables enterprise-level capabilities (Kubernetes, GitOps) on low cost hosting services (Hetzner Cloud) with a focus on low maintenance burden (Talos Linux, Helm, Velero). Maikel took the time to understand the requirements, asking the right questions and producing a schedule of work we agreed upon.
 
