@@ -15,6 +15,7 @@ function App({ Component, pageProps }) {
         <link rel="icon" href="https://maikel.dev/favicon.ico" />
         <meta property="og:title" content="Maikel OÜ" key="og-title" />
         <meta property="og:type" content="website" />
+        <meta property="fediverse:creator" content="@maikel@vmst.io" />
         <meta
           property="og:description"
           content="Full Stack Developer and Cloud Architect"
