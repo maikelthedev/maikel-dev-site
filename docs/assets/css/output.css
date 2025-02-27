@@ -238,14 +238,8 @@
       max-width: 96rem;
     }
   }
-  .mx-5 {
-    margin-inline: calc(var(--spacing) * 5);
-  }
   .mx-auto {
     margin-inline: auto;
-  }
-  .my-2 {
-    margin-block: calc(var(--spacing) * 2);
   }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
@@ -325,15 +319,6 @@
   .resize {
     resize: both;
   }
-  .list-inside {
-    list-style-position: inside;
-  }
-  .list-decimal {
-    list-style-type: decimal;
-  }
-  .list-disc {
-    list-style-type: disc;
-  }
   .break-inside-avoid-column {
     break-inside: avoid-column;
   }
@@ -377,9 +362,6 @@
   .overflow-hidden {
     overflow: hidden;
   }
-  .overflow-x-auto {
-    overflow-x: auto;
-  }
   .rounded {
     border-radius: 0.25rem;
   }
@@ -418,17 +400,11 @@
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
-  .bg-transparent {
-    background-color: transparent;
-  }
   .bg-white {
     background-color: var(--color-white);
   }
   .object-cover {
     object-fit: cover;
-  }
-  .p-0 {
-    padding: calc(var(--spacing) * 0);
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
@@ -438,9 +414,6 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
-  }
-  .px-1 {
-    padding-inline: calc(var(--spacing) * 1);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -474,14 +447,6 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -494,10 +459,6 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -505,9 +466,6 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  .text-black {
-    color: var(--color-black);
   }
   .text-blue-600 {
     color: var(--color-blue-600);
@@ -520,12 +478,6 @@
   }
   .text-gray-800 {
     color: var(--color-gray-800);
-  }
-  .text-green-300 {
-    color: var(--color-green-300);
-  }
-  .text-inherit {
-    color: inherit;
   }
   .text-white {
     color: var(--color-white);
