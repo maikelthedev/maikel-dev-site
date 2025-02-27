@@ -30,7 +30,8 @@ defmodule Blog.MixProject do
 
   defp aliases do
     [
-      deploy: ["grf.build --output docs"]
+      deploy: ["grf.build --output docs"],
+      "build.assets": ["npx @tailwindcss/cli -i assets/css/input.css -o assets/css/output.css "]
     ]
   end
 end
