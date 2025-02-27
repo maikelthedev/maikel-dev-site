@@ -1,13 +1,8 @@
 ---
 layout: base
 ---
-
-    <h1>Blog</h1>
-
-    <%= 
-
-    %>
-
-
-<%= @partials.postslist %>
-    <%= @partials.js %>
+<section id="blog" class="container mx-auto px-6 py-20">
+  <h1 class="text-center">Blog</h2>
+  <%= @partials.postslist %>
+  </div>
+</section>

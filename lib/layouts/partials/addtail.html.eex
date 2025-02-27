@@ -20,5 +20,9 @@
     @apply bg-transparent p-0 text-inherit;
   }
 
+  a {
+    @apply hover:font-bold;
+  }
+
 </style>
 

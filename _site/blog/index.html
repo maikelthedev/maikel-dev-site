@@ -26,6 +26,10 @@
     @apply bg-transparent p-0 text-inherit;
   }
 
+  a {
+    @apply hover:font-bold;
+  }
+
 </style>
 
 
@@ -41,6 +45,7 @@
     <div class="ml-auto space-x-6">
       <a href="/" class="hover:text-gray-600">Home</a>
       <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
       <a href="/#projects" class="hover:text-gray-400">Projects</a>
       <a href="/#contact" class="hover:text-gray-400">Contact</a>
       <a href="/blog" class="hover:text-gray-600">Blog</a>
@@ -51,13 +56,9 @@
 </nav>
 
     <section class="container mx-auto">
-      
-    <h1>Blog</h1>
-
-    
-
-
-<div class="grid grid-cols-2 lg:grid-cols-4 xs:grid-cols-1 gap-10 my-10">
+      <section id="blog" class="container mx-auto px-6 py-20">
+  <h1 class="text-center">Blog</h2>
+  <div class="grid grid-cols-2 lg:grid-cols-4 xs:grid-cols-1 gap-10 my-10">
     
 
 
@@ -153,6 +154,10 @@
     
 
     </div>
+  </div>
+</section>
+    </section>
+    </div>
           <script>
     // Function to format the date
     function formatDate(dateString) {
@@ -176,8 +181,5 @@
       element.textContent = formatDate(dateStr); // Set the formatted date in the element
     });
   </script>
-
-    </section>
-    </div>
   </body>
 </html>

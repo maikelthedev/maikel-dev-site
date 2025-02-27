@@ -25,9 +25,6 @@ config :griffin_ssg,
         :world
 
     """
-    def hello do
-      :world
-    end
 
     def sorted_posts(collections, url) do
 

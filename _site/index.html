@@ -26,6 +26,10 @@
     @apply bg-transparent p-0 text-inherit;
   }
 
+  a {
+    @apply hover:font-bold;
+  }
+
 </style>
 
 
@@ -41,6 +45,7 @@
     <div class="ml-auto space-x-6">
       <a href="/" class="hover:text-gray-600">Home</a>
       <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
       <a href="/#projects" class="hover:text-gray-400">Projects</a>
       <a href="/#contact" class="hover:text-gray-400">Contact</a>
       <a href="/blog" class="hover:text-gray-600">Blog</a>
@@ -121,7 +126,11 @@
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-semibold">Contact</h2>
       <p class="mt-4 text-lg">Feel free to reach out to me via email for inquiries or project collaborations.</p>
-      <a href="mailto:maikel@example.com" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Email Me</a>
+        <div class="space-x-2">
+        <a href="mailto:maikel@example.com" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Email Me</a>
+        <a href="mailto:maikel@example.com" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Email Me</a>
+        <a href="mailto:maikel@example.com" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Email Me</a>
+        </div>
     </div>
   </section>
 
@@ -237,5 +246,28 @@
 
     </section>
     </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
   </body>
 </html>
