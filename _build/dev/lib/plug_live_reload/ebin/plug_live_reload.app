@@ -1,0 +1,11 @@
+{application,plug_live_reload,
+             [{modules,['Elixir.PlugLiveReload',
+                        'Elixir.PlugLiveReload.Application',
+                        'Elixir.PlugLiveReload.Socket']},
+              {optional_applications,[]},
+              {applications,[kernel,stdlib,elixir,logger,file_system,plug,
+                             cowboy]},
+              {description,"Adds live-reload functionality to Plug for development."},
+              {registered,[]},
+              {vsn,"0.2.0"},
+              {mod,{'Elixir.PlugLiveReload.Application',[]}}]}.
