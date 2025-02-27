@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Panel Utils</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">Panel Utils</h1>
+  <img src="/assets/img/hexagons.jpg" alt="Panel Utils" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+Survation Panel Utils</h1>
+<h2>
+Introduction</h2>
+<p>
+There are processes that run the Panel that do not require a ExpressJS server, nor a front end in Angular. These are processes that runs regularly in the background independently. </p>
+<h2>
+First stage the mailer</h2>
+<p>
+This project started as a mailer. That is a Python project that took a list of emails, a template from AWS, data associated with each email and using Amazon Web Services SES it sends all those mass emails. Typical emails where:</p>
+<ul>
+  <li>
+New survey (duration, points per survey)  </li>
+  <li>
+Password Recovery (with a token)  </li>
+  <li>
+New User  </li>
+  <li>
+Points registered  </li>
+  <li>
+You’ve been paid (when the user asked to cash out) their points).   </li>
+</ul>
+<p>
+I created beautifully-formatted templated emails manually using  <a href="https://get.foundation/emails.html">Foundation</a> and uploaded them to AWS using AWS-cli. Then I could just choose the template from the mailer and send over the data that needed to add to it. </p>
+<h2>
+The Sampler</h2>
+<p>
+At the beginning we were targeting all panelists, we needed them all to complete the initial surveys upon launch to have enough data to later better sample by those details. But then once we have the data we needed:</p>
+<ol>
+  <li>
+The Extractor: To pull all their responses from SurveyGizmo and format them in the user collection of Mongo as our unique souce of truth and data lake.   </li>
+  <li>
+The Sampler: to based, on those answers, be able to create UK National Representative samples. But also to create tailor-made samples as required by the project manager.   </li>
+  <li>
+The Updater: To update dynamic (updatable) samples. Samples that update depending on users responses to other surveys or new users added to the panel. e.g.: If you needed a survey to get immediate responses from any new user from Scotland, you’ll made this survey use a dynamic sample with “region = scotland”  </li>
+</ol>
+<p>
+All of these were merged with the mailer and run in the same project. A Python utility with 4 modules that would run each in consecutive order every minute, independent from the panel backend. </p>
+<h2>
+The Queue</h2>
+<p>
+Both sample and mailer were using a very simple queue using Mongo as the unique source of truth connecting both backend and utils. </p>
+<p>
+Utils could create a mailing list or sample with “processed: false” and the utils would pick it up and process it, then retrieve the formed, processed document back to Mongo with “processed: true” and wait until there’s another one that needs processing. </p>
+<p>
+In the case of user responses, it’ll just wait for new transactions, as completing a survey is a new transaction, with “processed: false”.</p>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>

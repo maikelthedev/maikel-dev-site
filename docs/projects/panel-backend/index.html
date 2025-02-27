@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Panel Backend</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">Panel Backend</h1>
+  <img src="/assets/img/hexagons.jpg" alt="Panel Backend" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+The Survation Panel Back-End</h1>
+<h2>
+The goal</h2>
+<p>
+Survation wanted to design their own panel, that’s a tool to have their own panelist completing surveys instead of having to pay third-party suppliers of panelists, to save costs. The set of people completing surveys is what’s called a “panel” in this context. </p>
+<h2>
+What I did</h2>
+<p>
+The back end of the project was made using NodeJs, ExpressJS, JsonWebTokens for authentication, Mongo for database, Redis for stuff that needed to go much faster than Mongo could. </p>
+<p>
+For every tool I used the latest version at all times and updated as soon as they were released. I used Bitbucket to preserve <strong>their</strong> code. There are some related utilities in Python that I’m going to mention in a different project as I treated it as such (the sampler, the mailer). </p>
+<p>
+The same API was used for both panelist, managers and admins. Endpoints were user-token based, so a panelist could not trigger an endpoint that required an admin. Some changes performed by admins or managers sent me an email (cash out) for motorization. </p>
+<p>
+Some features were experimentally made in Rust because I wanted to give it a try, using <a href="https://neon-bindings.com/">Neon Bindings</a></p>
+<p>
+Both front end and back end were part of a Kubernetes cloud so each one of the projects had their own deployment YAML and were tested in a stage environment using Docker in Jenkins, then automatically deployed in production if everything was fine. </p>
+<h2>
+Features</h2>
+<ol>
+  <li>
+Rest API as a user to sign up/log in/log out/change details/complete surveys/cash out/check points/list surveys.   </li>
+  <li>
+Additional API connection to their <a href="https://www.survation.com">Wordpress</a> site to fetch posts listed on their homepage and bottom section, also for the text and images shown in the homepage. So they could, without needing to code, change it from <a href="https://www.survation.com">Wordpress</a>, which they were familiar with. In WP they had CustomFields plugin for that. So I just had to point them to the right page to made the modifications and add a tutorial in the wiki I created for them.   </li>
+  <li>
+Rest API as an admin and manager to create projects, close projects, modify projects, enqueue emails, send password recovery emails, delete users, modify users, add user points, create samples, modify samples, create lists, modify lists, delete samples or lists, pay users.   </li>
+</ol>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>

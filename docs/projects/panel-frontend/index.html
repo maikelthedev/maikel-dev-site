@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Panel Frontend</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">Panel Frontend</h1>
+  <img src="/assets/img/hexagons.jpg" alt="Panel Frontend" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+The Survation Panel Front-End</h1>
+<h2>
+The goal</h2>
+<p>
+Survation wanted to design their own panel, that’s a tool to have their own panelist completing surveys instead of having to pay third-party suppliers of panelists, to save costs. The set of people completing surveys is what’s called a “panel” in this context. </p>
+<h2>
+What I did</h2>
+<p>
+I created the <a href="https://panel.survation.com">Survation Panel</a> from scratch using the latest version of Angular, reaching all the way from v.4 up to v.13 and maintaining it. I used Bitbucket to preserve <strong>their</strong> code and applied using Bootstrap a ready-made theme template of which they had a static design (just the homepage) by <a href="https://spinachbranding.com/">Spinach</a>, I used Boostrap to speed up design and the page allowed users to find the surveys. </p>
+<p>
+The same interface was used for both panelists and project managers. So they had a different, privileged dashboard that allowed them to create projects. </p>
+<p>
+The result is in this image</p>
+<p>
+  <img src="/posts/panel-frontend.webp" alt="The Survation Panel">
+</p>
+<h2>
+Features</h2>
+<h3>
+As a panelist/user</h3>
+<ol>
+  <li>
+Sign Up / Log in / Delete your own account.   </li>
+  <li>
+See a list all the surveys available to you.   </li>
+  <li>
+Complete those surveys  </li>
+  <li>
+Check your points (1 point = 1 pence)  </li>
+  <li>
+Cash out your points into money.   </li>
+  <li>
+View Results  </li>
+  <li>
+Allow you to complete your profile  </li>
+  <li>
+Ask for a password reminder.   </li>
+  <li>
+Change notifications, emails, address, postcode.   </li>
+  <li>
+Read the latest blog posts they published.   </li>
+</ol>
+<h3>
+As a manager or administrator</h3>
+<ol>
+  <li>
+Create project definition (survey link, points, duration, sample to apply it to, mail delivery, shown until date).  </li>
+  <li>
+Send (or resend) alerts of new surveys to those users who enabled notifications.   </li>
+  <li>
+Change survey status (visible, not visible)  </li>
+  <li>
+Create samples based on age recent activity (always prioritse users who reply faster), brackets, region, sex, gender, income, or <strong>very literally</strong> every answer any respondent has answered to any survey before. &lt;– <em>This was one of my proudest accomplishments</em>  </li>
+  <li>
+Create lists of panelist based on their emails.   </li>
+  <li>
+Crate other managers or admins (only admins)  </li>
+  <li>
+Assign points (only admins)  </li>
+  <li>
+Delete, modify data or ban users.   </li>
+</ol>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>

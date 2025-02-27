@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Automated FreeBSD build</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">Automated FreeBSD build</h1>
+  <img src="/assets/img/hexagons.jpg" alt="Automated FreeBSD build" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+Automated FreeBSD image build tailored for Oracle Cloud Infrastructure</h1>
+<p>
+SkunkWerks specializes in FreeBSD as Operating System. They maintain their own versions for use with the Oracle Cloud Infrastructure. Each week they build a new version with the latest bugfixes and updates. </p>
+<p>
+This task was done manually using some flakey scripts for the Fish shell. SkunkWerks wanted to automate this so nobody anymore had to waste time every week doing it. My task was to automate it using Ansible that they will integrate with their Github hooks workflow. The system needed to be configurable so that you could specify which processor you were building for (AMD or ARM). </p>
+<h2>
+What I did.</h2>
+<p>
+I decompose their Fish script. Most of it was using OCI cli, other parts QEMU, most of it shell scripts. </p>
+<p>
+I converted all the OCI bits into OCI Ansible collection so that error control could be built in in the YAML code. </p>
+<p>
+The code would then:</p>
+<ol>
+  <li>
+Run a machine on OCI as builder environment with FreeBSD (ARM for ARM / AMD for AMD) with configurable power (number of processors, size of RAM).   </li>
+  <li>
+Pull the latest stable version of FreeBSD with all its bugfixes and updates. Using now the git module of Ansible.   </li>
+  <li>
+Create a build for the chosen processor.   </li>
+  <li>
+Apply the patches to make the build compatible with OCI.   </li>
+  <li>
+Upload the file to an OCI bucket.   </li>
+  <li>
+Destroy the builder server.   </li>
+  <li>
+Create an image from the file in the OCI bucket.   </li>
+  <li>
+Apply some needed settings change in the configuration of that image so that it could run.   </li>
+  <li>
+Run a server with the image and some given cloud-init configuration.   </li>
+  <li>
+Connect to that image and run some test code to prove it works.   </li>
+  <li>
+Destroy the testing server.   </li>
+</ol>
+<h2>
+What I learnt from this</h2>
+<p>
+I enjoyed this project a lot since I learnt plenty new skills with it. </p>
+<ul>
+  <li>
+To run stuff using QEMU. Specially to run ARM from QEMU on an x86 machine.   </li>
+  <li>
+Image creation on Oracle Cloud which might come handy whenever a client needs a cloud that accepts tailor-made images (there aren’t many).   </li>
+  <li>
+The use of Cloud-Init scripts.   </li>
+  <li>
+Everything about OCI Ansible Collection, its limitations and its features.   </li>
+  <li>
+The build process of a FreeBSD system.   </li>
+  <li>
+How “make” works, since I don’t code in C, so never used it before.   </li>
+  <li>
+The differences between FreeBSD and Linux (specially Ubuntu). Now I run FreeBSD in an old laptop as part of my home lab.   </li>
+</ul>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survation Cloud</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">Survation Cloud</h1>
+  <img src="/assets/img/hexagons.jpg" alt="Survation Cloud" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+The Survation Cloud</h1>
+<h2>
+Where this all started</h2>
+<p>
+Survation required the panel software I was designing to read posts from their pre-existing, very broken and very outdated Wordpress setup. </p>
+<p>
+To load the site could take as long as more than 1 full minute. I didn’t want the panel I designed to be that slow, nor did I want it to cache the posts, I wanted it to always have up-to-date posts. So I decided to speed up their <a href="https://www.survation.com">Wordpress</a> site. </p>
+<p>
+At the very beginning the Survation cloud was just their <a href="https://www.survation.com">Wordpress</a> site. </p>
+<h3>
+First step, moving the cloud</h3>
+<p>
+The site was hosted in a self-managed hosting solution that didn’t allow me to tweak with anything on the database or the web servers. That solution was 40 GBP per month. I copied all the Wordpress folder content, enumerated the versions of each one of the systems (nginx, php, mysql) and replicated the whole setup at first in a Digital Ocean server that costs them only 5 USD/month. SSL handling for the httpS was performed automatically using Let’s Encrypt. </p>
+<h3>
+Second step, the tweaks</h3>
+<p>
+Now that I could do whatever I wanted to speed up the site, I used <a href="https://locust.io/">Locust</a> to measure the start average load time. I was using at first <a href="https://jmeter.apache.org/">Apache JMeter</a> but I found it cumbersome in comparison so I found that other tool. </p>
+<p>
+So once it was all up and running I started from finding possible tweaks to the DB to make it faster, the first thing was to try to move into an up-to-date version. It didn’t take much work. Also I migrated from MySQL into MariaDB. </p>
+<p>
+Next I downloaded a couple of plugins:</p>
+<ul>
+  <li>
+One that would take every image or file anyone at Survation uploaded it and copy it in a Digital Ocean bucket with CDN enabled as cdn.survation.com   </li>
+  <li>
+One that would serve every file from that CDN instead of the local version.   </li>
+  <li>
+One that would cache every page, unless a project manager was editing it.   </li>
+</ul>
+<p>
+Then I copied and created another version of their template files that would take all images from the CDN too. </p>
+<p>
+The result was <a href="https://www.survation.com">Survation.com</a> now fully loads in under 3 seconds. Its rest API is also near instant. </p>
+<h2>
+Requirements changed</h2>
+<h3>
+Fat machines for data science</h3>
+<p>
+From time to time Survation runs what is called an <a href="https://en.wikipedia.org/wiki/Multilevel_regression_with_poststratification">MRP</a> survey. I’m not going to try to explain it because I’m not a statistician. The thing is to run it they need a big fat machine with large memory and multiple processors. </p>
+<p>
+At first we were using Digital Ocean but in my never-ending compare-the-market mood I discovered <a href="https://www.hetzner.com/">Hetzner</a>. Each machine was costing 480 USD per month and were not that powerful. With Hetzner they were costing never more than 40 euros and were much faster. Also, the joy of using European providers. </p>
+<p>
+Once deployed the machine all I need to do was to configure network, SSH access, run R-studio with some very specific and obscure packages for it, then secure it and help the expert statistician that was going to use it shall they have any technical query. In a nutshell I ended up creating a Terraform template since this was happening once every 3 to 6 months. </p>
+<p>
+But this was the beginning with Hetzner. </p>
+<h3>
+More services</h3>
+<p>
+Since they had me they could provide added-value to clients with dashboards in R-studio with the results of the research projects they run so I started dockerising everything, at first this meant just:</p>
+<ul>
+  <li>
+<a href="https://www.survation.com">Wordpress</a>  </li>
+  <li>
+Panel backend  </li>
+  <li>
+<a href="https://panel.survation.com">Panel frontend</a>  </li>
+  <li>
+MySQL  </li>
+  <li>
+Mongo  </li>
+  <li>
+Redis  </li>
+</ul>
+<p>
+But then it became:</p>
+<ul>
+  <li>
+<a href="https://tech.survation.com/">Survation Wiki</a> a technical wiki were everything technical was explained to them.   </li>
+  <li>
+<a href="https://secrets.survation.com">Survation secrets</a> a Bitwarden instance. Saving Survation hundreds of pounds in LastPass users. Documented too in the Wiki.   </li>
+  <li>
+<a href="https://jenkins.survation.com">Jenkins</a> my CI/CD tool of choice, not because of lack of trying finding a better one.   </li>
+  <li>
+<a href="https://phabricator.survation.com/">Phabricator</a> where every bit of my code, and some needed for the Data Scientist was shared. Let alone to get through me everbody had to first log their query there, stopping unnecesary questions that would be replied with a link to <a href="https://www.lmgtfy.app/">lmgtfy.com</a>  </li>
+  <li>
+Survation Utils: a set of Python utilities that worked alongisde the panel continously to create samples, email users and scrape the answers of the users to the surveys to be used to sample them.   </li>
+  <li>
+Survation Data: Jupyter Notebooks with several utilities to perform some data science with the data from Mongo or clean up respondent data from dirty datasets.   </li>
+  <li>
+<a href="https://files.survation.com/login">Survation File</a> a OwnCloud instance used as a file drop so clients could sent data safely or viceversa.   </li>
+  <li>
+<a href="https://sensu.survation.com">Sensu</a> to monitor their cloud. Sending to my smartwatch alarms if anything failed through Pushover. Before I was using good-old Nagios, later Icynga. I changed to Sensu because I wanted a simple distributed test system that could be in different places.   </li>
+  <li>
+Grafana to monitor the panelist users, the sign-ups, the rate of growth, the completion of surveys and their cost.   </li>
+  <li>
+<a href="https://visual.survation.com/">Survation Dashboards</a> Shiny dashboards hidden per client, behind a user-protected page. Their data scientist provided the visualisations, I provided the platform and configured it for each client.   </li>
+</ul>
+<h2>
+Enter Kubernetes</h2>
+<p>
+As it was becoming unmanageable I decided to use Kubernetes to orchestrate them all, self-heal and not have a hundred different copies of MariaDB doing the same thing. Let alone assigning whatever.survation.com domain names was much easier using Traefik inside Kubernetes. </p>
+<p>
+I configured the whole thing in Terraform to create the cloud while Ansible to configure the machines, including pulling from Velero the back-ups of every service. I tested the setup with production-mirrored data, destroying and rebuilding it once and again until the whole thing could be destroyed with a “terraform destroy –auto-approve” command and rebuilt losing absolutely nothing with “terraform apply” including domain names assignment using Digital Ocean via Terraform code. </p>
+<p>
+The final setup was:</p>
+<ul>
+  <li>
+AWS SES to send emails.   </li>
+  <li>
+Digital Ocean as CDN, bucket for back ups and DNS nameservers for all of Survation domains and subdomains.   </li>
+  <li>
+Hetzner as the actual machines running it all, somewhere in Finland.  </li>
+</ul>
+<p>
+As per today the Survation cloud still runs under this setup and I learnt a good lesson that I tattooed in my right arm. </p>
+<p>
+  <img src="/posts/lessismore.webp" alt="The Survation Panel">
+</p>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>

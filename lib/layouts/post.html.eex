@@ -2,6 +2,9 @@
 layout: base
 ---
 <div>
-  <h1><%= @title %></h1>
+<div class=" my-10">
+  <h1 class="mx-auto text-center"><%= @title %></h1>
+  <img src="<%= Blog.get_post_image(@image) %>" alt="<%= @title %>" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
   <%= @content %>
 </div>

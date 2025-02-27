@@ -24,5 +24,16 @@
     @apply hover:font-bold;
   }
 
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
 </style>
 

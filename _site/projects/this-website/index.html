@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>This website (Legacy)</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">This website (Legacy)</h1>
+  <img src="/assets/img/hexagons.jpg" alt="This website (Legacy)" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+This website</h1>
+<p>
+I postponed the creation of this website until I had the time to really do it the way I desired to get it done. 
+I wanted something that matched these requirements:</p>
+<ul>
+  <li>
+Free to serve  </li>
+  <li>
+Easy to maintain whenever there are new projects.   </li>
+  <li>
+Showcases what I can do with JavaScript  </li>
+  <li>
+Is fast  </li>
+</ul>
+<h2>
+My choices</h2>
+<p>
+I’m an Angular guy but I’ve experienced first hand from my work at Survation how slow SPAs can be and the nightmare for SEO they can become. In fact for Survation the webpage is server by the backend and to ensure they can be scanned by crawlers I modified the backend so that it detects crawlers it servers a static page generated with handlebars with just the needed information (basic html with meta tags) to show an image for Facebook or Twitter links, description, title, etc. </p>
+<p>
+But I also knew React, despite only using it with Survation for a very small project to get new users into the Panel. So I wanted to use React here but I wanted it to be server-based so I chose NextJS. </p>
+<p>
+And since Vercel not only supplies 1 free project with their free “hobby” offering but also allows custom domains I chose to use them. </p>
+<p>
+I used TailWinds CSS to style it because I wanted to try something different than Elon Musk’s owned Bootstrap. </p>
+<p>
+NextJS is fast, but I might revisit my choice using Astro. </p>
+<p>
+The projects (like this page) are described using markdown, which is built statically on deployment. </p>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>

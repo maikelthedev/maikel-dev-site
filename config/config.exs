@@ -26,6 +26,8 @@ config :griffin_ssg,
 
     """
 
+    @default_image "/assets/img/posts/blog.webp"
+
     def sorted_posts(collections, url) do
 
       %{posts: %{public: posts_in_yes}} = collections
@@ -62,9 +64,17 @@ config :griffin_ssg,
         if Map.has_key?(data, :image) do
           "/assets/img/" <> data.image
         else
-          "/assets/img/default.png"
+          @default_image
 
         end
+    end
+
+    def get_post_image(image) do
+      dbg()
+      case image do
+        nil -> @default_image
+        _ -> "/assets/img/" <> image
+      end
     end
 
     def get_skills(skills) do

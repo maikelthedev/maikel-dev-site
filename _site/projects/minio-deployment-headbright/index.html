@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Min.io cluster deployment</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">Min.io cluster deployment</h1>
+  <img src="/assets/img/hexagons.jpg" alt="Min.io cluster deployment" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+Min.io cluster deployment scripts</h1>
+<p>
+Headbright needed to automate the deployment of a 3-machines cluster for Min.io servers as object storage. They have a pre-made script for a single-node deployment and some cloud-init initial configuration they wanted me to reuse. </p>
+<h2>
+What I did</h2>
+<p>
+I rewrote the bash script, dividing each section into different functions for easy debugging, including an option to be able to call the script with </p>
+<pre><code class="bash">source thescript.sh</code></pre>
+<p>
+to be able to run each function independently. They didn’t want me to use Terraform so I also wrote an additiona script that wasn’t part of the job to emulate the use of Terraform under the same exact conditions they wanted to develop the cloud (use Hetzner CLI, the number of PCs, their names, their folders). I conveniently named the script to develop my copycat dev environment “thescript.sh apply” and “thescript.sh destroy”</p>
+<p>
+Because of inter-communication  between servers I had to open some additional ports, which I did by amending their cloud-init file. Once the entire system was up and running, I tested it repeatedly and once it was robust enough I sent them all the files includinig the one of my dev enviornment that they could use as a guide to avoid repeating themselves in the command line.</p>
+<p>
+My own script (not part of the contract and therefore not subject to NDAs or copyright) to launch my dev environment was this:</p>
+<pre><code class="bash">#!/bin/bash
+
+set -e
+
+PATH_TO_KNOWN_HOSTS=/home/maikel/.ssh/known_hosts
+
+apply_function() {
+    echo &quot;Applying...&quot;
+    hcloud server create --name=minio1 --type=cx11 --image=ubuntu-20.04 --user-data-from-file=cloud-config.yaml &amp;&amp; \
+    hcloud server create --name=minio2 --type=cx11 --image=ubuntu-20.04 --user-data-from-file=cloud-config.yaml &amp;&amp; \
+    echo &quot;All servers up&quot;
+    
+    # Call the function to add volumes
+    add_volumes_function
+}
+
+destroy_function() {
+    echo &quot;Destroying...&quot;
+    hcloud server delete minio1 &amp;&amp; \
+    hcloud server delete minio2 &amp;&amp; \
+    echo &quot;All servers destroyed&quot; &amp;&amp; \
+    # We need the IPs to get rid of the known_hosts line. 
+    get_all_ips_function &amp;&amp; \
+    ssh-keygen -f &quot;${PATH_TO_KNOWN_HOSTS}&quot; -R &quot;${minio1_ip}&quot; &amp;&amp; \
+    ssh-keygen -f &quot;${PATH_TO_KNOWN_HOSTS}&quot; -R &quot;${minio2_ip}&quot; install
+    
+    # Call the function to destroy volumes
+    destroy_volumes_function
+}
+
+add_volumes_function() {
+    echo &quot;Creating &amp; attaching volumes...&quot;
+    hcloud volume create --size 10 --name volume-minio1 --server minio1 &amp;&amp; \
+    hcloud volume create --size 10 --name volume-minio2 --server minio2 &amp;&amp; \
+    echo &quot;All volumes created&quot;
+}
+
+dettach_volumes_function() {
+    echo &quot;Dettaching volumes...&quot; &amp;&amp; \
+    hcloud volume detach volume-minio1  &amp;&amp; \
+    hcloud volume detach volume-minio2  &amp;&amp; \
+    echo &quot;All volumes dettached&quot;
+}
+
+destroy_volumes_function() {
+    echo &quot;Destroying volumes...&quot; &amp;&amp; \
+    hcloud volume delete volume-minio1  &amp;&amp; \
+    hcloud volume delete volume-minio2  &amp;&amp; \
+    echo &quot;All volumes destroyed&quot;
+}
+
+get_server_ip() {
+    local server_name=&quot;$1&quot;
+    hcloud server describe &quot;$server_name&quot; -o json | jq -r &#39;.public_net.ipv4.ip&#39;
+}
+
+get_all_ips_function() {
+    minio1_ip=$(get_server_ip minio1)
+    minio2_ip=$(get_server_ip minio2)
+    
+    echo &quot;IP address of minio1: $minio1_ip&quot;
+    echo &quot;IP address of minio2: $minio2_ip&quot;
+}
+
+send_file_to_server() {
+    local file_path=&quot;$1&quot;
+    local target_ip=&quot;$2&quot;
+    echo &quot;$file_path&quot;
+    echo &quot;$target_ip&quot;
+    scp -i ~/.ssh/.somekey &quot;$file_path&quot; zofx@&quot;$target_ip&quot;:/tmp/
+}
+
+send_install_script_function() {
+    # Send the install script to each server
+    send_file_to_server install-multi-minio.sh &quot;$minio1_ip&quot;
+    send_file_to_server install-multi-minio.sh &quot;$minio2_ip&quot;
+}
+
+mount_volumes_function() {
+    # Mounts the volumes in each server, must run after cloud-config has finished
+    ssh ubuntu@&quot;$minio1_ip&quot; -i ~/.ssh/.somekey &quot;sudo mkdir /mnt/ubuntu-minio0 &amp;&amp; sudo mkfs.xfs /dev/sdb &amp;&amp; sudo mount /dev/sdb /mnt/ubuntu-minio0&quot;
+    ssh ubuntu@&quot;$minio2_ip&quot; -i ~/.ssh/.somekey &quot;sudo mkdir /mnt/ubuntu-minio0 &amp;&amp; sudo mkfs.xfs /dev/sdb &amp;&amp; sudo mount /dev/sdb /mnt/ubuntu-minio0&quot;
+    
+}
+
+# Check if a parameter is provided
+if [ $# -lt 1 ]; then
+    echo &quot;Usage: $0 [apply|destroy|add_volumes|destroy_volumes|mount_volumes]&quot;
+    exit 1
+fi
+
+# Determine the action based on the first parameter
+case &quot;$1&quot; in
+    &quot;apply&quot;)
+        apply_function
+    ;;
+    &quot;add_volumes&quot;)
+        add_volumes_function
+    ;;
+    &quot;destroy_volumes&quot;)
+        dettach_volumes_function
+        destroy_volumes_function
+    ;;
+    &quot;mount_volumes&quot;)
+        get_all_ips_function
+        mount_volumes_function
+    ;;
+    &quot;get_all_ips&quot;)
+        get_all_ips_function
+    ;;
+    &quot;send_install_script&quot;)
+        get_all_ips_function
+        send_install_script_function
+    ;;
+    &quot;destroy&quot;)
+        destroy_function
+    ;;
+    *)
+        echo &quot;Unknown action: $1&quot;
+        exit 1
+    ;;
+esac
+</code></pre>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>

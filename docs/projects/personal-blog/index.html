@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+<style type="text/tailwindcss">
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  a {
+    @apply hover:font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply list-disc list-inside mx-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside mx-5;
+  }
+</style>
+
+
+   </head>
+  <body>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/testimonials" class="hover:text-gray-400">Testimonials</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
+      <div>
+<div class=" my-10">
+  <h1 class="mx-auto text-center">My Personal Blog</h1>
+  <img src="/assets/img/hexagons.jpg" alt="My Personal Blog" class="mx-auto my-4 rounded-lg shadow-lg" width="800" height="400">
+  </div>
+  <h1>
+My Personal Blog</h1>
+<p>
+I keep a personal blog independent from this page <a href="https://blog.maikel.dev">here</a> for non-tech and some tech related stuff. The function of my blog is to apply the DRY (don’t repeat yourself) principle to life so I use it mainly to keep tracked of  what worked with different subjects in life. </p>
+<p>
+Some days I just use it as a plain diary. </p>
+<p>
+I didn’t want to be bothered with the format and it was born BEFORE I made this site so I used, as adviced by my fedi-neighbour <a href="https://chaosfem.tw/@sashag/">Sasha</a> the software Publii as I was looking for a system with the next requirements:</p>
+<ul>
+  <li>
+It must be free  </li>
+  <li>
+It must serve static files so that I could use Github Pages.   </li>
+  <li>
+I wanted a static CMS but with a proper editor that could be as simple to use as Wordpress  </li>
+  <li>
+I didn’t want to be concerned about any code, any friction added to this project would make me never use it.   </li>
+</ul>
+<h2>
+My choices</h2>
+<p>
+After I asked the Fediverse, as mentioned above, I was recommended Publii, I tried it and I liked it so I use it. 
+Publii uses handlebars for templating, which I’m familiar with. So whenever I have the spare time for it I might edit the out-of-the-box template I’ve been using. </p>
+
+</div>
+
+    </section>
+    </div>
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleString({
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+  </body>
+</html>
