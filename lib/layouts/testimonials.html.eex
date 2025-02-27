@@ -1,0 +1,37 @@
+---
+layout: base
+---
+
+<h1>Testimonials</h1>
+
+
+<%= for person <- @testimonials do %>
+            
+            
+                  <div
+        key="<%= person["name"] %>"
+        class="w-full  break-inside-avoid-column py-2"
+      >
+        <div class="custom-bg-gray-100 rounded shadow relative">
+          <img
+            src="<%= "/assets/img/" <> person["logo"] %>"
+            alt="Company Logo"
+            class="absolute top-6 right-6 h-8 w-8"
+          />
+          <div class="p-6">
+            <a href="<%= person["link"] %>">
+              <p class="custom-text-gray-600 font-medium hover:underline">
+              <%= person["name"] %>
+              </p>
+            </a>
+            <p class="custom-text-gray-500 text-sm"><%= person["role"] %>
+            </p>
+            <div class="pt-2">
+            <%= person["content"] %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<% end %>
+

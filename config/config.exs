@@ -70,7 +70,6 @@ config :griffin_ssg,
     end
 
     def get_post_image(image) do
-      dbg()
       case image do
         nil -> @default_image
         _ -> "/assets/img/" <> image
