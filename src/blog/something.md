@@ -4,7 +4,7 @@ layout: post
 author: Maikel
 posts: public
 description: What is this for
-image: "some.url"
+image: hexagons.jpg
 ---
 
 # Index Whatever

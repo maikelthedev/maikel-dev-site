@@ -7,14 +7,30 @@
      <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   
 <style type="text/tailwindcss">
-  h1 { @apply text-4xl font-bold; }
-  h2 { @apply text-3xl font-semibold; }
-  h3 { @apply text-2xl font-medium; }
-  h4 { @apply text-xl font-medium; }
-  h5 { @apply text-lg font-medium; }
-  h6 { @apply text-base font-medium; }
+  h1 { @apply text-4xl font-bold my-2; }
+  h2 { @apply text-3xl font-semibold my-2; }
+  h3 { @apply text-2xl font-medium my-2; }
+  h4 { @apply text-xl font-medium my-2; }
+  h5 { @apply text-lg font-medium my-2; }
+  h6 { @apply text-base font-medium my-2; }
+
+  pre {
+    @apply bg-gray-900 text-white p-4 my-2 rounded-md overflow-x-auto;
+  }
+
+  code {
+    @apply bg-gray-800 text-green-300 px-1 rounded;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
 </style>
 
+
+
+    
   </head>
   <body>
   <div class="container mx-auto">
@@ -27,24 +43,82 @@
     <h1>Blog</h1>
     <section class="my-10">
     
-        <div class="m-10">
-      <a href="/blog/something/">Something</a>
-      <p>"2025-02-27T16:46:56Z"</p>
-            <p>"What is this for"</p>
-            <p>"some.url"</p>
+
+      
+
+<div class="m-10">
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+    <div class="p-6">
+      <h2 class="text-xl font-semibold hover:underline">
+        <a href="/blog/something/">Something</a>
+      </h2>
+      <p class="text-gray-500 text-sm mt-1">"2025-02-27T17:11:28Z"</p>
+
+        <p class="formatted-date" data-date=2025-02-27T17:11:28Z ></p>
+
+      <p class="text-gray-700 mt-2">"What is this for"</p>
+
+      
+        <div class="mt-4">
+          <img src="/assets/img/hexagons.jpg" alt="Post image" class="w-full h-48 object-cover rounded-md">
+        </div>
+     
     </div>
+  </div>
+</div>
+
     
-        <div class="m-10">
-      <a href="/blog/someelse/">Something Else</a>
-      <p>"2025-02-27T16:48:46Z"</p>
-            <p>"What is this for"</p>
-            <p>"some.url"</p>
+
+      
+
+<div class="m-10">
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+    <div class="p-6">
+      <h2 class="text-xl font-semibold hover:underline">
+        <a href="/blog/someelse/">Something Else</a>
+      </h2>
+      <p class="text-gray-500 text-sm mt-1">"2025-02-27T17:20:29Z"</p>
+
+        <p class="formatted-date" data-date=2025-02-27T17:20:29Z ></p>
+
+      <p class="text-gray-700 mt-2">"What is this for"</p>
+
+      
+        <div class="mt-4">
+          <img src="/assets/img/default.png" alt="Post image" class="w-full h-48 object-cover rounded-md">
+        </div>
+     
     </div>
+  </div>
+</div>
+
     
     </section>
     <footer>
-      &copy; 
     </footer>
     </div>
+
+          <script>
+    // Function to format the date
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      return date.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+    }
+
+    // Select all elements with the 'formatted-date' class
+    const dateElements = document.querySelectorAll('.formatted-date');
+
+    // Loop through each element, call the function, and insert the formatted date
+    dateElements.forEach(element => {
+      const dateStr = element.getAttribute('data-date'); // Get the date from a data attribute
+      element.textContent = formatDate(dateStr); // Set the formatted date in the element
+    });
+  </script>
+
   </body>
 </html>

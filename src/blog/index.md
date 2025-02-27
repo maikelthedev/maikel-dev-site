@@ -1,4 +1,4 @@
 ---
-layout: blogindex
+layout: blog
 ---
 

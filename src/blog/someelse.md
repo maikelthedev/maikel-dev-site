@@ -4,7 +4,6 @@ layout: post
 author: Maikel
 posts: public
 description: What is this for
-image: "some.url"
 ---
 
 # Index Whatever
@@ -17,3 +16,7 @@ image: "some.url"
 
 ##### 5
 Iturri gorri berri
+
+```bash
+cd src
+```
