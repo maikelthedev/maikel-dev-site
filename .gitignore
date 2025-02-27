@@ -1,7 +1,7 @@
 # dependencies
-_build
-_site
-node_modules
+/_build
+/_site
+/node_modules
 
 # misc
 .DS_Store
