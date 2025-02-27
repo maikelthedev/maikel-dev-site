@@ -66,4 +66,9 @@ config :griffin_ssg,
 
         end
     end
+
+    def get_skills(skills) do
+      skills
+      |> Enum.join(", ")
+    end
   end
