@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Griffin</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
      <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   
 <style type="text/tailwindcss">
@@ -28,12 +29,9 @@
 </style>
 
 
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
-    
-  </head>
+   </head>
   <body>
-
+  <div>
     <nav class="bg-white text-gray-800 p-4">
   <div class="container mx-auto flex justify-between items-center">
     <!-- Logo -->
@@ -42,6 +40,9 @@
     <!-- Navigation Links (Always right-aligned) -->
     <div class="ml-auto space-x-6">
       <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
       <a href="/blog" class="hover:text-gray-600">Blog</a>
     </div>
 
@@ -49,64 +50,109 @@
   </div>
 </nav>
 
-
-    <div class="container mx-auto">
+    <section class="container mx-auto">
+      
     <h1>Blog</h1>
 
     
-    <section class="my-10">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-4 xs:grid-cols-1 gap-10 my-10">
     
 
 
-<div class="m-10">
-  <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-    <div class="p-6">
-      <h2 class="text-xl font-semibold hover:underline">
-        <a href="/blog/someelse/">Something Else</a>
-      </h2>
+      <div class="">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+          <div class="p-6">
+            <h2 class="text-xl font-semibold hover:underline">
+              <a href="/blog/whatever/">Something Else</a>
+            </h2>
 
-        <p class="formatted-date text-gray-500 text-sm mt-1" data-date=2025-02-27T17:20:29Z ></p>
+              <p class="formatted-date text-gray-500 text-sm mt-1" data-date=2025-02-27T19:16:05Z ></p>
 
-      <p class="text-gray-700 mt-2">What is this for</p>
+            <p class="text-gray-700 mt-2">What is this for</p>
 
-      
-        <div class="mt-4">
-          <img src="/assets/img/default.png" alt="Post image" class="w-full h-48 object-cover rounded-md">
+            
+              <div class="mt-4">
+                <img src="/assets/img/default.png" alt="Post image" class="w-full h-48 object-cover rounded-md">
+              </div>
+          
+          </div>
         </div>
-     
-    </div>
-  </div>
-</div>
+      </div>
 
     
 
 
-<div class="m-10">
-  <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-    <div class="p-6">
-      <h2 class="text-xl font-semibold hover:underline">
-        <a href="/blog/something/">Something</a>
-      </h2>
+      <div class="">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+          <div class="p-6">
+            <h2 class="text-xl font-semibold hover:underline">
+              <a href="/blog/somewhere/">Something Else</a>
+            </h2>
 
-        <p class="formatted-date text-gray-500 text-sm mt-1" data-date=2025-02-27T17:11:28Z ></p>
+              <p class="formatted-date text-gray-500 text-sm mt-1" data-date=2025-02-27T19:15:50Z ></p>
 
-      <p class="text-gray-700 mt-2">What is this for</p>
+            <p class="text-gray-700 mt-2">What is this for</p>
 
-      
-        <div class="mt-4">
-          <img src="/assets/img/hexagons.jpg" alt="Post image" class="w-full h-48 object-cover rounded-md">
+            
+              <div class="mt-4">
+                <img src="/assets/img/default.png" alt="Post image" class="w-full h-48 object-cover rounded-md">
+              </div>
+          
+          </div>
         </div>
-     
-    </div>
-  </div>
-</div>
+      </div>
 
     
-    </section>
-    <footer>
-    </footer>
-    </div>
 
+
+      <div class="">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+          <div class="p-6">
+            <h2 class="text-xl font-semibold hover:underline">
+              <a href="/blog/someelse/">Something Else</a>
+            </h2>
+
+              <p class="formatted-date text-gray-500 text-sm mt-1" data-date=2025-02-27T17:20:29Z ></p>
+
+            <p class="text-gray-700 mt-2">What is this for</p>
+
+            
+              <div class="mt-4">
+                <img src="/assets/img/default.png" alt="Post image" class="w-full h-48 object-cover rounded-md">
+              </div>
+          
+          </div>
+        </div>
+      </div>
+
+    
+
+
+      <div class="">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+          <div class="p-6">
+            <h2 class="text-xl font-semibold hover:underline">
+              <a href="/blog/something/">Something</a>
+            </h2>
+
+              <p class="formatted-date text-gray-500 text-sm mt-1" data-date=2025-02-27T17:11:28Z ></p>
+
+            <p class="text-gray-700 mt-2">What is this for</p>
+
+            
+              <div class="mt-4">
+                <img src="/assets/img/hexagons.jpg" alt="Post image" class="w-full h-48 object-cover rounded-md">
+              </div>
+          
+          </div>
+        </div>
+      </div>
+
+    
+
+    </div>
           <script>
     // Function to format the date
     function formatDate(dateString) {
@@ -131,5 +177,7 @@
     });
   </script>
 
+    </section>
+    </div>
   </body>
 </html>

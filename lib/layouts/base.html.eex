@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %></title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <%= @partials.addtail %>
+   </head>
+  <body>
+  <div>
+    <%= @partials.nav %>
+    <section class="container mx-auto">
+      <%= @content %>
+    </section>
+    </div>
+  </body>
+</html>

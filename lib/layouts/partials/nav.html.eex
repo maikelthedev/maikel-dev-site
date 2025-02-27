@@ -6,6 +6,9 @@
     <!-- Navigation Links (Always right-aligned) -->
     <div class="ml-auto space-x-6">
       <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/#skills" class="hover:text-gray-400">Skills</a>
+      <a href="/#projects" class="hover:text-gray-400">Projects</a>
+      <a href="/#contact" class="hover:text-gray-400">Contact</a>
       <a href="/blog" class="hover:text-gray-600">Blog</a>
     </div>
 

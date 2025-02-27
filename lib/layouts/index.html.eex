@@ -1,20 +1,73 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title><%= @title %></title>
-    <link rel="stylesheet" href="/css/style.css">
-    <%= @partials.addtail %>
-   </head>
-  <body>
-  <div>
-    <%= @partials.nav %>
-    <section class="container mx-auto">
-      <%= @content %>
-    </section>
-    <footer class="container mx-auto mt-10">
-      &copy; <%= @author %>
-    </footer>
+---
+layout: base
+---
+  <!-- Hero Section -->
+
+  <!-- About Me Section -->
+  <section id="about" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl font-semibold text-center">About Me</h2>
+    <p class="mt-4 text-lg text-gray-700 text-center max-w-2xl mx-auto">I am a Full-Stack Developer with experience in building web applications using technologies like JavaScript, Elixir, and various cloud services. My goal is to help businesses scale by providing high-quality solutions that are reliable and performant.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold text-center">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold">Frontend</h3>
+          <ul class="mt-4">
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>React, Vue.js</li>
+            <li>Tailwind CSS, Bootstrap</li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-semibold">Backend</h3>
+          <ul class="mt-4">
+            <li>Node.js, Express</li>
+            <li>Elixir, Phoenix</li>
+            <li>GraphQL, RESTful APIs</li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-semibold">Cloud & DevOps</h3>
+          <ul class="mt-4">
+            <li>AWS, Google Cloud</li>
+            <li>Docker, Kubernetes</li>
+            <li>CI/CD pipelines</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </body>
-</html>
+  </section>
+
+
+
+
+<%= @partials.projectslist %>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-800 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold">Contact</h2>
+      <p class="mt-4 text-lg">Feel free to reach out to me via email for inquiries or project collaborations.</p>
+      <a href="mailto:maikel@example.com" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Email Me</a>
+    </div>
+  </section>
+
+    <!-- Posts Section -->
+  <section id="blog" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl font-semibold text-center">Blog</h2>
+    <%= @partials.postslist %>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Maikel. All rights reserved.</p>
+    </div>
+  </footer>
+

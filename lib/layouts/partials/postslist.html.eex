@@ -1,0 +1,29 @@
+<div class="grid grid-cols-2 lg:grid-cols-4 xs:grid-cols-1 gap-10 my-10">
+    <%= 
+    for page <- Blog.sorted_posts(@collections, @url) do 
+        %>
+
+
+      <div class="">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+          <div class="p-6">
+            <h2 class="text-xl font-semibold hover:underline">
+              <a href="<%= page.data.url %>"><%= page.data.title %></a>
+            </h2>
+
+              <p class="formatted-date text-gray-500 text-sm mt-1" data-date=<%= page.page.date %> ></p>
+
+            <p class="text-gray-700 mt-2"><%= page.page.description %></p>
+
+            
+              <div class="mt-4">
+                <img src="<%= Blog.get_image(page.data) %>" alt="Post image" class="w-full h-48 object-cover rounded-md">
+              </div>
+          
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+
+    </div>
