@@ -31,14 +31,23 @@
 
    </head>
   <body>
-  <div class="container mx-auto">
-    <div class="my-10">
-  <nav>
-    <span class="hover:font-bold"><a class"hover:font-bold" href="/">Home</a></span>
-    <span class="hover:font-bold"><a class"hover:font-bold" href="/blog">Blog</a></span>
-  </nav>
-</div>
-    <section>
+  <div>
+    <nav class="bg-white text-gray-800 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-semibold">Maikel</a>
+    
+    <!-- Navigation Links (Always right-aligned) -->
+    <div class="ml-auto space-x-6">
+      <a href="/" class="hover:text-gray-600">Home</a>
+      <a href="/blog" class="hover:text-gray-600">Blog</a>
+    </div>
+
+
+  </div>
+</nav>
+
+    <section class="container mx-auto">
       <h1>
 Maikel.dev is being redesigned</h1>
 <p>
@@ -46,7 +55,7 @@ I got tired of NextJS and I’m redesigning this site using instead Elixir
 The platform I’m using is called Griffin. Available in hex.pm</p>
 
     </section>
-    <footer>
+    <footer class="container mx-auto mt-10">
       &copy; Maikel
     </footer>
     </div>

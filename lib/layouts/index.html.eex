@@ -7,12 +7,12 @@
     <%= @partials.addtail %>
    </head>
   <body>
-  <div class="container mx-auto">
+  <div>
     <%= @partials.nav %>
-    <section>
+    <section class="container mx-auto">
       <%= @content %>
     </section>
-    <footer>
+    <footer class="container mx-auto mt-10">
       &copy; <%= @author %>
     </footer>
     </div>

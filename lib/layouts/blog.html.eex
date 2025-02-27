@@ -1,34 +1,71 @@
+<% 
+
+defmodule Blog do
+  @moduledoc """
+  Documentation for `Blog`.
+  """
+
+  @doc """
+  Hello world.
+
+  ## Examples
+
+      iex> Blog.hello()
+      :world
+
+  """
+  def hello do
+    :world
+  end
+
+  def sorted_posts(collections) do
+    %{posts: %{public: posts_in_yes}} = collections
+
+    # Sort posts by the `page.date` in descending order (latest first)
+    Enum.sort_by(posts_in_yes, fn post ->
+      # Parse the date string into DateTime
+      post.page.date
+    end, :desc)
+  end
+
+  def get_image(data) do
+      if Map.has_key?(data, :image) do
+        "/assets/img/" <> data.image
+      else
+        "/assets/img/default.png"
+
+      end
+  end
+end
+
+
+%>
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title><%= @title %></title>
-    <link rel="stylesheet" href="/css/style.css">
     <%= @partials.addtail %>
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
     
   </head>
   <body>
-  <div class="container mx-auto">
+
     <%= @partials.nav %>
+
+    <div class="container mx-auto">
     <h1>Blog</h1>
+
+    <%= 
+
+    %>
     <section class="my-10">
     <%= 
-    %{posts: %{public: posts_in_yes}} = @collections
-    for page <- posts_in_yes do 
+    for page <- Blog.sorted_posts(@collections) do 
         %>
 
-      <% 
-      the_image = 
-        if Map.has_key?(page.data, :image) do
-          "/assets/img/" <> page.data.image
-        else
-          "/assets/img/default.png"
-          
-        end 
-
-      
-        %>
 
 <div class="m-10">
   <div class="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
@@ -36,15 +73,14 @@
       <h2 class="text-xl font-semibold hover:underline">
         <a href="<%= page.data.url %>"><%= page.data.title %></a>
       </h2>
-      <p class="text-gray-500 text-sm mt-1"><%= inspect(page.page.date) %></p>
 
-        <p class="formatted-date" data-date=<%= page.page.date %> ></p>
+        <p class="formatted-date text-gray-500 text-sm mt-1" data-date=<%= page.page.date %> ></p>
 
-      <p class="text-gray-700 mt-2"><%= inspect(page.page.description) %></p>
+      <p class="text-gray-700 mt-2"><%= page.page.description %></p>
 
       
         <div class="mt-4">
-          <img src="<%= the_image %>" alt="Post image" class="w-full h-48 object-cover rounded-md">
+          <img src="<%= Blog.get_image(page.data) %>" alt="Post image" class="w-full h-48 object-cover rounded-md">
         </div>
      
     </div>
