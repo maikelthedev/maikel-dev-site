@@ -67,19 +67,19 @@
       background: #0d9488;
       transform: translateY(-2px);
     }
-    .services, .portfolio {
+    .services, .portfolio, .testimonials {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       margin: 40px 0;
     }
-    .service-card, .portfolio-card {
+    .service-card, .portfolio-card, .testimonial-card {
       background: var(--card);
       padding: 24px;
       border-radius: 12px;
       border-left: 4px solid var(--highlight);
     }
-    .service-card h3, .portfolio-card h3 {
+    .service-card h3, .portfolio-card h3, .testimonial-card h3 {
       color: white;
       margin-top: 0;
     }
@@ -117,6 +117,38 @@
     .reason-content h4 {
       margin: 0 0 8px 0;
       color: white;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+    }
+    .testimonial-author img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+    .testimonial-author div h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .testimonial-author div p {
+      margin: 0;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .logos img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
     }
   </style>
 </head>
@@ -229,19 +261,65 @@
     </div>
 
     <h2>Technologies I Work With</h2>
-    <div class="card">
-      <p>I specialize in:</p>
-      <div class="expertise">
-        <span>Elixir/Phoenix</span>
-        <span>Kubernetes</span>
-        <span>Terraform</span>
-        <span>Ansible</span>
-        <span>AWS/Azure/Oracle</span>
-        <span>Angular/React</span>
-        <span>PostgreSQL/MongoDB</span>
-        <span>CI/CD</span>
-        <span>GDPR</span>
-        <span>Cost Optimization</span>
+    <div class="logos">
+      <img src="/logos/aws.webp" alt="AWS" title="AWS">
+      <img src="/logos/angular.webp" alt="Angular" title="Angular">
+      <img src="/logos/ansible.webp" alt="Ansible" title="Ansible">
+      <img src="/logos/azure.webp" alt="Azure" title="Azure">
+      <img src="/logos/bash.webp" alt="Bash" title="Bash">
+      <img src="/logos/bootstrap.webp" alt="Bootstrap" title="Bootstrap">
+      <img src="/logos/docker.webp" alt="Docker" title="Docker">
+      <img src="/logos/digitalocean.webp" alt="DigitalOcean" title="DigitalOcean">
+      <img src="/logos/django.webp" alt="Django" title="Django">
+      <img src="/logos/express.webp" alt="Express" title="Express">
+      <img src="/logos/freebsd.webp" alt="FreeBSD" title="FreeBSD">
+      <img src="/logos/git.webp" alt="Git" title="Git">
+      <img src="/logos/grafana.webp" alt="Grafana" title="Grafana">
+      <img src="/logos/html.webp" alt="HTML" title="HTML">
+      <img src="/logos/javascript.webp" alt="JavaScript" title="JavaScript">
+      <img src="/logos/jenkins.webp" alt="Jenkins" title="Jenkins">
+      <img src="/logos/kubernetes.webp" alt="Kubernetes" title="Kubernetes">
+      <img src="/logos/nginx.webp" alt="Nginx" title="Nginx">
+      <img src="/logos/nodejs.webp" alt="Node.js" title="Node.js">
+      <img src="/logos/oracle.webp" alt="Oracle Cloud" title="Oracle Cloud">
+      <img src="/logos/postgresql.webp" alt="PostgreSQL" title="PostgreSQL">
+      <img src="/logos/python.webp" alt="Python" title="Python">
+      <img src="/logos/react.webp" alt="React" title="React">
+      <img src="/logos/redis.webp" alt="Redis" title="Redis">
+      <img src="/logos/terraform.webp" alt="Terraform" title="Terraform">
+    </div>
+
+    <h2>What Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <p>"Maikel has a wide range of tech skills already to draw from, and navigated our unfamiliar environment easily. He picked up our diverse tech stack very quickly, and made rapid progress with very little hand-holding. He was a pleasure to work with, and I'd gladly do so again."</p>
+        <div class="testimonial-author">
+          <img src="https://media.licdn.com/dms/image/C4D03AQGqJZq5QZqZgQ/profile-displayphoto-shrink_400_400/0/1517296040000?e=1714608000&v=beta&t=hXJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZ" alt="Dave Cottlehuber" title="Dave Cottlehuber">
+          <div>
+            <h4>Dave Cottlehuber</h4>
+            <p>CEO @ SkunkWerks</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"I recently had the opportunity to engage Maikel for a DevOps assignment. His proficiency and dedication were evident from the onset. Maikel not only delivered the task with precision but also ensured that every detail was addressed with the utmost professionalism. His proactive communication and comprehensive domain knowledge ensured a seamless and efficient completion of the assignment."</p>
+        <div class="testimonial-author">
+          <img src="https://media.licdn.com/dms/image/C4D03AQGqJZq5QZqZgQ/profile-displayphoto-shrink_400_400/0/1517296040000?e=1714608000&v=beta&t=hXJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZ" alt="Konstantin Kostov" title="Konstantin Kostov">
+          <div>
+            <h4>Konstantin Kostov</h4>
+            <p>CEO @ Headbright Group</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Maikel is a multi-talented maestro of tech, expertly managing code, clouds, and complexities to craft solutions that will push the boundaries of what's possible with your timescale and budget."</p>
+        <div class="testimonial-author">
+          <img src="https://media.licdn.com/dms/image/C4D03AQGqJZq5QZqZgQ/profile-displayphoto-shrink_400_400/0/1517296040000?e=1714608000&v=beta&t=hXJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZJZ" alt="John Gibb" title="John Gibb">
+          <div>
+            <h4>John Gibb</h4>
+            <p>Head of Projects @ Survation</p>
+          </div>
+        </div>
       </div>
     </div>
 
