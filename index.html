@@ -10,9 +10,10 @@
       --bg: #0f172a;
       --card: #1e293b;
       --text: #e2e8f0;
-      --highlight: #f97316;
-      --cta: #ef4444;
-      --urgent: #dc2626;
+      --primary: #dc2626;
+      --accent: #b91c1c;
+      --highlight: #f87171;
+      --success: #10b981;
     }
     body {
       margin: 0;
@@ -47,7 +48,7 @@
       font-weight: 700;
     }
     .urgent {
-      color: var(--urgent);
+      color: var(--primary);
       font-weight: 700;
       text-transform: uppercase;
       font-size: 14px;
@@ -59,22 +60,26 @@
       border-radius: 12px;
       margin: 20px 0;
       border-left: 4px solid var(--highlight);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
     }
     .cta {
       display: inline-block;
       margin: 30px 0;
       padding: 14px 28px;
-      background: var(--cta);
+      background: var(--accent);
       color: white;
       text-decoration: none;
       font-weight: 700;
       border-radius: 8px;
-      transition: all 0.2s;
+      transition: all 0.3s ease;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     .cta:hover {
-      background: var(--urgent);
+      background: var(--primary);
       transform: translateY(-2px);
     }
     .services, .portfolio, .testimonials {
@@ -88,6 +93,10 @@
       padding: 24px;
       border-radius: 12px;
       border-left: 4px solid var(--highlight);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover, .portfolio-card:hover, .testimonial-card:hover {
+      transform: translateY(-2px);
     }
     .service-card h3, .portfolio-card h3, .testimonial-card h3 {
       color: white;
@@ -105,7 +114,7 @@
       margin-bottom: 40px;
     }
     .exclusive, .scarcity {
-      background: rgba(249, 115, 22, 0.1);
+      background: rgba(248, 113, 113, 0.1);
       padding: 16px;
       border-radius: 8px;
       border-left: 4px solid var(--highlight);
@@ -113,7 +122,7 @@
     }
     .scarcity {
       background: rgba(239, 68, 68, 0.1);
-      border-left: 4px solid var(--urgent);
+      border-left: 4px solid var(--primary);
     }
     .expertise, .skills {
       display: flex;
@@ -160,7 +169,7 @@
       color: #94a3b8;
     }
     .countdown {
-      color: var(--urgent);
+      color: var(--primary);
       font-weight: 700;
       font-size: 14px;
       text-align: center;
@@ -175,7 +184,7 @@
     <div class="urgent">LIMITED AVAILABILITY — ONLY 2 SLOTS OPEN FOR Q2 2026</div>
 
     <h1>
-      Build with the Best,<br>
+      Build with the Best,
       <span class="highlight">Before It’s Too Late</span>
     </h1>
     <p class="tagline">
@@ -343,7 +352,7 @@
     </div>
 
     <div class="scarcity">
-      <strong>⚠️ Only 2 slots left for Q2 2026.</strong> Once they’re gone, new inquiries will be waitlisted until Q3. <a href="mailto:hello@maikel.dev" style="color: var(--urgent); text-decoration: underline;">Secure your spot now</a>.
+      <strong>⚠️ Only 2 slots left for Q2 2026.</strong> Once they’re gone, new inquiries will be waitlisted until Q3. <a href="mailto:hello@maikel.dev" style="color: var(--primary); text-decoration: underline;">Secure your spot now</a>.
     </div>
 
     <a href="mailto:hello@maikel.dev" class="cta">Claim Your Spot Before It’s Gone</a>
