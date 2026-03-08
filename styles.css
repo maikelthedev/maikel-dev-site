@@ -1,0 +1,209 @@
+/* Bold — high contrast black & white, yellow accent */
+:root {
+  --bg: #0a0a0a;
+  --card: #171717;
+  --text: #fafafa;
+  --primary: #eab308;
+  --accent: #ca8a04;
+  --highlight: #facc15;
+  --success: #22c55e;
+  --muted: #a3a3a3;
+  --exclusive-bg: rgba(250, 204, 21, 0.1);
+  --scarcity-bg: rgba(234, 179, 8, 0.15);
+}
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+h1 {
+  font-size: 52px;
+  margin-bottom: 24px;
+  color: white;
+  font-weight: 800;
+}
+h2 {
+  margin-top: 60px;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.highlight {
+  color: var(--highlight);
+  font-weight: 700;
+}
+.urgent {
+  color: var(--highlight);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 0;
+  margin: 20px 0;
+  border-left: 4px solid var(--highlight);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.cta {
+  display: inline-block;
+  margin: 30px 0;
+  padding: 16px 32px;
+  background: var(--highlight);
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.cta:hover {
+  background: white;
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+.services, .portfolio, .testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+.service-card, .portfolio-card, .testimonial-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 0;
+  border-left: 4px solid var(--highlight);
+  transition: transform 0.3s ease;
+}
+.service-card:hover, .portfolio-card:hover, .testimonial-card:hover {
+  transform: translateY(-2px);
+}
+.service-card h3, .portfolio-card h3, .testimonial-card h3 {
+  color: white;
+  margin-top: 0;
+}
+footer {
+  margin-top: 80px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+.tagline {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+.exclusive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 20px 0;
+}
+.exclusive {
+  background: var(--exclusive-bg);
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--highlight);
+}
+.scarcity {
+  background: var(--scarcity-bg);
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  margin: 20px 0;
+}
+.expertise, .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+.expertise span, .skills span {
+  background: var(--card);
+  padding: 8px 16px;
+  border-radius: 0;
+  border: 1px solid #404040;
+  font-size: 14px;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.logos img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.testimonial-author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.testimonial-author div h4 {
+  margin: 0;
+  font-size: 16px;
+}
+.testimonial-author div p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.countdown {
+  color: var(--highlight);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.lang-toggle {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.lang-toggle button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 0;
+  transition: color 0.2s, background 0.2s;
+}
+.lang-toggle button:hover {
+  color: var(--text);
+}
+.lang-toggle button[aria-pressed="true"] {
+  color: var(--highlight);
+  background: var(--exclusive-bg);
+}
