@@ -73,6 +73,8 @@ p {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
 }
 .cta:hover {
   background: white;
@@ -206,4 +208,64 @@ footer {
 .lang-toggle button[aria-pressed="true"] {
   color: var(--highlight);
   background: var(--exclusive-bg);
+}
+
+/* Floating CTA */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.floating-cta .cta {
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Form */
+.contact-form {
+  background: var(--card);
+  padding: 32px;
+  border-radius: 0;
+  border-left: 4px solid var(--highlight);
+  margin: 40px 0;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  color: var(--text);
+  border-radius: 0;
+  font-family: inherit;
+}
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  .container {
+    padding: 40px 16px;
+  }
+  .floating-cta {
+    bottom: 10px;
+    right: 10px;
+  }
+  .floating-cta .cta {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }
