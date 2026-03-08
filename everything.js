@@ -5,7 +5,7 @@
     en: {
       urgent: 'Available for New Long-Term Partnerships in Q2 2026',
       heroTitle: 'Build with a <span class="highlight">Senior Elixir & Cloud Architect</span>',
-      tagline: 'I work with SaaS companies who value reliability, scalability, and performance. If you’re looking for a dedicated architect to join your team 20 hours a week, let’s talk.',
+      tagline: 'I work with companies who value reliability, scalability, and performance. If you’re looking for a dedicated architect to join your team 20 hours a week, let’s talk.',
       intro: 'I’m <strong>Maikel Frias Mosquea</strong>, a senior <strong>Elixir & Cloud Architect</strong> with 10+ years of experience. I specialize in long-term collaborations, helping teams scale their infrastructure seamlessly. I work as part of your team, 20 hours a week, to build and maintain systems that grow with your business.',
       scarcity1: '',
       cta1: 'Let’s Talk',
@@ -51,8 +51,8 @@
     es: {
       urgent: 'Disponible para nuevas colaboraciones a largo plazo en Q2 2026',
       heroTitle: 'Trabaja con un <span class="highlight">Arquitecto Senior en Elixir y Cloud</span>',
-      tagline: 'Trabajo con empresas SaaS que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un arquitecto dedicado para unirte a tu equipo 20 horas a la semana, hablemos.',
-      intro: 'Soy <strong>Maikel Frias Mosquea</strong>, <strong>Arquitecto Senior en Elixir y Cloud</strong> con más de 10 años de experiencia. Me especializo en colaboraciones a largo plazo, ayudando a los equipos a escalar su infraestructura sin esfuerzo. Trabajo como parte de tu equipo, 20 horas a la semana, para construir y mantener sistemas que crezcan con tu negocio.',
+      tagline: 'Trabajo con empresas que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un arquitecto dedicado para unirte a tu equipo 20 horas a la semana, hablemos.',
+      intro: 'Soy <strong>Maikel Frias Mosquea</strong>, <strong>Arquitecto Senior en Elixir y Cloud</strong> con más de 10 años de experiencia. Me especializo en colaboraciones a largo plazo, ayudando a equipos a escalar su infraestructura sin esfuerzo. Trabajo como parte de tu equipo, 20 horas a la semana, para construir y mantener sistemas que crezcan con tu negocio.',
       scarcity1: '',
       cta1: 'Hablemos',
       sectionServices: 'Cómo Puedo Ayudarte',
