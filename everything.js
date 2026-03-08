@@ -4,9 +4,9 @@
   var translations = {
     en: {
       urgent: 'Available for New Long-Term Partnerships in Q2 2026',
-      heroTitle: 'Build with a <span class="highlight">Senior Elixir & Cloud Architect</span>',
-      tagline: 'I work with SaaS companies who value reliability, scalability, and performance. If you’re looking for a dedicated architect to join your team 20 hours a week, let’s talk.',
-      intro: 'I’m <strong>Maikel Frias Mosquea</strong>, a senior <strong>Elixir & Cloud Architect</strong> with 10+ years of experience. I specialize in long-term collaborations, helping teams scale their infrastructure seamlessly. I work as part of your team, 20 hours a week, to build and maintain systems that grow with your business.',
+      heroTitle: 'Scale Your Systems with a <span class="highlight">Senior Elixir & Cloud Architect</span>',
+      tagline: 'I work with companies who value reliability, scalability, and performance. If you’re looking for a dedicated architect to collaborate with your team, let’s talk.',
+      intro: 'I’m <strong>Maikel Frias Mosquea</strong>, a senior <strong>Elixir & Cloud Architect</strong> with 10+ years of experience. I specialize in long-term collaborations, helping teams scale their infrastructure seamlessly. I work closely with your team to build and maintain systems that grow with your business.',
       scarcity1: '',
       cta1: 'Let’s Talk',
       sectionServices: 'How I Can Help',
@@ -32,7 +32,7 @@
       w4Title: '🤝 A Partner for the Long Haul',
       w4Desc: 'I don’t just build systems—I mentor your team, optimize your processes, and ensure your infrastructure scales as you grow. This is about building a relationship, not just a project.',
       countdown: '',
-      sectionPortfolio: 'Selected Work',
+      sectionPortfolio: 'How I’ve Helped Teams Like Yours',
       p1Title: 'Survation Panel System',
       p1Desc: 'Full-stack survey platform for a UK market research leader. Together, we reduced cloud costs by 30% and improved response times by 40%, all with zero downtime.',
       p2Title: 'OCI Development Cloud',
@@ -45,14 +45,14 @@
       t2Quote: '"I engaged Maikel for a DevOps assignment. His proficiency and dedication were clear from the start. <strong>He delivered with precision and ensured every detail was handled professionally.</strong>"',
       t3Quote: '"Maikel is a multi-talented tech leader, expertly managing code, clouds, and complexities. <strong>I would not hesitate to recommend him to anyone looking for a skilled, long-term partner.</strong>"',
       scarcity2: '<a href="mailto:hello@maikel.dev" style="color: var(--primary); text-decoration: underline;">Let’s talk about how we can work together</a>.',
-      cta2: 'Let’s Talk',
+      cta2: 'Join Forces',
       footer: '© 2026 Maikel OÜ — Based in Estonia, serving clients worldwide.'
     },
     es: {
       urgent: 'Disponible para nuevas colaboraciones a largo plazo en Q2 2026',
-      heroTitle: 'Trabaja con un <span class="highlight">Arquitecto Senior en Elixir y Cloud</span>',
-      tagline: 'Trabajo con empresas SaaS que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un arquitecto dedicado para unirte a tu equipo 20 horas a la semana, hablemos.',
-      intro: 'Soy <strong>Maikel Frias Mosquea</strong>, <strong>Arquitecto Senior en Elixir y Cloud</strong> con más de 10 años de experiencia. Me especializo en colaboraciones a largo plazo, ayudando a los equipos a escalar su infraestructura sin esfuerzo. Trabajo como parte de tu equipo, 20 horas a la semana, para construir y mantener sistemas que crezcan con tu negocio.',
+      heroTitle: 'Escala tus sistemas con un <span class="highlight">Arquitecto Senior en Elixir y Cloud</span>',
+      tagline: 'Trabajo con empresas que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un arquitecto dedicado para colaborar con tu equipo, hablemos.',
+      intro: 'Soy <strong>Maikel Frias Mosquea</strong>, <strong>Arquitecto Senior en Elixir y Cloud</strong> con más de 10 años de experiencia. Me especializo en colaboraciones a largo plazo, ayudando a equipos a escalar su infraestructura sin esfuerzo. Trabajo estrechamente con tu equipo para construir y mantener sistemas que crezcan con tu negocio.',
       scarcity1: '',
       cta1: 'Hablemos',
       sectionServices: 'Cómo Puedo Ayudarte',
@@ -78,7 +78,7 @@
       w4Title: '🤝 Un Socio a Largo Plazo',
       w4Desc: 'No solo construyo sistemas—formo a tu equipo, optimizo tus procesos y aseguro que tu infraestructura escale contigo. Se trata de construir una relación, no solo un proyecto.',
       countdown: '',
-      sectionPortfolio: 'Trabajos Seleccionados',
+      sectionPortfolio: 'Cómo He Ayudado a Equipos Como el Tuyo',
       p1Title: 'Survation Panel System',
       p1Desc: 'Plataforma de encuestas full-stack para un líder en investigación de mercados del Reino Unido. Juntos, redujimos los costes de cloud en un 30% y mejoramos los tiempos de respuesta en un 40%, todo sin tiempo de inactividad.',
       p2Title: 'OCI Development Cloud',
@@ -91,7 +91,7 @@
       t2Quote: '"Tuve la oportunidad de contar con Maikel para una tarea de DevOps. Su competencia y dedicación fueron evidentes desde el principio. <strong>No solo entregó el trabajo con precisión, sino que abordó cada detalle con profesionalismo.</strong>"',
       t3Quote: '"Maikel es un líder técnico multitalento, gestionando código, nube y complejidades con maestría. <strong>No dudaría en recomendarlo a cualquiera que busque un socio técnico a largo plazo.</strong>"',
       scarcity2: '<a href="mailto:hello@maikel.dev" style="color: var(--primary); text-decoration: underline;">Hablemos de cómo podemos trabajar juntos</a>.',
-      cta2: 'Hablemos',
+      cta2: 'Unámonos',
       footer: '© 2026 Maikel OÜ — Con base en Estonia, sirviendo a clientes en todo el mundo.'
     }
   };
