@@ -5,10 +5,10 @@
     en: {
       urgent: 'Available for New Long-Term Partnerships in Q2 2026',
       heroTitle: 'Build with a <span class="highlight">Senior Elixir & Cloud Architect</span>',
-      tagline: 'I partner with SaaS companies who value reliability, scalability, and performance. If you’re looking for a collaborator who invests in your long-term success, let’s talk.',
-      intro: 'I’m <strong>Maikel Frias Mosquea</strong>, a senior <strong>Elixir & Cloud Architect</strong> with 10+ years of experience. I specialize in building systems that scale seamlessly and partnerships that last. My approach is hands-on, collaborative, and focused on your growth.',
+      tagline: 'I work with SaaS companies who value reliability, scalability, and performance. If you’re looking for a dedicated architect to join your team 20 hours a week, let’s talk.',
+      intro: 'I’m <strong>Maikel Frias Mosquea</strong>, a senior <strong>Elixir & Cloud Architect</strong> with 10+ years of experience. I specialize in long-term collaborations, helping teams scale their infrastructure seamlessly. I work as part of your team, 20 hours a week, to build and maintain systems that grow with your business.',
       scarcity1: '',
-      cta1: 'Start the Conversation',
+      cta1: 'Let’s Talk',
       sectionServices: 'How I Can Help',
       s1Title: 'Elixir & Phoenix Mastery',
       s1Desc: 'Scalable, fault-tolerant backends and distributed services that handle growth effortlessly. I focus on building systems that evolve with your needs, so you can scale without worry.',
@@ -24,7 +24,7 @@
       s6Desc: 'Peace of mind with audits, documentation, and best practices for full compliance. Your systems stay compliant and ready for the future.',
       sectionWhy: 'Why Work With Me?',
       w1Title: '🔥 Focused on Your Success',
-      w1Desc: 'I work with a select few clients each quarter to ensure I can provide the attention and expertise you deserve. My goal is to build a partnership, not just deliver a project.',
+      w1Desc: 'I work with a select few clients each quarter to ensure I can provide the attention and expertise you deserve. My goal is to integrate with your team and help you succeed.',
       w2Title: '🚀 Solving Challenges Others Can’t',
       w2Desc: 'Where others see limitations, I see opportunities. If you’re facing systemic issues or cloud complexities, I’ll help you turn them into strengths.',
       w3Title: '💡 Clear, Actionable Results',
@@ -45,23 +45,23 @@
       t2Quote: '"I engaged Maikel for a DevOps assignment. His proficiency and dedication were clear from the start. <strong>He delivered with precision and ensured every detail was handled professionally.</strong>"',
       t3Quote: '"Maikel is a multi-talented tech leader, expertly managing code, clouds, and complexities. <strong>I would not hesitate to recommend him to anyone looking for a skilled, long-term partner.</strong>"',
       scarcity2: '<a href="mailto:hello@maikel.dev" style="color: var(--primary); text-decoration: underline;">Let’s talk about how we can work together</a>.',
-      cta2: 'Get in Touch',
+      cta2: 'Let’s Talk',
       footer: '© 2026 Maikel OÜ — Based in Estonia, serving clients worldwide.'
     },
     es: {
       urgent: 'Disponible para nuevas colaboraciones a largo plazo en Q2 2026',
-      heroTitle: 'Construye con un <span class="highlight">Arquitecto Senior en Elixir y Cloud</span>',
-      tagline: 'Trabajo con empresas SaaS que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un colaborador que invierta en tu éxito a largo plazo, hablemos.',
-      intro: 'Soy <strong>Maikel Frias Mosquea</strong>, <strong>Arquitecto Senior en Elixir y Cloud</strong> con más de 10 años de experiencia. Me especializo en construir sistemas que escalan sin esfuerzo y colaboraciones que perduran. Mi enfoque es práctico, colaborativo y centrado en tu crecimiento.',
+      heroTitle: 'Trabaja con un <span class="highlight">Arquitecto Senior en Elixir y Cloud</span>',
+      tagline: 'Trabajo con empresas SaaS que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un arquitecto dedicado para unirte a tu equipo 20 horas a la semana, hablemos.',
+      intro: 'Soy <strong>Maikel Frias Mosquea</strong>, <strong>Arquitecto Senior en Elixir y Cloud</strong> con más de 10 años de experiencia. Me especializo en colaboraciones a largo plazo, ayudando a los equipos a escalar su infraestructura sin esfuerzo. Trabajo como parte de tu equipo, 20 horas a la semana, para construir y mantener sistemas que crezcan con tu negocio.',
       scarcity1: '',
-      cta1: 'Inicia la Conversación',
+      cta1: 'Hablemos',
       sectionServices: 'Cómo Puedo Ayudarte',
       s1Title: 'Dominio de Elixir y Phoenix',
       s1Desc: 'Backends escalables y tolerantes a fallos que manejan el crecimiento sin esfuerzo. Me enfoco en construir sistemas que evolucionan con tus necesidades, para que puedas escalar sin preocupaciones.',
       s2Title: 'Excelencia Full-Stack',
       s2Desc: 'Desarrollo de punta a punta con Angular, React, Next.js, Django, Flask o Phoenix. No solo construyo funciones—creo soluciones que te dan una ventaja competitiva duradera.',
       s3Title: 'Liderazgo en Cloud y DevOps',
-      s3Desc: 'Experto en Kubernetes, CI/CD, Terraform, Ansible y multi-nube para blindar tu infraestructura. Te ayudo a desplegar con confianza y mantener sistemas que crecen con tu negocio.',
+      s3Desc: 'Experto en Kubernetes, CI/CD, Terraform, Ansible y multi-nube para futuro-proteger tu infraestructura. Te ayudo a desplegar con confianza y mantener sistemas que crecen con tu negocio.',
       s4Title: 'Ingeniería de Fiabilidad',
       s4Desc: 'Sistemas que prosperan bajo presión, con cero tiempo de inactividad y máxima resiliencia. Tus usuarios disfrutan de una experiencia fluida y tu equipo gana tranquilidad.',
       s5Title: 'Optimización Estratégica de Costes',
@@ -70,7 +70,7 @@
       s6Desc: 'Tranquilidad con auditorías, documentación y buenas prácticas para el cumplimiento total. Tus sistemas permanecen cumpliendo la normativa y listos para el futuro.',
       sectionWhy: '¿Por qué Trabajar Conmigo?',
       w1Title: '🔥 Enfocado en Tu Éxito',
-      w1Desc: 'Trabajo con unos pocos clientes cada trimestre para garantizar que pueda ofrecer la atención y experiencia que mereces. Mi objetivo es construir una colaboración, no solo entregar un proyecto.',
+      w1Desc: 'Trabajo con unos pocos clientes cada trimestre para garantizar que pueda ofrecer la atención y experiencia que mereces. Mi objetivo es integrarme en tu equipo y ayudarte a tener éxito.',
       w2Title: '🚀 Resuelvo Desafíos que Otros No Pueden',
       w2Desc: 'Donde otros ven limitaciones, yo veo oportunidades. Si enfrentas problemas sistémicos o complejidades en la nube, te ayudaré a convertirlos en fortalezas.',
       w3Title: '💡 Resultados Claros y Accionables',
@@ -91,7 +91,7 @@
       t2Quote: '"Tuve la oportunidad de contar con Maikel para una tarea de DevOps. Su competencia y dedicación fueron evidentes desde el principio. <strong>No solo entregó el trabajo con precisión, sino que abordó cada detalle con profesionalismo.</strong>"',
       t3Quote: '"Maikel es un líder técnico multitalento, gestionando código, nube y complejidades con maestría. <strong>No dudaría en recomendarlo a cualquiera que busque un socio técnico a largo plazo.</strong>"',
       scarcity2: '<a href="mailto:hello@maikel.dev" style="color: var(--primary); text-decoration: underline;">Hablemos de cómo podemos trabajar juntos</a>.',
-      cta2: 'Ponte en Contacto',
+      cta2: 'Hablemos',
       footer: '© 2026 Maikel OÜ — Con base en Estonia, sirviendo a clientes en todo el mundo.'
     }
   };
@@ -106,7 +106,7 @@
     document.querySelectorAll('.lang-toggle [data-lang]').forEach(function (btn) {
       btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
     });
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch ( e ) {}
   }
 
   document.querySelectorAll('.lang-toggle [data-lang]').forEach(function (btn) {
@@ -116,6 +116,6 @@
   });
 
   var saved = null;
-  try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  try { saved = localStorage.getItem(STORAGE_KEY); } catch ( e ) {}
   applyLang(saved === 'es' ? 'es' : 'en');
 })();
