@@ -46,10 +46,62 @@
       t3Quote: '<span class="highlight">"Maikel is a multi-talented tech leader,</span> expertly managing code, clouds, and complexities. <strong>I would not hesitate to recommend him to anyone looking for a skilled, long-term partner.</strong>"',
       scarcity2: '<a href="mailto:hello@maikel.dev" style="color: var(--primary); text-decoration: underline;">Let’s talk about how we can work together</a>.',
       cta2: 'Let’s Talk',
-      footer: '© 2026 Maikel OÜ — Based in Estonia, serving clients worldwide.'
-    },
-    es: {
-      urgent: '<span class="highlight">Disponible para nuevas colaboraciones a largo plazo en Q2 2026</span>',
+      footer: '© 2026 Maikel OÜ — Based in Estonia, serving clients worldwide.',
+            navTitle: 'Site Navigation',
+            navServices: 'Services',
+            navServicesDesc: 'How I can help your team',
+            navPortfolio: 'Portfolio',
+            navPortfolioDesc: 'Selected projects and case studies',
+            navAbout: 'About',
+            navAboutDesc: 'My experience and philosophy',
+            navContact: 'Contact',
+            navContactDesc: 'Get in touch',
+            navHome: 'Home',
+            navServices: 'Services',
+            navPortfolio: 'Portfolio',
+            navAbout: 'About',
+            navContact: 'Contact',
+            aboutMe: 'About Me',
+            contactTitle: 'Get In Touch',
+            contactDesc: "Ready to start your project? Fill out the form below and I'll get back to you within 24 hours.",
+            contactInfoTitle: 'Contact Information',
+            contactEmailLabel: 'Email',
+            contactEmail: 'hello@maikel.dev',
+            contactLocation: 'Based in: Estonia',
+            contactServing: 'Serving: Clients worldwide',
+            contactNameLabel: 'Name',
+            contactEmailInputLabel: 'Email',
+            contactMessageLabel: 'Message',
+            contactSendMessage: 'Send Message',
+            portfolioSelected: 'Selected Work',
+            techSkills: 'Technologies',
+            tech_angular: 'Angular',
+            tech_express: 'Express',
+            tech_kubernetes: 'Kubernetes',
+            tech_mongodb: 'MongoDB',
+            tech_redis: 'Redis',
+            tech_aws: 'AWS',
+            tech_terraform: 'Terraform',
+            tech_ansible: 'Ansible',
+            tech_oracle_cloud: 'Oracle Cloud',
+            tech_freebsd: 'FreeBSD',
+            tech_qemu: 'QEMU',
+            tech_minio: 'Min.io',
+            tech_hetzner: 'Hetzner',
+            tech_bash: 'Bash',
+            tech_cloud_init: 'Cloud-init',
+            viewAllServices: 'View All Services',
+            viewAllProjects: 'View All Projects',
+            testimonialsTitle: 'What Clients Say',
+            testimonial1Name: 'Dave Cottlehuber',
+            testimonial1Role: 'CEO @ SkunkWerks',
+            testimonial2Name: 'Konstantin Kostov',
+            testimonial2Role: 'CEO @ Headbright Group',
+            testimonial3Name: 'John Gibb',
+            testimonial3Role: 'Head of Projects @ Survation'
+                },
+                es: {
+            urgent: '<span class="highlight">Disponible para nuevas colaboraciones a largo plazo en Q2 2026</span>',
       heroTitle: 'Trabaja con un <span class="highlight">Arquitecto Senior en Elixir y Cloud</span>',
       tagline: 'Trabajo con empresas SaaS que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un arquitecto dedicado para unirte a tu equipo 20 horas a la semana, hablemos.',
       intro: 'Soy <strong>Maikel Frias Mosquea</strong>, <strong>Arquitecto Senior en Elixir y Cloud</strong> con más de 10 años de experiencia. Me especializo en colaboraciones a largo plazo, ayudando a los equipos a escalar su infraestructura sin esfuerzo. Trabajo como parte de tu equipo, 20 horas a la semana, para construir y mantener sistemas que crezcan con tu negocio.',
@@ -92,9 +144,61 @@
       t3Quote: '<span class="highlight">"Maikel es un líder técnico multitalento,</span> gestionando código, nube y complejidades con maestría. <strong>No dudaría en recomendarlo a cualquiera que busque un socio técnico a largo plazo.</strong>"',
       scarcity2: '<a href="mailto:hello@maikel.dev" style="color: var(--primary); text-decoration: underline;">Hablemos de cómo podemos trabajar juntos</a>.',
       cta2: 'Hablemos',
-      footer: '© 2026 Maikel OÜ — Con base en Estonia, sirviendo a clientes en todo el mundo.'
-    }
-  };
+      footer: '© 2026 Maikel OÜ — Con base en Estonia, sirviendo a clientes en todo el mundo.',
+            navTitle: 'Navegación del Sitio',
+            navServices: 'Servicios',
+            navServicesDesc: 'Cómo puedo ayudar a tu equipo',
+            navPortfolio: 'Portafolio',
+            navPortfolioDesc: 'Proyectos seleccionados y estudios de caso',
+            navAbout: 'Sobre Mí',
+            navAboutDesc: 'Mi experiencia y filosofía',
+            navContact: 'Contacto',
+            navContactDesc: 'Ponte en contacto',
+            navHome: 'Inicio',
+            navServices: 'Servicios',
+            navPortfolio: 'Portafolio',
+            navAbout: 'Sobre Mí',
+            navContact: 'Contacto',
+            aboutMe: 'Sobre Mí',
+            contactTitle: 'Ponte en Contacto',
+            contactDesc: "¿Listo para iniciar tu proyecto? Completa el formulario a continuación y te responderé en menos de 24 horas.",
+            contactInfoTitle: 'Información de Contacto',
+            contactEmailLabel: 'Correo Electrónico',
+            contactEmail: 'hello@maikel.dev',
+            contactLocation: 'Con base en: Estonia',
+            contactServing: 'Sirviendo a: Clientes en todo el mundo',
+            contactNameLabel: 'Nombre',
+            contactEmailInputLabel: 'Correo Electrónico',
+            contactMessageLabel: 'Mensaje',
+            contactSendMessage: 'Enviar Mensaje',
+            portfolioSelected: 'Trabajos Seleccionados',
+            techSkills: 'Tecnologías',
+            tech_angular: 'Angular',
+            tech_express: 'Express',
+            tech_kubernetes: 'Kubernetes',
+            tech_mongodb: 'MongoDB',
+            tech_redis: 'Redis',
+            tech_aws: 'AWS',
+            tech_terraform: 'Terraform',
+            tech_ansible: 'Ansible',
+            tech_oracle_cloud: 'Oracle Cloud',
+            tech_freebsd: 'FreeBSD',
+            tech_qemu: 'QEMU',
+            tech_minio: 'Min.io',
+            tech_hetzner: 'Hetzner',
+            tech_bash: 'Bash',
+            tech_cloud_init: 'Cloud-init',
+            viewAllServices: 'Ver Todos los Servicios',
+            viewAllProjects: 'Ver Todos los Proyectos',
+            testimonialsTitle: 'Lo que Dicen los Clientes',
+            testimonial1Name: 'Dave Cottlehuber',
+            testimonial1Role: 'CEO @ SkunkWerks',
+            testimonial2Name: 'Konstantin Kostov',
+            testimonial2Role: 'CEO @ Headbright Group',
+            testimonial3Name: 'John Gibb',
+            testimonial3Role: 'Jefe de Proyectos @ Survation'
+          }
+        };
 
   function applyLang(lang) {
     var t = translations[lang] || translations.en;
@@ -116,6 +220,20 @@
   });
 
   var saved = null;
-  try { saved = localStorage.getItem(STORAGE_KEY); } catch ( e ) {}
-  applyLang(saved === 'es' ? 'es' : 'en');
-})();
+    try { saved = localStorage.getItem(STORAGE_KEY); } catch ( e ) {}
+    applyLang(saved === 'es' ? 'es' : (saved === 'en' ? 'en' : 'en'));
+
+  // Email obfuscation for floating CTA (base64 encoded)
+  document.querySelectorAll('.floating-cta[data-email-decoded]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var encoded = this.getAttribute('data-email-decoded');
+      try {
+        var email = atob(encoded);
+        window.location.href = 'mailto:' + email;
+      } catch (err) {
+        console.error('Failed to decode email:', err);
+      }
+    });
+  });
+  })();

@@ -39,22 +39,19 @@
 
     <main id="main-content" role="main">
       <nav class="page-nav" aria-label="Page navigation">
-        <span class="current">Home</span>
-      </nav>
+              <span class="current" data-i18n="navHome">Home</span>
+            </nav>
 
       <p data-i18n="intro">
         I'm <strong>Maikel Frias Mosquea</strong>, a senior <strong>Elixir & Cloud Architect</strong> with 10+ years of experience. I specialize in long-term collaborations, helping teams scale their infrastructure seamlessly. I work as part of your team, 20 hours a week, to build and maintain systems that grow with your business.
       </p>
 
       <nav class="main-nav" aria-label="Site navigation">
-              <h2>Site Navigation</h2>
-              <ul>
-                <li><a href="services.html">Services</a> - How I can help your team</li>
-                <li><a href="portfolio.html">Portfolio</a> - Selected projects and case studies</li>
-                <li><a href="about.html">About</a> - My experience and philosophy</li>
-                <li><a href="contact.html">Contact</a> - Get in touch</li>
-              </ul>
-            </nav>
+        <a href="services.html"><span data-i18n="navServices">Services</span></a>
+        <a href="portfolio.html"><span data-i18n="navPortfolio">Portfolio</span></a>
+        <a href="about.html"><span data-i18n="navAbout">About</span></a>
+        <a href="contact.html"><span data-i18n="navContact">Contact</span></a>
+      </nav>
 
       <section aria-labelledby="urgent-section-title">
         <h2 id="urgent-section-title" class="urgent" data-i18n="urgent" role="alert" aria-live="polite"><span class="highlight">Available for New Long-Term Partnerships in Q2 2026</span></h2>
@@ -76,7 +73,7 @@
             <p data-i18n="s3Desc"><span class="highlight">Kubernetes, CI/CD, Terraform, Ansible, and multi-cloud expertise</span> to future-proof your infrastructure.</p>
           </div>
         </div>
-        <p><a href="services.html" class="cta">View All Services</a></p>
+        <p class="cta-container"><a href="services.html" class="cta" data-i18n="viewAllServices">View All Services</a></p>
       </section>
 
       <section aria-labelledby="portfolio-section-title">
@@ -95,19 +92,19 @@
             <p data-i18n="p3Desc"><span class="highlight">Custom Min.io deployment</span> for Headbright Group. Saved $12K/year in storage costs and achieved 99.99% uptime.</p>
           </div>
         </div>
-        <p><a href="portfolio.html" class="cta">View All Projects</a></p>
+        <p class="cta-container"><a href="portfolio.html" class="cta" data-i18n="viewAllProjects">View All Projects</a></p>
       </section>
 
       <section aria-labelledby="testimonials-section-title">
-        <h2 data-i18n="sectionTestimonials" id="testimonials-section-title">What Clients Say</h2>
+        <h2 data-i18n="testimonialsTitle" id="testimonials-section-title">What Clients Say</h2>
         <div class="testimonials">
           <div class="testimonial-card">
             <p data-i18n="t1Quote"><span class="highlight">"Maikel has a wide range of tech skills and navigated our environment with ease.</span> He picked up our stack quickly and made rapid progress with minimal oversight. <strong>He was a pleasure to work with, and I'd gladly do so again.</strong>"</p>
             <div class="testimonial-author">
               <img src="clients/skunkwerks.webp" alt="Photo of Dave Cottlehuber" title="Dave Cottlehuber" loading="lazy">
               <div>
-                <h4>Dave Cottlehuber</h4>
-                <p>CEO @ SkunkWerks</p>
+                <h4 data-i18n="testimonial1Name">Dave Cottlehuber</h4>
+                <p data-i18n="testimonial1Role">CEO @ SkunkWerks</p>
               </div>
             </div>
           </div>
@@ -116,8 +113,8 @@
             <div class="testimonial-author">
               <img src="clients/headbright1.webp" alt="Photo of Konstantin Kostov" title="Konstantin Kostov" loading="lazy">
               <div>
-                <h4>Konstantin Kostov</h4>
-                <p>CEO @ Headbright Group</p>
+                <h4 data-i18n="testimonial2Name">Konstantin Kostov</h4>
+                <p data-i18n="testimonial2Role">CEO @ Headbright Group</p>
               </div>
             </div>
           </div>
@@ -126,22 +123,20 @@
             <div class="testimonial-author">
               <img src="clients/surva.webp" alt="Photo of John Gibb" title="John Gibb" loading="lazy">
               <div>
-                <h4>John Gibb</h4>
-                <p>Head of Projects @ Survation</p>
+                <h4 data-i18n="testimonial3Name">John Gibb</h4>
+                <p data-i18n="testimonial3Role">Head of Projects @ Survation</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <a href="mailto:hello@maikel.dev" class="cta" data-i18n="cta2" aria-label="Contact me via email"><span class="highlight">Let's Talk</span></a>
     </main>
 
     <footer role="contentinfo" data-i18n="footer">© 2026 Maikel OÜ — Based in Estonia, serving clients worldwide.</footer>
   </div>
   
   <!-- Floating CTA -->
-  <a href="mailto:hello@maikel.dev" class="floating-cta cta" data-i18n="cta2" aria-label="Contact me via email">
+  <a href="contact.html" class="floating-cta cta" data-i18n="cta2" aria-label="Contact me via email">
     <span class="highlight">Let's Talk</span>
   </a>
   

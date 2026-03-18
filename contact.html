@@ -39,49 +39,24 @@
 
     <main id="main-content" role="main">
       <nav class="page-nav" aria-label="Page navigation">
-        <a href="index.html">Home</a>
+        <a href="index.html" data-i18n="navHome">Home</a>
         <span>/</span>
-        <span class="current">Contact</span>
+        <span class="current" data-i18n="navContact">Contact</span>
       </nav>
 
-      <section aria-labelledby="contact-section-title" class="contact-form">
-        <h2 id="contact-section-title">Get In Touch</h2>
-        <p>Ready to start your project? Fill out the form below and I'll get back to you within 24 hours.</p>
+      <section aria-labelledby="contact-section-title" class="contact-info">
+        <h2 data-i18n="contactTitle" id="contact-section-title">Get In Touch</h2>
+        <p data-i18n="contactDesc">Ready to start your project? Reach out via email and I'll get back to you within 24 hours.</p>
         
-        <form action="mailto:hello@maikel.dev" method="post" enctype="text/plain">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
-          </div>
-          <button type="submit" class="cta" data-i18n="cta2"><span class="highlight">Send Message</span></button>
-        </form>
+        <div class="email-container">
+          <p class="email-text">Email: <span class="email-part">hello</span><span class="email-symbol">@</span><span class="email-part">maikel.dev</span></p>
+        </div>
       </section>
 
-      <section aria-labelledby="contact-info-title">
-        <h2 id="contact-info-title">Contact Information</h2>
-        <p>Email: <a href="mailto:hello@maikel.dev">hello@maikel.dev</a></p>
-        <p>Based in: Estonia</p>
-        <p>Serving: Clients worldwide</p>
-      </section>
-
-      <a href="mailto:hello@maikel.dev" class="cta" data-i18n="cta2" aria-label="Contact me via email"><span class="highlight">Let's Talk</span></a>
     </main>
 
     <footer role="contentinfo" data-i18n="footer">© 2026 Maikel OÜ — Based in Estonia, serving clients worldwide.</footer>
   </div>
-  
-  <!-- Floating CTA -->
-  <a href="mailto:hello@maikel.dev" class="floating-cta cta" data-i18n="cta2" aria-label="Contact me via email">
-    <span class="highlight">Let's Talk</span>
-  </a>
   
   <script src="everything.js"></script>
 </body>
