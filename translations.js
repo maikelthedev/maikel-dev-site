@@ -1,6 +1,6 @@
 var translations = {
   en: {
-    brandName: 'Maikel Frias Mosquea',
+    brandName: 'Maikel',
     urgent: '<span class="highlight">Available for New Long-Term Partnerships in Q2 2026</span>',
     heroTitle: 'Build with a <span class="highlight">Senior Elixir & Cloud Architect</span>',
     tagline: 'I work with SaaS companies who value reliability, scalability, and performance. If you\'re looking for a dedicated architect to join your team 20 hours a week, let\'s talk.',
@@ -73,7 +73,7 @@ var translations = {
     tech_cloud_init: 'Cloud-init'
   },
   es: {
-    brandName: 'Maikel Frias Mosquea',
+    brandName: 'Maikel',
     urgent: '<span class="highlight">Disponible para nuevas colaboraciones a largo plazo en Q2 2026</span>',
     heroTitle: 'Trabaja con un <span class="highlight">Arquitecto Senior en Elixir y Cloud</span>',
     tagline: 'Trabajo con empresas SaaS que valoran la fiabilidad, escalabilidad y rendimiento. Si buscas un arquitecto dedicado para unirte a tu equipo 20 horas a la semana, hablemos.',
