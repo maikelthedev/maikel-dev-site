@@ -10,11 +10,11 @@
   <meta property="og:description" content="Partner with Maikel, a senior Elixir & Cloud Architect, to build and maintain scalable, fault-tolerant systems for your SaaS. 20 hours a week, long-term collaboration.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maikel.dev">
-  <meta property="og:image" content="https://maikel.dev/logos/maikel-og.webp">
+  <meta property="og:image" content="https://logos/maikel-og.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Maikel Frias Mosquea — Senior Elixir & Cloud Architect">
   <meta name="twitter:description" content="Partner with Maikel, a senior Elixir & Cloud Architect, to build and maintain scalable, fault-tolerant systems for your SaaS.">
-  <meta name="twitter:image" content="https://maikel.dev/logos/maikel-og.webp">
+  <meta name="twitter:image" content="https://logos/maikel-og.webp">
   <title>Maikel Frias Mosquea — Senior Elixir & Cloud Architect</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,122 +24,54 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <div class="container" id="top">
-    <nav class="lang-toggle" aria-label="Language">
-      <button type="button" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" data-lang="es" aria-pressed="false">ES</button>
-    </nav>
-    
-    <header role="banner">
-      <h1 data-i18n="heroTitle" class="hero-gradient-text">Build with a <span class="highlight">Senior Elixir & Cloud Architect</span></h1>
-      <p class="tagline" data-i18n="tagline">
-        I work with SaaS companies who value reliability, scalability, and performance. If you're looking for a dedicated architect to join your team 20 hours a week, let's talk.
-      </p>
-    </header>
-
-    <main id="main-content" role="main">
-      <nav class="page-nav" aria-label="Page navigation">
-              <span class="current" data-i18n="navHome">Home</span>
-            </nav>
-
-      <p data-i18n="intro">
-        I'm <strong>Maikel Frias Mosquea</strong>, a senior <strong>Elixir & Cloud Architect</strong> with 10+ years of experience. I specialize in long-term collaborations, helping teams scale their infrastructure seamlessly. I work as part of your team, 20 hours a week, to build and maintain systems that grow with your business.
-      </p>
-
-      <nav class="main-nav" aria-label="Site navigation">
-        <a href="services.html"><span data-i18n="navServices">Services</span></a>
-        <a href="portfolio.html"><span data-i18n="navPortfolio">Projects</span></a>
-        <a href="about.html"><span data-i18n="navAbout">About</span></a>
-        <a href="contact.html"><span data-i18n="navContact">Contact</span></a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#home" class="brand" data-i18n="brandName">Maikel Frias Mosquea</a>
+      
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" data-nav="home" data-i18n="navHome">Home</a>
+        <a href="#services" data-nav="services" data-i18n="navServices">Services</a>
+        <a href="#portfolio" data-nav="portfolio" data-i18n="navPortfolio">Projects</a>
+        <a href="#about" data-nav="about" data-i18n="navAbout">About</a>
+        <a href="#contact" data-nav="contact" data-i18n="navContact">Contact</a>
       </nav>
+      
+      <div class="header-right">
+        <nav class="lang-toggle" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </nav>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+    
+    <nav class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#home" data-nav="home" data-i18n="navHome">Home</a>
+      <a href="#services" data-nav="services" data-i18n="navServices">Services</a>
+      <a href="#portfolio" data-nav="portfolio" data-i18n="navPortfolio">Projects</a>
+      <a href="#about" data-nav="about" data-i18n="navAbout">About</a>
+      <a href="#contact" data-nav="contact" data-i18n="navContact">Contact</a>
+    </nav>
+  </header>
 
-      <section aria-labelledby="urgent-section-title">
-        <h2 id="urgent-section-title" class="urgent" data-i18n="urgent" role="alert" aria-live="polite"><span class="highlight">Available for New Long-Term Partnerships in Q2 2026</span></h2>
-      </section>
-
-      <section aria-labelledby="services-section-title">
-        <h2 data-i18n="sectionServices" id="services-section-title">How I Can Help</h2>
-        <div class="services">
-          <div class="service-card">
-            <h3 data-i18n="s1Title">Elixir & Phoenix Mastery</h3>
-            <p data-i18n="s1Desc">Scalable, fault-tolerant backends and distributed services that handle growth effortlessly.</p>
-          </div>
-          <div class="service-card">
-            <h3 data-i18n="s2Title">Full-Stack Excellence</h3>
-            <p data-i18n="s2Desc"><span class="highlight">End-to-end development</span> with Angular, React, Next.js, Django, Flask, or Phoenix.</p>
-          </div>
-          <div class="service-card">
-            <h3 data-i18n="s3Title">Cloud & DevOps Leadership</h3>
-            <p data-i18n="s3Desc"><span class="highlight">Kubernetes, CI/CD, Terraform, Ansible, and multi-cloud expertise</span> to future-proof your infrastructure.</p>
-          </div>
-        </div>
-        <p class="cta-container"><a href="services.html" class="cta" data-i18n="viewAllServices">View All Services</a></p>
-      </section>
-
-      <section aria-labelledby="portfolio-section-title">
-        <h2 data-i18n="sectionPortfolio" id="portfolio-section-title">Selected Work</h2>
-        <div class="portfolio">
-          <div class="portfolio-card">
-            <h3 data-i18n="p1Title">Survation Panel System</h3>
-            <p data-i18n="p1Desc"><span class="highlight">Full-stack survey platform</span> for a UK market research leader. Reduced cloud costs by 30% and improved response times by 40%.</p>
-          </div>
-          <div class="portfolio-card">
-            <h3 data-i18n="p2Title">OCI Development Cloud</h3>
-            <p data-i18n="p2Desc"><span class="highlight">Oracle Cloud Infrastructure as Code</span> for SkunkWerks. Cut deployment time by 70% and eliminated manual errors.</p>
-          </div>
-          <div class="portfolio-card">
-            <h3 data-i18n="p3Title">Min.io Cluster Deployment</h3>
-            <p data-i18n="p3Desc"><span class="highlight">Custom Min.io deployment</span> for Headbright Group. Saved $12K/year in storage costs and achieved 99.99% uptime.</p>
-          </div>
-        </div>
-        <p class="cta-container"><a href="portfolio.html" class="cta" data-i18n="viewAllProjects">View All Projects</a></p>
-      </section>
-
-      <section aria-labelledby="testimonials-section-title">
-        <h2 data-i18n="testimonialsTitle" id="testimonials-section-title">What Clients Say</h2>
-        <div class="testimonials">
-          <div class="testimonial-card">
-            <p data-i18n="t1Quote"><span class="highlight">"Maikel has a wide range of tech skills and navigated our environment with ease.</span> He picked up our stack quickly and made rapid progress with minimal oversight. <strong>He was a pleasure to work with, and I'd gladly do so again.</strong>"</p>
-            <div class="testimonial-author">
-              <img src="clients/skunkwerks.webp" alt="Photo of Dave Cottlehuber" title="Dave Cottlehuber" loading="lazy">
-              <div>
-                <h4 data-i18n="testimonial1Name">Dave Cottlehuber</h4>
-                <p data-i18n="testimonial1Role">CEO @ SkunkWerks</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <p data-i18n="t2Quote"><span class="highlight">"I engaged Maikel for a DevOps assignment.</span> His proficiency and dedication were clear from the start. <strong>He delivered with precision and ensured every detail was handled professionally.</strong>"</p>
-            <div class="testimonial-author">
-              <img src="clients/headbright1.webp" alt="Photo of Konstantin Kostov" title="Konstantin Kostov" loading="lazy">
-              <div>
-                <h4 data-i18n="testimonial2Name">Konstantin Kostov</h4>
-                <p data-i18n="testimonial2Role">CEO @ Headbright Group</p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-card">
-            <p data-i18n="t3Quote"><span class="highlight">"Maikel is a multi-talented tech leader,</span> expertly managing code, clouds, and complexities. <strong>I would not hesitate to recommend him to anyone looking for a skilled, long-term partner.</strong>"</p>
-            <div class="testimonial-author">
-              <img src="clients/surva.webp" alt="Photo of John Gibb" title="John Gibb" loading="lazy">
-              <div>
-                <h4 data-i18n="testimonial3Name">John Gibb</h4>
-                <p data-i18n="testimonial3Role">Head of Projects @ Survation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div class="container" id="app">
+    <main id="main-content" role="main">
+      <div id="page-content"></div>
     </main>
 
     <footer role="contentinfo" data-i18n="footer">© 2026 Maikel OÜ — Based in Estonia, serving clients worldwide.</footer>
   </div>
   
-  <!-- Floating CTA -->
-  <a href="contact.html" class="floating-cta cta" data-i18n="cta2" aria-label="Contact me via email">
+  <a href="#contact" class="floating-cta cta" data-i18n="cta2" aria-label="Contact me via email">
     <span class="highlight">Let's Talk</span>
   </a>
   
-  <script src="everything.js"></script>
+  <script src="translations.js"></script>
+  <script src="components.js"></script>
+  <script src="router.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
