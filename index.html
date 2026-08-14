@@ -12,420 +12,642 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Maikel Frias Mosquea — Full-Stack Software Engineer and Cloud Systems Architect">
   <meta name="twitter:description" content="Projects and recommendations for Maikel Frias Mosquea.">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="dark">
   <title>Maikel Frias Mosquea</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-:root {
-    color-scheme: light;
-    --font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --text-muted: #444444;
-    --line: #e0e0e0;
-}
+    :root {
+      --bg: #05060a;
+      --bg-soft: #0a0c14;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-2: rgba(255, 255, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #eef1f8;
+      --muted: #9aa3b8;
+      --accent: #7c5cff;
+      --accent-2: #22d3ee;
+      --accent-3: #ff5c8a;
+      --radius: 18px;
+      --maxw: 1120px;
+      --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+    }
 
-* { box-sizing: border-box; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-body {
-    margin: 0;
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-.cv-container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 64px 24px;
-}
+    ::selection { background: rgba(124, 92, 255, 0.35); color: #fff; }
 
-.cv-header {
-    margin-bottom: 40px;
-    text-align: center;
-}
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-.cv-name {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin: 0 0 4px;
-    color: var(--text);
-}
+    .wrap { width: min(var(--maxw), 92vw); margin-inline: auto; }
 
-.cv-title {
-    font-size: 1.05rem;
-    font-weight: 400;
-    color: var(--text-muted);
-    margin: 0;
-}
+    /* ---------- Background aurora ---------- */
+    .aurora {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+      background:
+        radial-gradient(60% 55% at 15% 0%, rgba(124, 92, 255, 0.28), transparent 60%),
+        radial-gradient(50% 50% at 90% 10%, rgba(34, 211, 238, 0.22), transparent 60%),
+        radial-gradient(60% 60% at 70% 100%, rgba(255, 92, 138, 0.18), transparent 60%),
+        var(--bg);
+    }
+    .aurora::after {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(28% 28% at 30% 40%, rgba(124, 92, 255, 0.35), transparent 70%),
+        radial-gradient(24% 24% at 70% 60%, rgba(34, 211, 238, 0.30), transparent 70%);
+      filter: blur(60px);
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+    @keyframes drift {
+      0%   { transform: translate3d(-4%, -2%, 0) scale(1); }
+      100% { transform: translate3d(6%, 4%, 0) scale(1.12); }
+    }
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(circle at 50% 20%, black, transparent 75%);
+      -webkit-mask-image: radial-gradient(circle at 50% 20%, black, transparent 75%);
+      pointer-events: none;
+    }
 
-.cv-section {
-    margin-bottom: 36px;
-}
+    /* ---------- Nav ---------- */
+    header.nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(5, 6, 10, 0.55);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s ease, background .3s ease;
+    }
+    header.nav.scrolled {
+      border-bottom-color: var(--border);
+      background: rgba(5, 6, 10, 0.8);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: .2px;
+    }
+    .brand .dot {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+      box-shadow: 0 0 18px rgba(124,92,255,.6);
+      animation: spin 8s linear infinite;
+      flex: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
-.cv-section-title {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--text-muted);
-    margin: 0 0 20px;
-    text-align: center;
-}
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: .95rem; color: var(--muted); }
+    .nav-links a { transition: color .2s ease; position: relative; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s ease;
+      border-radius: 2px;
+    }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-links a.btn::after { display: none; }
 
-.cv-summary {
-    font-size: 1.1rem;
-    color: var(--text);
-    line-height: 1.7;
-    margin: 0 0 36px;
-    text-align: center;
-    padding: 20px 24px;
-    background: #f5f5f5;
-    border-radius: 4px;
-    font-weight: 450;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .95rem;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary {
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      border-color: transparent;
+      color: #06070c;
+      box-shadow: 0 10px 30px -10px rgba(124, 92, 255, 0.7);
+    }
+    .btn.primary:hover { box-shadow: 0 16px 40px -12px rgba(34, 211, 238, 0.7); }
+    .btn.ghost { background: transparent; }
 
-.cv-summary strong {
-    font-weight: 700;
-}
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .menu-toggle span {
+      width: 24px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
+    }
 
-.logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
-    gap: 12px;
-    justify-items: center;
-    padding: 20px 0;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-}
+    /* ---------- Hero ---------- */
+    .hero { padding: 168px 0 96px; position: relative; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+    }
+    .eyebrow .pulse {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 0 0 rgba(34,211,238,.6);
+      animation: pulse 2.4s ease-out infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(34,211,238,.6); }
+      70% { box-shadow: 0 0 0 12px rgba(34,211,238,0); }
+      100% { box-shadow: 0 0 0 0 rgba(34,211,238,0); }
+    }
 
-.logos img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    opacity: 0.8;
-    justify-self: center;
-}
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      margin: 26px 0 20px;
+      font-weight: 700;
+    }
+    .hero h1 .grad {
+      background: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent-3) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p.lead {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      margin: 0 0 36px;
+    }
+    .hero p.lead strong { color: var(--text); font-weight: 600; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.cv-entry {
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--line);
-}
+    .hero-meta { display: flex; gap: 40px; margin-top: 56px; flex-wrap: wrap; }
+    .hero-meta .item { display: flex; flex-direction: column; }
+    .hero-meta .item b { font-family: var(--display); font-size: 1.6rem; }
+    .hero-meta .item span { color: var(--muted); font-size: .85rem; }
 
-.cv-entry:last-child {
-    border-bottom: none;
-}
+    /* ---------- Sections ---------- */
+    section { padding: 96px 0; position: relative; }
+    .section-head { max-width: 640px; margin-bottom: 56px; }
+    .section-head .tag {
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      font-weight: 600;
+    }
+    .section-head h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      letter-spacing: -0.01em;
+      margin: 14px 0 12px;
+      line-height: 1.1;
+    }
+    .section-head p { color: var(--muted); margin: 0; }
 
-.cv-entry-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 6px;
-}
+    /* ---------- Tech grid ---------- */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 12px;
+    }
+    .tech {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 10px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .tech:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124,92,255,.4);
+      background: var(--surface-2);
+    }
+    .tech img { width: 34px; height: 34px; object-fit: contain; opacity: .9; }
+    .tech span { font-size: .78rem; color: var(--muted); }
+    .tech:hover span { color: var(--text); }
 
-.cv-entry-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin: 0;
-    color: var(--text);
-}
+    /* ---------- Projects ---------- */
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .project {
+      position: relative;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s ease, border-color .3s ease, background .3s ease;
+    }
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(120% 120% at 0% 0%, rgba(124,92,255,.18), transparent 55%);
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+    .project:hover { transform: translateY(-6px); border-color: rgba(124,92,255,.4); background: var(--surface-2); }
+    .project:hover::before { opacity: 1; }
+    .project .role {
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .project h3 { font-family: var(--display); font-size: 1.3rem; margin: 0 0 10px; }
+    .project p { color: var(--muted); margin: 0 0 20px; font-size: .96rem; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span {
+      font-size: .75rem;
+      color: var(--muted);
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
 
-.cv-entry-role {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
+    /* ---------- Recommendations ---------- */
+    .recs { columns: 2; column-gap: 20px; }
+    .rec {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .rec blockquote {
+      margin: 0 0 18px;
+      font-size: .95rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .rec blockquote::before {
+      content: "\201C";
+      display: block;
+      font-family: var(--display);
+      font-size: 2.6rem;
+      line-height: 1;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 6px;
+    }
+    .rec figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rec figcaption strong { font-size: .9rem; font-family: var(--display); }
+    .rec figcaption span { font-size: .8rem; color: var(--muted); }
+    .verify {
+      font-size: .85rem;
+      color: var(--muted);
+      margin: 0 0 32px;
+    }
+    .verify a { color: var(--accent-2); }
+    .verify a:hover { text-decoration: underline; }
 
-.cv-entry-desc {
-    font-size: 0.95rem;
-    color: var(--text);
-    margin: 0 0 10px;
-    line-height: 1.7;
-}
+    /* ---------- CTA ---------- */
+    .cta {
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 72px 24px;
+      background:
+        radial-gradient(80% 120% at 50% 0%, rgba(124,92,255,.25), transparent 60%),
+        var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .cta p { color: var(--muted); max-width: 520px; margin: 0 auto 30px; }
 
-.cv-entry-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
+    /* ---------- Footer ---------- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .foot .links { display: flex; gap: 22px; }
+    .foot a:hover { color: var(--text); }
 
-.cv-entry-tags span {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    background: #f0f0f0;
-    padding: 3px 10px;
-    border-radius: 3px;
-}
+    /* ---------- Reveal ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.in { opacity: 1; transform: none; }
 
-.cv-rec {
-    margin-bottom: 24px;
-    padding: 0 0 24px;
-    border-bottom: 1px solid var(--line);
-}
-
-.cv-rec:last-child {
-    border-bottom: none;
-}
-
-.cv-rec blockquote {
-    margin: 0 0 12px;
-    font-size: 0.95rem;
-    color: var(--text);
-    line-height: 1.7;
-}
-
-.cv-rec blockquote strong {
-    font-weight: 600;
-}
-
-.cv-rec-author {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-}
-
-.cv-rec-author strong {
-    font-size: 0.88rem;
-    color: var(--text);
-    font-weight: 600;
-}
-
-.cv-rec-author span {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-.cv-verify {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin: 0 0 20px;
-    text-align: center;
-}
-
-.cv-verify a {
-    color: var(--text);
-}
-
-::selection {
-    background: #dddddd;
-    color: var(--text);
-}
-
-@media (max-width: 640px) {
-    .cv-container { padding: 40px 16px; }
-    .cv-name { font-size: 1.6rem; }
-    .logos { grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); }
-    .logos img { width: 28px; height: 28px; }
-    .cv-rec { padding: 16px; }
-}
-
-@media print {
-    .cv-container { padding: 0.4in; max-width: none; }
-    .cv-rec { break-inside: avoid; }
-}
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .projects { grid-template-columns: 1fr; }
+      .recs { columns: 1; }
+    }
+    @media (max-width: 640px) {
+      .nav-links {
+        position: fixed;
+        inset: 72px 0 auto 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 24px 6vw 32px;
+        background: rgba(5,6,10,.96);
+        border-bottom: 1px solid var(--border);
+        transform: translateY(-140%);
+        transition: transform .35s ease;
+      }
+      .nav-links.open { transform: translateY(0); }
+      .menu-toggle { display: flex; }
+      .brand { font-size: .95rem; }
+      .hero { padding: 140px 0 72px; }
+      section { padding: 72px 0; }
+      .hero-meta { gap: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media print {
+      .aurora, .grid-overlay, header.nav, .menu-toggle, .hero-actions, .cta, footer { display: none; }
+      body { background: #fff; color: #111; }
+      .reveal { opacity: 1; transform: none; }
+    }
   </style>
 </head>
 <body>
-  <div class="cv-container">
-    <!-- Header -->
-    <header class="cv-header">
-      <h1 class="cv-name">Maikel Frias Mosquea</h1>
-      <p class="cv-title">Full-Stack Software Engineer &amp; Cloud Systems Architect</p>
-    </header>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
 
-    <p class="cv-summary">
-      Across every recommendation, one thing stands out: I handle the full stack, from front-end
-      to back-end to infrastructure. Your team deals with <strong>one person who knows your whole
-      architecture inside out</strong>. No hand-offs, no gaps, no context lost.
-    </p>
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><span class="dot"></span> Maikel Frias Mosquea</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#stack">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="https://www.linkedin.com/in/maikelthedev/" target="_blank" rel="noopener" class="btn primary">LinkedIn</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <!-- Skills -->
-    <section class="cv-section" aria-labelledby="skills-title">
-      <h2 id="skills-title" class="cv-section-title">Tech Stack</h2>
-      <div class="logos" role="list">
-        <img src="logos/elixir.webp" alt="Elixir" title="Elixir" loading="lazy" role="listitem">
-        <img src="logos/phoenix.svg" alt="Phoenix" title="Phoenix" loading="lazy" role="listitem">
-        <img src="logos/kubernetes.webp" alt="Kubernetes" title="Kubernetes" loading="lazy" role="listitem">
-        <img src="logos/terraform.webp" alt="Terraform" title="Terraform" loading="lazy" role="listitem">
-        <img src="logos/ansible.webp" alt="Ansible" title="Ansible" loading="lazy" role="listitem">
-        <img src="logos/docker.webp" alt="Docker" title="Docker" loading="lazy" role="listitem">
-        <img src="logos/aws.webp" alt="AWS" title="AWS" loading="lazy" role="listitem">
-        <img src="logos/azure.webp" alt="Azure" title="Azure" loading="lazy" role="listitem">
-        <img src="logos/oracle.webp" alt="Oracle Cloud" title="Oracle Cloud" loading="lazy" role="listitem">
-        <img src="logos/angular.webp" alt="Angular" title="Angular" loading="lazy" role="listitem">
-        <img src="logos/react.webp" alt="React" title="React" loading="lazy" role="listitem">
-        <img src="logos/nextjs.webp" alt="Next.js" title="Next.js" loading="lazy" role="listitem">
-        <img src="logos/postgresql.webp" alt="PostgreSQL" title="PostgreSQL" loading="lazy" role="listitem">
-        <img src="logos/redis.webp" alt="Redis" title="Redis" loading="lazy" role="listitem">
-        <img src="logos/mongo.webp" alt="MongoDB" title="MongoDB" loading="lazy" role="listitem">
-        <img src="logos/nginx.webp" alt="Nginx" title="Nginx" loading="lazy" role="listitem">
-        <img src="logos/grafana.webp" alt="Grafana" title="Grafana" loading="lazy" role="listitem">
-        <img src="logos/jenkins.webp" alt="Jenkins" title="Jenkins" loading="lazy" role="listitem">
-        <img src="logos/python.webp" alt="Python" title="Python" loading="lazy" role="listitem">
-        <img src="logos/bash.webp" alt="Bash" title="Bash" loading="lazy" role="listitem">
-        <img src="logos/git.webp" alt="Git" title="Git" loading="lazy" role="listitem">
-        <img src="logos/sensu.webp" alt="Sensu" title="Sensu" loading="lazy" role="listitem">
-        <img src="logos/kotlin.webp" alt="Kotlin" title="Kotlin" loading="lazy" role="listitem">
-        <img src="logos/nixos.webp" alt="NixOS" title="NixOS" loading="lazy" role="listitem">
-        <img src="logos/vllm.webp" alt="vLLM" title="vLLM" loading="lazy" role="listitem">
-        <img src="logos/llamacpp.webp" alt="llama.cpp" title="llama.cpp" loading="lazy" role="listitem">
-        <img src="logos/podman.webp" alt="Podman" title="Podman" loading="lazy" role="listitem">
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow reveal"><span class="pulse"></span> Full-Stack · Cloud · DevOps</span>
+        <h1 class="reveal">Maikel Frias<br /><span class="grad">Mosquea</span></h1>
+        <p class="lead reveal">Full-Stack Software Engineer &amp; Cloud Systems Architect. Across every recommendation, one thing stands out: I handle the full stack, from front-end to back-end to infrastructure. Your team deals with <strong>one person who knows your whole architecture inside out</strong>. No hand-offs, no gaps, no context lost.</p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn primary">View projects &rarr;</a>
+          <a href="https://www.linkedin.com/in/maikelthedev/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
+        </div>
+        <div class="hero-meta reveal">
+          <div class="item"><b>27+</b><span>Technologies</span></div>
+          <div class="item"><b>3</b><span>Selected projects</span></div>
+          <div class="item"><b>4</b><span>Recommendations</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech stack -->
+    <section id="stack">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="tag">Tech Stack</span>
+          <h2>From the front-end to the metal.</h2>
+          <p>Languages, frameworks, clouds, and tools I use to design, build, and operate real systems.</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech reveal" title="Elixir"><img src="logos/elixir.webp" alt="Elixir" loading="lazy"><span>Elixir</span></div>
+          <div class="tech reveal" title="Phoenix"><img src="logos/phoenix.svg" alt="Phoenix" loading="lazy"><span>Phoenix</span></div>
+          <div class="tech reveal" title="Kubernetes"><img src="logos/kubernetes.webp" alt="Kubernetes" loading="lazy"><span>Kubernetes</span></div>
+          <div class="tech reveal" title="Terraform"><img src="logos/terraform.webp" alt="Terraform" loading="lazy"><span>Terraform</span></div>
+          <div class="tech reveal" title="Ansible"><img src="logos/ansible.webp" alt="Ansible" loading="lazy"><span>Ansible</span></div>
+          <div class="tech reveal" title="Docker"><img src="logos/docker.webp" alt="Docker" loading="lazy"><span>Docker</span></div>
+          <div class="tech reveal" title="AWS"><img src="logos/aws.webp" alt="AWS" loading="lazy"><span>AWS</span></div>
+          <div class="tech reveal" title="Azure"><img src="logos/azure.webp" alt="Azure" loading="lazy"><span>Azure</span></div>
+          <div class="tech reveal" title="Oracle Cloud"><img src="logos/oracle.webp" alt="Oracle Cloud" loading="lazy"><span>Oracle Cloud</span></div>
+          <div class="tech reveal" title="Angular"><img src="logos/angular.webp" alt="Angular" loading="lazy"><span>Angular</span></div>
+          <div class="tech reveal" title="React"><img src="logos/react.webp" alt="React" loading="lazy"><span>React</span></div>
+          <div class="tech reveal" title="Next.js"><img src="logos/nextjs.webp" alt="Next.js" loading="lazy"><span>Next.js</span></div>
+          <div class="tech reveal" title="PostgreSQL"><img src="logos/postgresql.webp" alt="PostgreSQL" loading="lazy"><span>PostgreSQL</span></div>
+          <div class="tech reveal" title="Redis"><img src="logos/redis.webp" alt="Redis" loading="lazy"><span>Redis</span></div>
+          <div class="tech reveal" title="MongoDB"><img src="logos/mongo.webp" alt="MongoDB" loading="lazy"><span>MongoDB</span></div>
+          <div class="tech reveal" title="Nginx"><img src="logos/nginx.webp" alt="Nginx" loading="lazy"><span>Nginx</span></div>
+          <div class="tech reveal" title="Grafana"><img src="logos/grafana.webp" alt="Grafana" loading="lazy"><span>Grafana</span></div>
+          <div class="tech reveal" title="Jenkins"><img src="logos/jenkins.webp" alt="Jenkins" loading="lazy"><span>Jenkins</span></div>
+          <div class="tech reveal" title="Python"><img src="logos/python.webp" alt="Python" loading="lazy"><span>Python</span></div>
+          <div class="tech reveal" title="Bash"><img src="logos/bash.webp" alt="Bash" loading="lazy"><span>Bash</span></div>
+          <div class="tech reveal" title="Git"><img src="logos/git.webp" alt="Git" loading="lazy"><span>Git</span></div>
+          <div class="tech reveal" title="Sensu"><img src="logos/sensu.webp" alt="Sensu" loading="lazy"><span>Sensu</span></div>
+          <div class="tech reveal" title="Kotlin"><img src="logos/kotlin.webp" alt="Kotlin" loading="lazy"><span>Kotlin</span></div>
+          <div class="tech reveal" title="NixOS"><img src="logos/nixos.webp" alt="NixOS" loading="lazy"><span>NixOS</span></div>
+          <div class="tech reveal" title="vLLM"><img src="logos/vllm.webp" alt="vLLM" loading="lazy"><span>vLLM</span></div>
+          <div class="tech reveal" title="llama.cpp"><img src="logos/llamacpp.webp" alt="llama.cpp" loading="lazy"><span>llama.cpp</span></div>
+          <div class="tech reveal" title="Podman"><img src="logos/podman.webp" alt="Podman" loading="lazy"><span>Podman</span></div>
+        </div>
       </div>
     </section>
 
     <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="tag">Selected Projects</span>
+          <h2>Real systems, measurable impact.</h2>
+          <p>A few highlights where full-stack depth paid off in cost, speed, and reliability.</p>
+        </div>
+        <div class="projects">
+          <article class="project reveal">
+            <div class="role">Full-Stack Lead</div>
+            <h3>Survation Panel System</h3>
+            <p>Full-stack survey platform for a UK market research leader. Reduced cloud costs by 30% and improved response times by 40%, all with zero downtime.</p>
+            <div class="tags">
+              <span>Angular</span><span>Express</span><span>Kubernetes</span><span>MongoDB</span><span>Redis</span><span>AWS</span>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="role">Cloud Architect</div>
+            <h3>OCI Development Cloud</h3>
+            <p>Oracle Cloud Infrastructure as Code for SkunkWerks. Cut deployment time by 70% and eliminated manual errors, setting them up for effortless scaling.</p>
+            <div class="tags">
+              <span>Terraform</span><span>Ansible</span><span>Oracle Cloud</span><span>FreeBSD</span><span>QEMU</span>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="role">DevOps Engineer</div>
+            <h3>Min.io Cluster Deployment</h3>
+            <p>Custom Min.io deployment for Headbright Group. Saved $12K/year in storage costs and achieved 99.99% uptime.</p>
+            <div class="tags">
+              <span>Min.io</span><span>Hetzner</span><span>Bash</span><span>Cloud-init</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Recommendations -->
-    <section class="cv-section" aria-labelledby="recommendations-title">
-      <h2 id="recommendations-title" class="cv-section-title">Recommendations</h2>
-
-      <p class="cv-verify">All recommendations are verifiable on <a href="https://www.linkedin.com/in/maikelthedev/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-
-      <div class="cv-rec">
-        <blockquote>
-          "Maikel has a wide range of tech skills already to draw from, and navigated our unfamiliar
-          environment easily. He picked up our diverse tech stack very quickly, and made rapid progress
-          with very little hand-holding. He was a pleasure to work with, and I'd gladly do so again."
-        </blockquote>
-        <div class="cv-rec-author">
-          <div>
-            <strong>Dave Cottlehuber</strong>
-            <span>Architecture &amp; support for Distributed Systems</span>
-          </div>
+    <section id="recommendations">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="tag">Recommendations</span>
+          <h2>What people I've worked with say.</h2>
         </div>
-      </div>
-
-      <div class="cv-rec">
-        <blockquote>
-          "I had the pleasure of working with Maikel at Survation where he single-handedly created our
-          online panel from scratch and demonstrated exceptional skills and expertise throughout the
-          entire process. His proficiency in front-end technologies, coupled with his expertise in
-          back-end frameworks and databases, allowed him to develop a reliable and responsive panel.
-          Maikel was always ready to tackle challenges head-on, providing innovative solutions to any
-          issues that arose during the development process. He consistently communicated progress
-          updates, sought feedback, incorporated suggestions promptly, and created plain language user
-          guides making him an invaluable asset to the team. I am confident that Maikel will excel in
-          any project he undertakes and contribute significantly to its success."
-        </blockquote>
-        <div class="cv-rec-author">
-          <div>
-            <strong>Rushaa Louise Hamid</strong>
-            <span>Head of Research at Toynbee Hall</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="cv-rec">
-        <blockquote>
-          "Maikel designs systems to solve complete business problems, rapidly learning whatever is
-          needed to detect, resolve and prevent issues for the long term. His effort and commitment
-          in the workplace is always impressive and I recommend his services to anyone needing a rapid
-          build-out of a stand-alone project or resolution to technical issues with existing
-          deployments."
-        </blockquote>
-        <div class="cv-rec-author">
-          <div>
-            <strong>Mike Burrows</strong>
-            <span>Engineering manager, team-lead, dev, dev-ops, data or test</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="cv-rec">
-        <blockquote>
-          "Maikel has been an exceptional asset to our team during our time working together. Maikel's
-          expertise in IT and his unwavering commitment to delivering streamlined support for our
-          staff have truly made a significant impact on our organization. Throughout our collaboration,
-          I have had the privilege of witnessing Maikel's exceptional technical skills and his ability
-          to solve complex IT challenges with ease. His deep understanding of various systems and
-          technologies, coupled with his willingness to share his knowledge, has been invaluable to
-          our team's success. Maikel consistently goes above and beyond to ensure that our staff
-          members have the necessary tools and support to perform their duties efficiently.
-          One of the most admirable qualities of Maikel is his patience and dedication when teaching
-          others. He possesses a rare talent for breaking down complex concepts into easily
-          understandable terms, which has allowed me and other team members to acquire new skills and
-          knowledge in the field of IT. Maikel's willingness to share his expertise has not only
-          enhanced our individual capabilities but has also fostered a collaborative and supportive
-          work environment. Maikel's professionalism, attention to detail, and strong work ethic are
-          truly commendable. He consistently meets deadlines, manages priorities effectively, and
-          remains calm under pressure. His proactive approach to problem-solving has significantly
-          contributed to the successful implementation of various IT solutions and the overall
-          efficiency of our projects. I have no doubt that Maikel's exceptional skills and dedication
-          would be a valuable asset to any organization. His technical expertise, combined with his
-          ability to teach and support others, makes him a standout professional in the field of IT.
-          I highly recommend Maikel without reservation and believe that he will continue to excel in
-          his future endeavours."
-        </blockquote>
-        <div class="cv-rec-author">
-          <div>
-            <strong>Hina Hussain</strong>
-            <span>Regional Operations Manager | Multi-Site Healthcare Operations Leader</span>
-          </div>
+        <p class="verify reveal">All recommendations are verifiable on <a href="https://www.linkedin.com/in/maikelthedev/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        <div class="recs">
+          <figure class="rec reveal">
+            <blockquote>"Maikel has a wide range of tech skills already to draw from, and navigated our unfamiliar environment easily. He picked up our diverse tech stack very quickly, and made rapid progress with very little hand-holding. He was a pleasure to work with, and I'd gladly do so again."</blockquote>
+            <figcaption>
+              <strong>Dave Cottlehuber</strong>
+              <span>Architecture &amp; support for Distributed Systems</span>
+            </figcaption>
+          </figure>
+          <figure class="rec reveal">
+            <blockquote>"I had the pleasure of working with Maikel at Survation where he single-handedly created our online panel from scratch and demonstrated exceptional skills and expertise throughout the entire process. His proficiency in front-end technologies, coupled with his expertise in back-end frameworks and databases, allowed him to develop a reliable and responsive panel. Maikel was always ready to tackle challenges head-on, providing innovative solutions to any issues that arose during the development process. He consistently communicated progress updates, sought feedback, incorporated suggestions promptly, and created plain language user guides making him an invaluable asset to the team. I am confident that Maikel will excel in any project he undertakes and contribute significantly to its success."</blockquote>
+            <figcaption>
+              <strong>Rushaa Louise Hamid</strong>
+              <span>Head of Research at Toynbee Hall</span>
+            </figcaption>
+          </figure>
+          <figure class="rec reveal">
+            <blockquote>"Maikel designs systems to solve complete business problems, rapidly learning whatever is needed to detect, resolve and prevent issues for the long term. His effort and commitment in the workplace is always impressive and I recommend his services to anyone needing a rapid build-out of a stand-alone project or resolution of technical issues with existing deployments."</blockquote>
+            <figcaption>
+              <strong>Mike Burrows</strong>
+              <span>Engineering manager, team-lead, dev, dev-ops, data or test</span>
+            </figcaption>
+          </figure>
+          <figure class="rec reveal">
+            <blockquote>"Maikel has been an exceptional asset to our team during our time working together. Maikel's expertise in IT and his unwavering commitment to delivering streamlined support for our staff have truly made a significant impact in our organization. Throughout our collaboration, I have had the privilege of witnessing Maikel's exceptional technical skills and his ability to solve complex IT challenges with ease. His deep understanding of various systems and technologies, coupled with his willingness to share his knowledge, has been invaluable to our team's success. Maikel consistently goes above and beyond to ensure that our staff members have the necessary tools and support to perform their duties efficiently. One of the most admirable qualities of Maikel is his patience and dedication when teaching others. He possesses a rare talent for breaking down complex concepts into easily understandable terms, which has allowed me and other team members to acquire new skills and knowledge in the field of IT. Maikel's willingness to share his expertise has not only enhanced our individual capabilities but has also fostered a collaborative and supportive work environment. Maikel's professionalism, attention to detail, and strong work ethic are truly commendable. He consistently meets deadlines, manages priorities effectively, and remains calm under pressure. His proactive approach to problem-solving has significantly contributed to the successful implementation of various IT solutions and the overall efficiency of our projects. I have no doubt that Maikel's exceptional skills and dedication would be a valuable asset to any organization. His technical expertise, combined with his ability to teach and support others, makes him a standout professional in the field of IT. I highly recommend Maikel without reservation and believe that he will continue to excel in his future endeavours."</blockquote>
+            <figcaption>
+              <strong>Hina Hussain</strong>
+              <span>Regional Operations Manager | Multi-Site Healthcare Operations Leader</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section class="cv-section" aria-labelledby="projects-title">
-      <h2 id="projects-title" class="cv-section-title">Selected Projects</h2>
-
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <h3 class="cv-entry-title">Survation Panel System</h3>
-          <span class="cv-entry-role">Full-Stack Lead</span>
-        </div>
-        <p class="cv-entry-desc">
-          Full-stack survey platform for a UK market research leader. Reduced cloud costs by 30%
-          and improved response times by 40%, all with zero downtime.
-        </p>
-        <div class="cv-entry-tags">
-          <span>Angular</span>
-          <span>Express</span>
-          <span>Kubernetes</span>
-          <span>MongoDB</span>
-          <span>Redis</span>
-          <span>AWS</span>
-        </div>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <h3 class="cv-entry-title">OCI Development Cloud</h3>
-          <span class="cv-entry-role">Cloud Architect</span>
-        </div>
-        <p class="cv-entry-desc">
-          Oracle Cloud Infrastructure as Code for SkunkWerks. Cut deployment time by 70%
-          and eliminated manual errors, setting them up for effortless scaling.
-        </p>
-        <div class="cv-entry-tags">
-          <span>Terraform</span>
-          <span>Ansible</span>
-          <span>Oracle Cloud</span>
-          <span>FreeBSD</span>
-          <span>QEMU</span>
-        </div>
-      </div>
-
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <h3 class="cv-entry-title">Min.io Cluster Deployment</h3>
-          <span class="cv-entry-role">DevOps Engineer</span>
-        </div>
-        <p class="cv-entry-desc">
-          Custom Min.io deployment for Headbright Group. Saved $12K/year in storage costs
-          and achieved 99.99% uptime.
-        </p>
-        <div class="cv-entry-tags">
-          <span>Min.io</span>
-          <span>Hetzner</span>
-          <span>Bash</span>
-          <span>Cloud-init</span>
+    <!-- CTA -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta reveal">
+          <h2>Let's build something<br />that lasts.</h2>
+          <p>Have a full-stack or cloud challenge? Let's talk about how to solve it end to end.</p>
+          <a href="https://www.linkedin.com/in/maikelthedev/" target="_blank" rel="noopener" class="btn primary">Connect on LinkedIn &rarr;</a>
         </div>
       </div>
     </section>
-  </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <a class="brand" href="#top" style="font-size:.95rem;"><span class="dot"></span> Maikel Frias Mosquea</a>
+      <div class="links">
+        <a href="#stack">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="https://www.linkedin.com/in/maikelthedev/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <span>&copy; <span id="year"></span> Maikel Frias Mosquea · maikel.dev</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const nav = document.getElementById("nav");
+    const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const toggle = document.getElementById("menuToggle");
+    const links = document.getElementById("navLinks");
+    toggle.addEventListener("click", () => links.classList.toggle("open"));
+    links.querySelectorAll("a").forEach(a =>
+      a.addEventListener("click", () => links.classList.remove("open"))
+    );
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
