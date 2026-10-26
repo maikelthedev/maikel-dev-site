@@ -442,7 +442,14 @@
       .reveal { opacity: 1; transform: none; }
     }
   </style>
-  <!-- GoatCounter: cookieless page counting, self-hosted. No cookies, so no consent banner. -->
+  <!-- GoatCounter: cookieless page counting, self-hosted on analytics.maikel.dev. No cookies, so
+       no consent banner. The path prefix keeps this site's pages apart from dosmigueles.com and
+       git.maikel.dev, which report to the same instance - without it every homepage is just
+       "/" and the dashboard cannot tell which site a visit belongs to. -->
+  <script>
+    window.goatcounter = window.goatcounter || {};
+    window.goatcounter.path = function (p) { return '/maikel.dev' + p; };
+  </script>
   <script data-goatcounter="https://analytics.maikel.dev/count"
           async src="//analytics.maikel.dev/count.js"></script>
 </head>
